@@ -9,36 +9,33 @@
 
 #### Workspace setup ####
 library(tidyverse)
+library(lubridate)
+library(dplyr)
 
 #### Clean data ####
-raw_data <- read_csv("inputs/data/plane_data.csv")
+#Pollster: Different pollsters may have varying methodologies and biases.
+#State: Election outcomes vary by state, especially in battleground states.
+#Sample Size: Larger samples tend to produce more reliable estimates.
+#Poll Methodology: Online, phone, in-person, etc., can influence poll results.
+#Date: More recent polls might better reflect current voter sentiment.
+#Party Affiliation: Voters' support tends to correlate with their party.
+#Pollster Rating: Reliability and bias rating of the pollster.
 
+raw_data <- read_csv("data/01-raw_data/raw_data.csv")
+
+# select useful columns and filter by date to keep polls ends in 2024
 cleaned_data <-
   raw_data |>
-  janitor::clean_names() |>
-  select(wing_width_mm, wing_length_mm, flying_time_sec_first_timer) |>
-  filter(wing_width_mm != "caw") |>
-  mutate(
-    flying_time_sec_first_timer = if_else(flying_time_sec_first_timer == "1,35",
-                                   "1.35",
-                                   flying_time_sec_first_timer)
-  ) |>
-  mutate(wing_width_mm = if_else(wing_width_mm == "490",
-                                 "49",
-                                 wing_width_mm)) |>
-  mutate(wing_width_mm = if_else(wing_width_mm == "6",
-                                 "60",
-                                 wing_width_mm)) |>
-  mutate(
-    wing_width_mm = as.numeric(wing_width_mm),
-    wing_length_mm = as.numeric(wing_length_mm),
-    flying_time_sec_first_timer = as.numeric(flying_time_sec_first_timer)
-  ) |>
-  rename(flying_time = flying_time_sec_first_timer,
-         width = wing_width_mm,
-         length = wing_length_mm
-         ) |> 
-  tidyr::drop_na()
+  janitor::clean_names() %>%
+  mutate(end_date = mdy(end_date)) %>%
+  filter(year(end_date) == 2024)|>
+  select(pollster,sample_size,numeric_grade,pollscore,state,transparency_score,end_date,party,answer,pct)
+
+
+# filter by state to keep those polls nationwide
+nationwide_data <- cleaned_data %>%
+  filter(is.na(state)) |>
+  select(-state)
 
 #### Save data ####
-write_csv(cleaned_data, "outputs/data/analysis_data.csv")
+write_csv(nationwide_data, "data/02-analysis_data/nationwide_data.csv")

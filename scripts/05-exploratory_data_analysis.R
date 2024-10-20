@@ -10,10 +10,19 @@
 
 #### Workspace setup ####
 library(tidyverse)
-library(rstanarm)
+#library(rstanarm)
 
 #### Read data ####
-analysis_data <- read_csv("data/analysis_data/analysis_data.csv")
+poll_data <- read_csv("data/02-analysis_data/cleaned_data.csv")
+candidate_avg_pct <- poll_data %>%
+  group_by(candidate_name) %>%
+  summarize(average_pct = mean(pct, na.rm = TRUE))
+
+# View the result
+print(candidate_avg_pct, n=60)
+top_10_candidates <- candidate_avg_pct %>%
+  arrange(desc(average_pct)) %>%  # Sort by average_pct in descending order
+  head(10)
 
 ### Model data ####
 first_model <-
