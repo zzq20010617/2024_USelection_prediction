@@ -28,14 +28,11 @@ cleaned_data <-
   raw_data |>
   janitor::clean_names() %>%
   mutate(end_date = mdy(end_date)) %>%
+  mutate(
+    state = if_else(is.na(state), "National", state)) %>%
   filter(year(end_date) == 2024)|>
   select(pollster,sample_size,numeric_grade,pollscore,state,transparency_score,end_date,party,answer,pct)
 
 
-# filter by state to keep those polls nationwide
-nationwide_data <- cleaned_data %>%
-  filter(is.na(state)) |>
-  select(-state)
-
 #### Save data ####
-write_csv(nationwide_data, "data/02-analysis_data/nationwide_data.csv")
+write_csv(cleaned_data, "data/02-analysis_data/cleaned_data.csv")
