@@ -7,7 +7,7 @@ author:
 thanks: "Code and data are available at: https://github.com/zzq20010617/2024_USelection_prediction"
 date: today
 date-format: long
-abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+abstract: "1) what was done, 2) what was found, and 3) why this matters. 4) sentence."
 number-sections: true
 bibliography: references.bib
 format:
@@ -197,10 +197,14 @@ Weaknesses and next steps should also be included.
 
 # Appendix {-}
 
+# Idealized methodology
 
-# Trafalgar Group’s Methodology
+# Idealized Survey
 
-The Trafalgar Group conducts polls ranging from major political campaigns to marketing surveys.  The organization's 0.7 pollster rating indicates moderate accuracy and reliability compared to other pollsters. The population consists of all eligible voters in the U.S., while the sampling frame likely includes registered voters across states, segmented by demographics like age, gender, and party affiliation. Trafalgar Group typically samples likely voters, focusing on those most likely to participate in upcoming elections. Trafalgar Group recruits its sample using a mix of interactive voice response (IVR), live phone calls, text messages, online panels, and email surveys. Trafalgar Group employs stratified random sampling to ensure proportional representation of subgroups like political party, gender, and region. This method improves accuracy by reflecting the electorate's demographic and political makeup but may risk over-stratification, giving smaller voter groups disproportionate influence and potentially skewing results. Trafalgar Group handles non-response by using weighting to adjust the sample, ensuring respondent demographics (age, race, education) match population parameters. This method reduces bias by accounting for underrepresented groups, though heavy reliance on post-survey adjustments may introduce new biases, particularly when there are large discrepancies in response rates across demographics.
+# Trafalgar group’s methodology overview and evaluation 
+
+The Trafalgar Group conducts polls ranging from major political campaigns to marketing surveys. The organization's 0.7 pollster rating indicates moderate accuracy and reliability compared to other pollsters. The population consists of all eligible voters in the U.S., while the sampling frame includes registered voters across states, segmented by demographics like age, gender, party affiliation, and ethnicity. Trafalgar Group typically samples likely voters, focusing on those most likely to participate in upcoming elections. Trafalgar Group recruits its sample using a mix of interactive voice response (IVR), live phone calls, text messages, online panels, and email surveys. Trafalgar Group employs stratified random sampling to ensure proportional representation of subgroups like political party, gender, and region. This method improves accuracy by reflecting the electorate's demographic and political makeup but may risk over-stratification, giving smaller voter groups disproportionate influence and potentially skewing results. Trafalgar Group handles non-response by using weighting to adjust the sample, ensuring respondent demographics match population parameters. This method reduces bias by accounting for underrepresented groups, though heavy reliance on post-survey adjustments may introduce new biases, particularly when there are large discrepancies in response rates across demographics.
+
 
 # Model details {#sec-model-details}
 
