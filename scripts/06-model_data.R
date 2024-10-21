@@ -25,18 +25,18 @@ nationwide_data <- nationwide_data %>%
   mutate(days_since_start = as.numeric(end_date - min(end_date)))
 
 unique_parties <- unique(nationwide_data$party)
-
-# model that include party as a predictor
-# model <- lm(pct ~ log(sample_size) + pollscore + numeric_grade + transparency_score+days_since_start+party, data = nationwide_data)
-# plot(model, which = 1)
-# new_data <- data.frame(
-#   sample_size = 1500,
-#   pollscore = -1.5,
-#   numeric_grade = 3,
-#   transparency_score = 8,
-#   days_since_start = 310,
-#   party = "DEM"
-# )
+nationwide_data$party <- as.factor(nationwide_data$party)
+#model that include party as a predictor
+model <- lm(pct ~ log(sample_size) + pollscore + numeric_grade + transparency_score+days_since_start+party, data = nationwide_data)
+plot(model, which = 1)
+new_data <- data.frame(
+  sample_size = 1500,
+  pollscore = -1.5,
+  numeric_grade = 3,
+  transparency_score = 8,
+  days_since_start = 310,
+  party = factor("DEM", levels = levels(nationwide_data$party))
+)
 
 
 ### Model data ####
