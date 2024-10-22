@@ -33,7 +33,7 @@ if (nrow(analysis_data) == 151) {
   stop("Test Failed: The dataset does not have 151 rows.")
 }
 
-# Check if the dataset has 3 columns
+# Check if the dataset has 4 columns
 if (ncol(analysis_data) == 4) {
   message("Test Passed: The dataset has 4 columns.")
 } else {
@@ -47,7 +47,7 @@ if (n_distinct(analysis_data$division) == nrow(analysis_data)) {
   stop("Test Failed: The 'division' column contains duplicate values.")
 }
 
-# Check if the 'state' column contains only valid Australian state names
+# Check if the 'state' column contains only valid United state names
 valid_states <- c(
   "Alabama",
   "Alaska",
