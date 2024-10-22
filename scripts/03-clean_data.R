@@ -21,18 +21,21 @@ library(dplyr)
 #Party Affiliation: Voters' support tends to correlate with their party.
 #Pollster Rating: Reliability and bias rating of the pollster.
 
+# Read and load raw data
 raw_data <- read_csv("data/01-raw_data/raw_data.csv")
+
+# change the type of end date in raw data from double to date
+raw_data$end_date <- as.character(raw_data$end_date)
+raw_data$end_date <- mdy(raw_data$end_date)
 
 # select useful columns and filter by date to keep polls ends in 2024
 cleaned_data <-
   raw_data |>
   janitor::clean_names() %>%
-  mutate(end_date = mdy(end_date)) %>%
+  select(pollster,sample_size,numeric_grade,pollscore,state,transparency_score,end_date,party,answer,pct) %>%
+  filter(end_date > as.Date("2024-01-01")) %>%
   mutate(
-    state = if_else(is.na(state), "National", state)) %>%
-  filter(year(end_date) == 2024)|>
-  select(pollster,sample_size,numeric_grade,pollscore,state,transparency_score,end_date,party,answer,pct)
-
+    state = if_else(is.na(state), "National", state))
 
 #### Save data ####
 write_csv(cleaned_data, "data/02-analysis_data/cleaned_data.csv")
