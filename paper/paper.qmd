@@ -160,8 +160,6 @@ This variable represents the number of days since the beginning of the election 
 The goal of our modelling strategy is try to capture the. Firstly,...
 In the following section we briefly describe the models we used to investigate. Background details and diagnostics are included in [Appendix -@sec-model-details].
 
-## SLR Model set-up
-
 ## MLR Model set-up
 We first filtered our data by different parties, as the single linear model but include other 3 parties(GRE, IND, and LIB, Conservative only has two entries in cleaned nationwide data and has 0 pct so its been removed), and fit linear model for each of them. The formula for Multiple linear regression is as follow
 \begin{align}

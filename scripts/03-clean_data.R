@@ -33,7 +33,7 @@ cleaned_data <-
   raw_data |>
   janitor::clean_names() %>%
   select(pollster,sample_size,numeric_grade,pollscore,state,transparency_score,end_date,party,answer,pct) %>%
-  filter(end_date > as.Date("2024-01-01")) %>%
+  filter(end_date >= as.Date("2024-01-01")) %>%
   mutate(
     state = if_else(is.na(state), "National", state))
 
