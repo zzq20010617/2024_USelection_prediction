@@ -229,7 +229,7 @@ The Bayesian model is build from the MLR models from above section. With the ins
 
 \begin{align} 
 \log \left( \frac{p_i}{1 - p_i} \right) &= \beta_0 + \beta_1 \log(\text{sample\_size}_i) + \beta_2 \, \text{pollscore}_i + \beta_3 \, \text{numeric\_grade}_i \\
-&+ \beta_4 \, \text{transparency\_score}_i + \beta_5 \, \text{days\_since\_start}_i + \alpha_j
+&+ \beta_4 \, \text{transparency\_score}_i + \beta_5 \, \text{days\_since\_start}_i + \alpha_j\\
 \alpha_j &\sim \text{Normal}(0, \sigma_{\text{pollster}}) \\
 \beta_0 &\sim \text{Normal}(0, 2.5) \\
 \beta_1 &\sim \text{Normal}(0, 2.5) \\
