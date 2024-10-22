@@ -10,7 +10,10 @@
 
 #### Workspace setup ####
 library(tidyverse)
-#library(rstanarm)
+library(rstanarm)
+library(modelsummary)
+library(rstanarm)
+library(splines)
 
 #### Read data ####
 cleaned_data <- read_csv("data/02-analysis_data/cleaned_data.csv")
@@ -57,7 +60,7 @@ for (party in names(models)) {
 }
 
 # choose a party to check summary
-model_summary <- summary(models[['REP']])
+model_summary <- summary(models[['DEM']])
 # Access the R-squared and Adjusted R-squared values
 r_squared <- model_summary$r.squared
 adjusted_r_squared <- model_summary$adj.r.squared
@@ -109,7 +112,7 @@ modelsummary(models = models)
 
 # Bayesian model section 
 model_formula_dem <- cbind(num_party, sample_size - num_party) ~ log(sample_size) +
-  pollscore + numeric_grade + (1 | pollster)
+  pollscore + numeric_grade + transparency_score + days_since_start + (1 | pollster)
 
 # Set normal priors for the coefficients
 priors <- normal(0, 2.5, autoscale = TRUE)
@@ -124,6 +127,7 @@ bayesian_model_dem <- stan_glmer(
   cores = 4,
   adapt_delta = 0.95
 )
+
 priors |>
   ggplot(aes(x = marathon_time)) +
   geom_histogram(binwidth = 10) +
@@ -135,7 +139,7 @@ pp_check(bayesian_model_dem)
 plot(bayesian_model_dem, pars = "(Intercept)", prob = 0.95)
 
 spline_model_dem <- stan_glm(
-  pct ~ ns(days_since_start, df = 7) + pollscore + log(sample_size) + pollster,  # Spline with 5 degrees of freedom for end_date_num
+  pct ~ ns(days_since_start, df = 7) + pollscore + numeric_grade + transparency_score + log(sample_size) + pollster,  # Spline with 5 degrees of freedom for end_date_num
   data = dem_data,                            # DEM national dataset
   family = gaussian(),                        # Use a Gaussian family for continuous outcome
   prior = normal(0, 5),                       # Weakly informative prior for coefficients
@@ -147,7 +151,7 @@ spline_model_dem <- stan_glm(
 )
 
 spline_model_rep <- stan_glm(
-  pct ~ ns(days_since_start, df = 7) + pollscore + log(sample_size) + pollster,  # Spline with 5 degrees of freedom for end_date_num
+  pct ~ ns(days_since_start, df = 7) + pollscore + numeric_grade + transparency_score + log(sample_size) + pollster,  # Spline with 5 degrees of freedom for end_date_num
   data = rep_data,                            # DEM national dataset
   family = gaussian(),                        # Use a Gaussian family for continuous outcome
   prior = normal(0, 5),                       # Weakly informative prior for coefficients
@@ -165,6 +169,7 @@ new_data <- data.frame(
   pollscore = -1.5,
   sample_size = 1200,
   numeric_grade = 3,
+  transparency_score=10,
   days_since_start = seq(
     min(dem_data$days_since_start),
     max(dem_data$days_since_start),
@@ -241,5 +246,9 @@ saveRDS(
   bayesian_model_dem,
   file = "models/bayesian_model_dem.rds"
 )
+
+saveRDS(models, file = "models/MLRmodels.rds")
+saveRDS(spline_model_dem, file = "models/spline_dem.rds")
+saveRDS(spline_model_rep, file = "models/spline_rep.rds")
 
 

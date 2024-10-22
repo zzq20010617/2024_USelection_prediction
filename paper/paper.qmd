@@ -25,6 +25,48 @@ format:
 library(tidyverse)
 ```
 
+```{r}
+#| include: false
+#| warning: false
+#| message: false
+
+cleaned_data <- read_csv(here::here("data/02-analysis_data/cleaned_data.csv"))
+nationwide_data <- cleaned_data %>%  filter(state == "National")
+
+# only two entries for Conservative Party
+unique_parties <- unique(nationwide_data$party)
+
+# drop columns that have NA in numeric_grade or pollscore, and 2 entries for CON party
+nationwide_data <- nationwide_data %>%
+  drop_na(numeric_grade, pollscore) %>%
+  filter(party != "CON") %>%
+  mutate(days_since_start = as.numeric(end_date - min(end_date)))
+
+unique_parties <- unique(nationwide_data$party)
+nationwide_data$party <- as.factor(nationwide_data$party)
+
+nationwide_data <- nationwide_data %>% mutate(
+  num_party = round((pct / 100) * sample_size, 0)
+)
+# filter nationwide_data by parties
+dem_data <- nationwide_data %>%
+  filter(party == "DEM")
+dem_data <- na.omit(dem_data)
+
+dem_data <- dem_data |>
+  mutate(
+    pollster = factor(pollster)
+  )
+
+rep_data <- nationwide_data %>%
+  filter(party == "REP")
+rep_data <- na.omit(rep_data)
+
+rep_data <- rep_data |>
+  mutate(
+    pollster = factor(pollster)
+  )
+```
 
 # Introduction
 
@@ -47,7 +89,7 @@ Our data is download from [@polls], the website gathered survey data from differ
 	
 The dataset is about public opinions about U.S. presidential candidates, which are captured through polling.
 
-## Outcome variables
+## Outcome variables {#sec-octvar}
 
 Our primary outcome variable is **support percentage (pct)**, which represents the percentage of respondents who support each candidate. This variable is modeled as the response variable in the MLR analyse.
 
@@ -88,7 +130,7 @@ And also planes (@fig-planes). (You can change the height and width, but don't w
 
 Talk way more about it. 
 
-## Predictor variables
+## Predictor variables {#sec-prevar}
 
 ### Sample Size
 
@@ -111,44 +153,25 @@ Transparency score measures how openly a pollster reports their methodology and 
 This variable represents the number of days since the beginning of the election polling period. It helps capture the dynamic nature of voter preferences over time, accounting for shifts in public opinion as the election date nears.
 
 
-# Model
+# Models
 
-The goal of our modelling strategy is twofold. Firstly,...
+The goal of our modelling strategy is try to capture the. Firstly,...
+In the following section we briefly describe the models we used to investigate. Background details and diagnostics are included in [Appendix -@sec-model-details].
 
-Here we briefly describe the Bayesian analysis model used to investigate... Background details and diagnostics are included in [Appendix -@sec-model-details].
+## SLR Model set-up
 
-## Model set-up
-
-Our model is build from a transformed version of the MLR in above section, with transparency_score dropped as it has a significant level greater than 0.05.
-
-$y_i$ represent the number of individuals in the sample that support the Democratic party (this corresponds to num_party).
-The response is modeled as binomial: $y_i \sim \text{Binomial}(\text{sample\_size}_i, p_i)$, where $p_i$ is the probability that an individual in poll $i$ supports the Democratic party, and $\text{sample\_size}_i$ is the total number of individuals surveyed in poll $i$. 
-
-\begin{align} 
-y_i | p_i &\sim \mbox{Binomial}(\text{sample\_size}_i, p_i) \\
-\log \left( \frac{p_i}{1 - p_i} \right) &= \beta_0 + \beta_1 \log(\text{sample\_size}_i) + \beta_2 \, \text{pollscore}_i + \beta_3 \, \text{numeric\_grade}_i + \alpha_j \\
-\alpha_j &\sim \mbox{Normal}(0, \sigma_{\text{pollster}}) \\
-\beta_0 &\sim \mbox{Normal}(0, 5) \\
-\beta_1 &\sim \mbox{Normal}(0, 5) \\
-\beta_2 &\sim \mbox{Normal}(0, 5) \\
-\beta_3 &\sim \mbox{Normal}(0, 5) \\
-\sigma_{\text{pollster}} &\sim \mbox{Exponential}(1)
+## MLR Model set-up
+We first filtered our data by different parties, as the single linear model but include other 3 parties(GRE, IND, and LIB, Conservative only has two entries in cleaned nationwide data and has 0 pct so its been removed), and fit linear model for each of them. The formula for Multiple linear regression is as follow
+\begin{align}
+\text{pct}_i &= \beta_0 + \beta_1 \log(\text{sample\_size}_i) + \beta_2 \, \text{pollscore}_i + \beta_3 \, \text{numeric\_grade}_i \\
+&+ \beta_4 \, \text{transparency\_score}_i + \beta_5 \, \text{days\_since\_start}_i + \epsilon_i
 \end{align}
 
+Response Variable is pct. Predictors are log(sample_size), pollscore, numeric_grade, transparency_score, and days_since_start, detail can be found in [@sec-octvar], and [@sec-prevar]
 
-We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We first priors as default with “autoscale = TRUE”,
+### Result
 
-
-### Model justification
-
-We expect a positive relationship between the size of the wings and time spent aloft. In particular...
-
-We can use maths by including latex between dollar signs, for instance $\theta$.
-
-
-# Results
-
-Our results are summarized in @tbl-modelresults.
+Our results for the MLR model are summarized in @tbl-mlrmodelresults.
 
 ```{r}
 #| echo: false
@@ -156,42 +179,196 @@ Our results are summarized in @tbl-modelresults.
 #| warning: false
 #| message: false
 
-library(rstanarm)
-
-# first_model <-
-#   readRDS(file = here::here("models/first_model.rds"))
+MLR_models <-
+  readRDS(file = here::here("models/MLRmodels.rds"))
 ```
 
 ```{r}
 #| echo: false
 #| eval: true
-#| label: tbl-modelresults
-#| tbl-cap: "Explanatory models of flight time based on wing width and wing length"
+#| label: tbl-mlrmodelresults
+#| tbl-cap: "Explanatory models of pct based on pollscore, sample size, and time"
 #| warning: false
 
-# modelsummary::modelsummary(
-#   list(
-#     "First model" = first_model
-#   ),
-#   statistic = "mad",
-#   fmt = 2
-# )
+modelsummary::modelsummary(
+  MLR_models,
+  fmt = 2
+)
+```
+We first check the residual vs. fitted plot as shown in [Appendix @sec-model-details], and see no obvious violation of assumptions. According to the summary, DEM and REP models are based on the largest number of observations (both 1235). Smaller parties have fewer observations, which may lead to less robust models. The $r^2$ shows that the model explain the highest amount of variance on Democratic Party than others with value 0.357, and other parties less than 0.2. Based on the summary of models for DEM and REP [@tbl-mlrmodelsum], we are not sure if those predictor that measure quality of polls are significant or not, so we keep them for now in Bayesian model. Prediction of MLR models is shown in [@fig-mlrpredict], which we can see blue line which is Democratic party has a steeper slope and start to take the lead between day 100 and day 200.
+
+```{r}
+#| echo: false
+#| label: fig-mlrpredict
+#| fig-cap: "Prediction with MLR models for DEM and REP party"
+#| warning: false
+
+# Augment the datasets with predictions
+dem_data <- dem_data |>
+  mutate(fitted_pct_dem = predict(MLR_models[['DEM']]))
+rep_data <- rep_data |>
+  mutate(fitted_pct_rep = predict(MLR_models[['REP']]))
+
+# Combine both datasets into one
+combined_data <- bind_rows(dem_data, rep_data)
+
+# Plot with colors based on the party
+ggplot(combined_data, aes(x = days_since_start)) +
+  geom_line(aes(y = fitted_pct_dem, color = "DEM")) +
+  geom_line(aes(y = fitted_pct_rep, color = "REP")) +
+  scale_color_manual(values = c("DEM" = "blue", "REP" = "red"), 
+                     name = "Party",
+                     labels = c("DEM (Blue)", "REP (Red)")) +
+  theme_classic() +
+  labs(y = "Percent", x = "Days") +
+  theme(legend.position = "top")
 ```
 
+## Bayesian Model set-up
+The Bayesian model is build from the MLR models from above section. With the inspiration from the example R code, we introduce the random effects for Pollsters, and we use a logistic link to predict the probability of support, modeling count data which is in binomial distribution. We choose to use a default prior and enable autoscale, the formula is shown below
+
+\begin{align} 
+\log \left( \frac{p_i}{1 - p_i} \right) &= \beta_0 + \beta_1 \log(\text{sample\_size}_i) + \beta_2 \, \text{pollscore}_i + \beta_3 \, \text{numeric\_grade}_i \\
+&+ \beta_4 \, \text{transparency\_score}_i + \beta_5 \, \text{days\_since\_start}_i + \alpha_j
+\end{align}
+\alpha_j &\sim \text{Normal}(0, \sigma_{\text{pollster}}) \\
+\beta_0 &\sim \text{Normal}(0, 2.5) \\
+\beta_1 &\sim \text{Normal}(0, 2.5) \\
+\beta_2 &\sim \text{Normal}(0, 2.5) \\
+\beta_3 &\sim \text{Normal}(0, 2.5) \\
+\beta_4 &\sim \text{Normal}(0, 2.5) \\
+\beta_5 &\sim \text{Normal}(0, 2.5) \\
+\sigma_{\text{pollster}} &\sim \text{Exponential}(1)
+\end{align}
+
+$y_i$ represent the number of individuals in the sample that support the Democratic party (this corresponds to num_party).
+The response is modeled as binomial: $y_i \sim \text{Binomial}(\text{sample\_size}_i, p_i)$, where $p_i$ is the probability that an individual in poll $i$ supports the Democratic party, and $\text{sample\_size}_i$ is the total number of individuals surveyed in poll $i$.
+
+### Result
+```{r}
+#| echo: false
+#| eval: true
+#| warning: false
+#| message: false
+
+Bay_model <-
+  readRDS(file = here::here("models/bayesian_model_dem.rds"))
+```
+
+```{r}
+#| echo: false
+#| eval: true
+#| label: tbl-baymodelresults
+#| tbl-cap: ""
+#| warning: false
+
+modelsummary::modelsummary(
+  Bay_model,
+  fmt = 2
+)
+```
+
+# Prediction
+
+To get a prediction by the Vayesian model we have, we first spline fit the model, and then create a data frame and generate posterior predictions by the new data frame.
+## Spline Fit for Bayesian model set-up
+
+We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use priors $\text{Normal}(0, 5) \\$ to allow for more flexibility of predictors effects with “autoscale = TRUE”. Then we crate a data frame like [@tbl-newdata], we set the quality scale of predict data to the best to perform a poll that has high quality. the result is shown as [@sec-splresult]
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-newdata
+
+# Create new data for prediction
+new_data <- data.frame(
+  pollscore = -1.5,
+  sample_size = 1200,
+  numeric_grade = 3,
+  transparency_score=10,
+  days_since_start = seq(
+    min(dem_data$days_since_start),
+    max(dem_data$days_since_start),
+    length.out = 100
+  ),
+  pollster = factor("TIPP", levels = levels(dem_data$pollster))
+)
+
+head(new_data)
+```
+
+## Result {#sec-splresult}
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+spline_dem <-
+  readRDS(file = here::here("models/spline_dem.rds"))
+spline_rep <-
+  readRDS(file = here::here("models/spline_rep.rds"))
+```
+
+```{r}
+#| echo: false
+#| label: fig-splpredict
+#| fig-cap: "Poll Percentage over Time with Spline Fit for DEM and REP party"
+#| warning: false
 
 
+posterior_preds_dem <- posterior_predict(spline_model_dem, newdata = new_data)
+posterior_preds_rep <- posterior_predict(spline_model_rep, newdata = new_data)
+
+combined_data <- bind_rows(dem_data, rep_data)
+
+# Plot the spline fit
+ggplot(combined_data, aes(x = days_since_start, y = pct, color = pollster)) +
+  # DEM predictions
+  geom_line(
+    data = pred_summary %>% filter(party == "DEM"),
+    aes(x = days_since_start, y = pred_mean_dem, color = "DEM"),  # Move color inside aes()
+    inherit.aes = FALSE
+  ) +
+  geom_ribbon(
+    data = pred_summary %>% filter(party == "DEM"),
+    aes(x = days_since_start, ymin = pred_lower_dem, ymax = pred_upper_dem, fill = "DEM"),  # Move fill inside aes()
+    alpha = 0.2,
+    inherit.aes = FALSE
+  ) +
+  # REP predictions
+  geom_line(
+    data = pred_summary %>% filter(party == "REP"),
+    aes(x = days_since_start, y = pred_mean_rep, color = "REP"),  # Move color inside aes()
+    inherit.aes = FALSE
+  ) +
+  geom_ribbon(
+    data = pred_summary %>% filter(party == "REP"),
+    aes(x = days_since_start, ymin = pred_lower_rep, ymax = pred_upper_rep, fill = "REP"),  # Move fill inside aes()
+    alpha = 0.2,
+    inherit.aes = FALSE
+  ) +
+  # Use scale_color_manual and scale_fill_manual for colors and fills
+  scale_color_manual(values = c("DEM" = "blue", "REP" = "red"), 
+                     name = "Party",
+                     labels = c("DEM (Blue)", "REP (Red)")) +
+  scale_fill_manual(values = c("DEM" = "blue", "REP" = "red"), 
+                    name = "Party",
+                    labels = c("DEM (Blue)", "REP (Red)")) +
+  labs(
+    x = "Days since 2024",
+    y = "Percentage",
+  ) +
+  theme_minimal()
+```
+The prediction graph contains prediction of spline fit model for two parties, blue line represents the DEM party's predicted percentage of support, and the red line represents the REP party's predicted percentage of support over time (measured in days since the start of 2024). We can tell that the predict support of DEM party is taking the lead by aroud 2 percent until the last day of the dataset.
 
 # Discussion
 
-## First discussion point {#sec-first-point}
+## Crossing point in the prediction  {#sec-first-point}
 
-If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
+From the prediction of spline fit model [@fig-splpredict], There is a clear increase in the support for the DEM party starting around day 200, while the REP party's support remains more stable with only a slight increase over time.
+The increase in support for the DEM party in the predictions could be attributed to Harris's rise as the Democratic candidate after Biden's exit from the race On July 21, 2024, which is about 230 days from start of 2024. 
 
-## Second discussion point
-
-Please don't use these as sub-heading labels - change them to be what your point actually is.
-
-## Third discussion point
 
 ## Weaknesses and next steps
 
@@ -212,7 +389,40 @@ Weaknesses and next steps should also be included.
 The Trafalgar Group conducts polls ranging from major political campaigns to marketing surveys. The organization's 0.7 pollster rating indicates moderate accuracy and reliability compared to other pollsters. The population consists of all eligible voters in the U.S., while the sampling frame includes registered voters across states, segmented by demographics like age, gender, party affiliation, and ethnicity. Trafalgar Group typically samples likely voters, focusing on those most likely to participate in upcoming elections. Trafalgar Group recruits its sample using a mix of interactive voice response (IVR), live phone calls, text messages, online panels, and email surveys. Trafalgar Group employs stratified random sampling to ensure proportional representation of subgroups like political party, gender, and region. This method improves accuracy by reflecting the electorate's demographic and political makeup but may risk over-stratification, giving smaller voter groups disproportionate influence and potentially skewing results. Trafalgar Group handles non-response by using weighting to adjust the sample, ensuring respondent demographics match population parameters. This method reduces bias by accounting for underrepresented groups, though heavy reliance on post-survey adjustments may introduce new biases, particularly when there are large discrepancies in response rates across demographics.
 
 
+
 # Model details {#sec-model-details}
+## Assumption check for MLR models
+```{r}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-assumptioncheck
+#| layout-ncol: 2
+#| fig-cap: "Examining how the model fits, and is affected by, the data"
+#| fig-subcap: [""]
+
+for (party in names(MLR_models)) {
+  # Extract the model for the current party
+  current_model <- MLR_models[[party]]
+
+  # Create a Residuals vs Fitted plot for the current model
+  plot(current_model, which = 1, main = paste("Residuals vs Fitted for", party, "Party"))
+
+}
+```
+
+## Significant check for MLR models
+```{r}
+#| echo: false
+#| eval: true
+#| label: tbl-mlrmodelsum
+#| tbl-cap: "Summary of DEM and REP data fit by MLR model"
+#| warning: false
+
+summary(MLR_models[['DEM']])
+summary(MLR_models[['REP']])
+```
 
 ## Posterior predictive check
 
