@@ -1,5 +1,5 @@
 ---
-title: "Forecasting the US Presidential Election: A Poll-of-Polls Approach Using Linear Models"
+title: "Forecasting the US Presidential Election: A Poll-of-Polls Approach Using Linear Models By Using Data of Pollsters From Five Thirty Eight In 2024"
 author: 
   - Ziqi Zhu
   - Yuanchen Miao
