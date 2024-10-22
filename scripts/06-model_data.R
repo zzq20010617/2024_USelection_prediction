@@ -1,10 +1,10 @@
 #### Preamble ####
-# Purpose: Models... [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 11 February 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
-# License: MIT
-# Pre-requisites: [...UPDATE THIS...]
+# Purpose: SLM of specific candidate are fitted and MLM of all candidates from United States president election 2024 are fitted
+# Author: Ziqi Zhu, Yuanchen Miao, Claire Chang
+# Date: 22 October 2024
+# Contact: ziqi.zhu@mail.utoronto.ca, vincent.miao@mail.utoronto.ca, claire.chang@mail.utoronto.ca
+# License: None
+# Pre-requisites: 03-clean-data.R must be run to obtained the data used in this script,04-test_cleaned_data.R must be run to verify that cleaned data could be used to fit a model
 # Any other information needed? [...UPDATE THIS...]
 
 
