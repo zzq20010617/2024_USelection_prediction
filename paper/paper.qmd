@@ -23,6 +23,8 @@ format:
 #| message: false
 
 library(tidyverse)
+library(rstanarm)
+library(splines)
 ```
 
 ```{r}
@@ -230,7 +232,6 @@ The Bayesian model is build from the MLR models from above section. With the ins
 \begin{align} 
 \log \left( \frac{p_i}{1 - p_i} \right) &= \beta_0 + \beta_1 \log(\text{sample\_size}_i) + \beta_2 \, \text{pollscore}_i + \beta_3 \, \text{numeric\_grade}_i \\
 &+ \beta_4 \, \text{transparency\_score}_i + \beta_5 \, \text{days\_since\_start}_i + \alpha_j
-\end{align}
 \alpha_j &\sim \text{Normal}(0, \sigma_{\text{pollster}}) \\
 \beta_0 &\sim \text{Normal}(0, 2.5) \\
 \beta_1 &\sim \text{Normal}(0, 2.5) \\
@@ -245,6 +246,7 @@ $y_i$ represent the number of individuals in the sample that support the Democra
 The response is modeled as binomial: $y_i \sim \text{Binomial}(\text{sample\_size}_i, p_i)$, where $p_i$ is the probability that an individual in poll $i$ supports the Democratic party, and $\text{sample\_size}_i$ is the total number of individuals surveyed in poll $i$.
 
 ### Result
+Summary of Bayesian model is hsown in [@tbl-baymodelresults], and the ppcheck is in appendix [@fig-ppcheck]. 
 ```{r}
 #| echo: false
 #| eval: true
@@ -273,7 +275,7 @@ modelsummary::modelsummary(
 To get a prediction by the Vayesian model we have, we first spline fit the model, and then create a data frame and generate posterior predictions by the new data frame.
 ## Spline Fit for Bayesian model set-up
 
-We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use priors $\text{Normal}(0, 5) \\$ to allow for more flexibility of predictors effects with “autoscale = TRUE”. Then we crate a data frame like [@tbl-newdata], we set the quality scale of predict data to the best to perform a poll that has high quality. the result is shown as [@sec-splresult]
+We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use priors $\text{Normal}(0, 5)$ to allow for more flexibility of predictors effects with “autoscale = TRUE”. Then we crate a data frame like [@tbl-newdata], we set the quality scale of predict data to the best to perform a poll that has high quality. the result is shown as [@sec-splresult]
 ```{r}
 #| echo: false
 #| warning: false
@@ -316,22 +318,43 @@ spline_rep <-
 #| warning: false
 
 
-posterior_preds_dem <- posterior_predict(spline_model_dem, newdata = new_data)
-posterior_preds_rep <- posterior_predict(spline_model_rep, newdata = new_data)
+posterior_preds_dem <- posterior_predict(spline_dem, newdata = new_data)
+posterior_preds_rep <- posterior_predict(spline_rep, newdata = new_data)
 
 combined_data <- bind_rows(dem_data, rep_data)
+
+# Summarize predictions
+pred_summary_dem <- new_data |>
+  mutate(
+    pred_mean_dem = colMeans(posterior_preds_dem),
+    pred_lower_dem = apply(posterior_preds_dem, 2, quantile, probs = 0.025),
+    pred_upper_dem = apply(posterior_preds_dem, 2, quantile, probs = 0.975),
+    party = "DEM"
+  )
+
+# Summarize predictions for REP
+pred_summary_rep <- new_data |>
+  mutate(
+    pred_mean_rep = colMeans(posterior_preds_rep),
+    pred_lower_rep = apply(posterior_preds_rep, 2, quantile, probs = 0.025),
+    pred_upper_rep = apply(posterior_preds_rep, 2, quantile, probs = 0.975),
+    party = "REP"
+  )
+
+# Combine both summaries into a single dataframe
+pred_summary <- bind_rows(pred_summary_dem, pred_summary_rep)
 
 # Plot the spline fit
 ggplot(combined_data, aes(x = days_since_start, y = pct, color = pollster)) +
   # DEM predictions
   geom_line(
     data = pred_summary %>% filter(party == "DEM"),
-    aes(x = days_since_start, y = pred_mean_dem, color = "DEM"),  # Move color inside aes()
+    aes(x = days_since_start, y = pred_mean_dem, color = "DEM"),
     inherit.aes = FALSE
   ) +
   geom_ribbon(
     data = pred_summary %>% filter(party == "DEM"),
-    aes(x = days_since_start, ymin = pred_lower_dem, ymax = pred_upper_dem, fill = "DEM"),  # Move fill inside aes()
+    aes(x = days_since_start, ymin = pred_lower_dem, ymax = pred_upper_dem, fill = "DEM"),
     alpha = 0.2,
     inherit.aes = FALSE
   ) +
@@ -426,29 +449,18 @@ summary(MLR_models[['REP']])
 
 ## Posterior predictive check
 
-In @fig-ppcheckandposteriorvsprior-1 we implement a posterior predictive check. This shows...
-
-In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. This shows... 
-
 ```{r}
 #| eval: true
 #| echo: false
 #| message: false
 #| warning: false
-#| label: fig-ppcheckandposteriorvsprior
+#| label: fig-ppcheck
 #| layout-ncol: 2
-#| fig-cap: "Examining how the model fits, and is affected by, the data"
-#| fig-subcap: ["Posterior prediction check", "Comparing the posterior with the prior"]
+#| fig-cap: "Posterior prediction check for Bayesian model"
 
-# pp_check(first_model) +
-#   theme_classic() +
-#   theme(legend.position = "bottom")
-# 
-# posterior_vs_prior(first_model) +
-#   theme_minimal() +
-#   scale_color_brewer(palette = "Set1") +
-#   theme(legend.position = "bottom") +
-#   coord_flip()
+
+pp_check(Bay_model)
+
 ```
 
 ## Diagnostics
