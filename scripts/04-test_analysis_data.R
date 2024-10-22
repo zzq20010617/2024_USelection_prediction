@@ -12,58 +12,124 @@
 library(tidyverse)
 library(testthat)
 
-data <- read_csv("data/02-analysis_data/analysis_data.csv")
+analysis_data <- read_csv("data/02-analisis_data/cleaned_data.csv")
 
+# Test if the data was successfully loaded
+if (exists("analysis_data")) {
+  message("Test Passed: The dataset was successfully loaded.")
+} else {
+  stop("Test Failed: The dataset could not be loaded.")
+}
 
 #### Test data ####
-# Test that the dataset has 151 rows - there are 151 divisions in Australia
-test_that("dataset has 151 rows", {
-  expect_equal(nrow(analysis_data), 151)
-})
 
-# Test that the dataset has 3 columns
-test_that("dataset has 3 columns", {
-  expect_equal(ncol(analysis_data), 3)
-})
+# Check if the dataset has 151 rows
+if (nrow(analysis_data) == 151) {
+  message("Test Passed: The dataset has 151 rows.")
+} else {
+  stop("Test Failed: The dataset does not have 151 rows.")
+}
 
-# Test that the 'division' column is character type
-test_that("'division' is character", {
-  expect_type(analysis_data$division, "character")
-})
+# Check if the dataset has 3 columns
+if (ncol(analysis_data) == 4) {
+  message("Test Passed: The dataset has 4 columns.")
+} else {
+  stop("Test Failed: The dataset does not have 4 columns.")
+}
 
-# Test that the 'party' column is character type
-test_that("'party' is character", {
-  expect_type(analysis_data$party, "character")
-})
+# Check if all values in the 'division' column are unique
+if (n_distinct(analysis_data$division) == nrow(analysis_data)) {
+  message("Test Passed: All values in 'division' are unique.")
+} else {
+  stop("Test Failed: The 'division' column contains duplicate values.")
+}
 
-# Test that the 'state' column is character type
-test_that("'state' is character", {
-  expect_type(analysis_data$state, "character")
-})
+# Check if the 'state' column contains only valid Australian state names
+valid_states <- c(
+  "Alabama",
+  "Alaska",
+  "Arizona",
+  "Arkansas",
+  "California",
+  "Colorado",
+  "Connecticut",
+  "Delaware",
+  "Florida",
+  "Georgia",
+  "Hawaii",
+  "Idaho",
+  "Illinois",
+  "Indiana",
+  "Lowa",
+  "Kansas",
+  "Kentucky",
+  "Louisiana",
+  "Maine",
+  "Maryland",
+  "Massachusetts",
+  "Michigan",
+  "Minnesota",
+  "Mississippi",
+  "Missouri",
+  "Montana",
+  "Nebraska",
+  "Nevada",
+  "New Hampshire",
+  "New Jersey",
+  "New Mexico",
+  "New York",
+  "North Carolina",
+  "North Dakota",
+  "Ohio",
+  "Oklahoma",
+  "Oregon",
+  "Pennsylvania",
+  "Rhode Island",
+  "South Carolina",
+  "South Dakota",
+  "Tennessee",
+  "Texas",
+  "Utah",
+  "Vermont",
+  "Virginia",
+  "Washington",
+  "West Virginia",
+  "Wisconsin",
+  "Wyoming"
+)
 
-# Test that there are no missing values in the dataset
-test_that("no missing values in dataset", {
-  expect_true(all(!is.na(analysis_data)))
-})
+if (all(analysis_data$state %in% valid_states)) {
+  message("Test Passed: The 'state' column contains only valid United states state names.")
+} else {
+  stop("Test Failed: The 'state' column contains invalid state names.")
+}
 
-# Test that 'division' contains unique values (no duplicates)
-test_that("'division' column contains unique values", {
-  expect_equal(length(unique(analysis_data$division)), 151)
-})
+# Check if the 'party' column contains only valid party names
+valid_parties <- c("Republican", "Democratic", "Greens", "Libertarians", "Constitution", "Natural Law")
 
-# Test that 'state' contains only valid Australian state or territory names
-valid_states <- c("New South Wales", "Victoria", "Queensland", "South Australia", "Western Australia", 
-                  "Tasmania", "Northern Territory", "Australian Capital Territory")
-test_that("'state' contains valid Australian state names", {
-  expect_true(all(analysis_data$state %in% valid_states))
-})
+if (all(analysis_data$party %in% valid_parties)) {
+  message("Test Passed: The 'party' column contains only valid party names.")
+} else {
+  stop("Test Failed: The 'party' column contains invalid party names.")
+}
 
-# Test that there are no empty strings in 'division', 'party', or 'state' columns
-test_that("no empty strings in 'division', 'party', or 'state' columns", {
-  expect_false(any(analysis_data$division == "" | analysis_data$party == "" | analysis_data$state == ""))
-})
+# Check if there are any missing values in the dataset
+if (all(!is.na(analysis_data))) {
+  message("Test Passed: The dataset contains no missing values.")
+} else {
+  stop("Test Failed: The dataset contains missing values.")
+}
 
-# Test that the 'party' column contains at least 2 unique values
-test_that("'party' column contains at least 2 unique values", {
-  expect_true(length(unique(analysis_data$party)) >= 2)
-})
+# Check if there are no empty strings in 'division', 'state', and 'party' columns
+if (all(analysis_data$division != "" & analysis_data$state != "" & analysis_data$party != "")) {
+  message("Test Passed: There are no empty strings in 'division', 'state', or 'party'.")
+} else {
+  stop("Test Failed: There are empty strings in one or more columns.")
+}
+
+# Check if the 'party' column has at least two unique values
+if (n_distinct(analysis_data$party) >= 2) {
+  message("Test Passed: The 'party' column contains at least two unique values.")
+} else {
+  stop("Test Failed: The 'party' column contains less than two unique values.")
+}
