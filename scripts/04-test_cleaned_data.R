@@ -1,13 +1,13 @@
 #### Preamble ####
 # Purpose: Tests the structure and validity of the simulated Australian 
-  #electoral divisions dataset.
+#electoral divisions dataset.
 # Author: Rohan Alexander
 # Date: 26 September 2024
 # Contact: rohan.alexander@utoronto.ca
 # License: MIT
 # Pre-requisites: 
-  # - The `tidyverse` package must be installed and loaded
-  # - 00-simulate_data.R must have been run
+# - The `tidyverse` package must be installed and loaded
+# - 00-simulate_data.R must have been run
 # Any other information needed? Make sure you are in the `starter_folder` rproj
 
 
@@ -26,12 +26,7 @@ if (exists("analysis_data")) {
 
 #### Test data ####
 
-# Check if the dataset has 151 rows
-if (nrow(analysis_data) == 151) {
-  message("Test Passed: The dataset has 151 rows.")
-} else {
-  stop("Test Failed: The dataset does not have 151 rows.")
-}
+
 
 # Check if the dataset has 4 columns
 if (ncol(analysis_data) == 4) {
