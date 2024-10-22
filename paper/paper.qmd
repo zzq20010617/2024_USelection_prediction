@@ -157,7 +157,7 @@ This variable represents the number of days since the beginning of the election 
 
 # Models
 
-The goal of our modelling strategy is try to capture the. Firstly,...
+The goal of our modelling strategy is try to capture the trend of support percentage for different parties in 2024 Presidential election as much as possible.
 In the following section we briefly describe the models we used to investigate. Background details and diagnostics are included in [Appendix -@sec-model-details].
 
 ## MLR Model set-up
