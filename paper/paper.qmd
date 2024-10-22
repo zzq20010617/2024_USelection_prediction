@@ -195,7 +195,7 @@ modelsummary::modelsummary(
   fmt = 2
 )
 ```
-We first check the residual vs. fitted plot as shown in [Appendix @sec-model-details], and see no obvious violation of assumptions. According to the summary, DEM and REP models are based on the largest number of observations (both 1235). Smaller parties have fewer observations, which may lead to less robust models. The $r^2$ shows that the model explain the highest amount of variance on Democratic Party than others with value 0.357, and other parties less than 0.2. Based on the summary of models for DEM and REP [@tbl-mlrmodelsum], we are not sure if those predictor that measure quality of polls are significant or not, so we keep them for now in Bayesian model. Prediction of MLR models is shown in [@fig-mlrpredict], which we can see blue line which is Democratic party has a steeper slope and start to take the lead between day 100 and day 200.
+We first check the residual vs. fitted plot as shown in [Appendix @sec-model-details], and see no obvious violation of assumptions. According to the summary, DEM and REP models are based on the largest number of observations (both 1235). Smaller parties have fewer observations, which may lead to less robust models. The $r^2$ shows that the model explain the highest amount of variance on Democratic Party than others with value 0.357, and other parties less than 0.2. Based on the summary of models for DEM and REP [@sec-model-sigcheck], we are not sure if those predictor that measure quality of polls are significant or not, so we keep them for now in Bayesian model. Prediction of MLR models is shown in [@fig-mlrpredict], which we can see blue line which is Democratic party has a steeper slope and start to take the lead between day 100 and day 200.
 
 ```{r}
 #| echo: false
@@ -413,38 +413,45 @@ The Trafalgar Group conducts polls ranging from major political campaigns to mar
 # Model details {#sec-model-details}
 ## Assumption check for MLR models
 ```{r}
-#| eval: true
 #| echo: false
-#| message: false
+#| eval: true
 #| warning: false
-#| label: fig-assumptioncheck
-#| layout-ncol: 2
-#| fig-cap: "Examining how the model fits, and is affected by, the data"
-#| fig-subcap: [""]
+#| fig.cap: "Residuals vs Fitted for DEM Party"
 
-for (party in names(MLR_models)) {
-  # Extract the model for the current party
-  current_model <- MLR_models[[party]]
-
-  # Create a Residuals vs Fitted plot for the current model
-  plot(current_model, which = 1, main = paste("Residuals vs Fitted for", party, "Party"))
-
-}
+plot(MLR_models[['DEM']], which = 1, main = "Residuals vs Fitted for DEM Party")
 ```
 
-## Significant check for MLR models
 ```{r}
 #| echo: false
 #| eval: true
-#| label: tbl-mlrmodelsum
-#| tbl-cap: "Summary of DEM and REP data fit by MLR model"
+#| warning: false
+#| fig.cap: "Residuals vs Fitted for REP Party"
+
+plot(MLR_models[['REP']], which = 1, main = "Residuals vs Fitted for REP Party")
+```
+## Significant check for MLR models {#sec-model-sigcheck}
+see [@tbl-mlrmodelsum-dem], and [@tbl-mlrmodelsum-rep]
+```{r}
+#| echo: false
+#| eval: true
+#| label: tbl-mlrmodelsum-dem
+#| tbl-cap: "Summary of DEM data fit by MLR model"
 #| warning: false
 
 summary(MLR_models[['DEM']])
+```
+```{r}
+#| echo: false
+#| eval: true
+#| label: tbl-mlrmodelsum-rep
+#| tbl-cap: "Summary of REP data fit by MLR model"
+#| warning: false
+
 summary(MLR_models[['REP']])
 ```
 
-## Posterior predictive check
+\newpage
+## Posterior predictive check {#sec-model-ppcheck}
 
 ```{r}
 #| eval: true
@@ -452,7 +459,6 @@ summary(MLR_models[['REP']])
 #| message: false
 #| warning: false
 #| label: fig-ppcheck
-#| layout-ncol: 2
 #| fig-cap: "Posterior prediction check for Bayesian model"
 
 
@@ -462,9 +468,9 @@ pp_check(Bay_model)
 
 ## Diagnostics
 
-@fig-stanareyouokay-1 is a trace plot. It shows... This suggests...
+<!-- @fig-stanareyouokay-1 is a trace plot. It shows... This suggests... -->
 
-@fig-stanareyouokay-2 is a Rhat plot. It shows... This suggests...
+<!-- @fig-stanareyouokay-2 is a Rhat plot. It shows... This suggests... -->
 
 ```{r}
 #| echo: false
