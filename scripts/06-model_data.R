@@ -235,6 +235,27 @@ ggplot(combined_data, aes(x = days_since_start, y = pct, color = pollster)) +
   ) +
   theme_minimal()
 
+#### Just Harris model ####
+
+# Model 1: pct as a function of end_date
+model_date <- lm(pct ~ end_date, data = just_harris_high_quality)
+
+# Augment data with model predictions
+just_harris_high_quality <- just_harris_high_quality |>
+  mutate(
+    fitted_date = predict(model_date),
+  )
+
+# Plot model predictions
+# Model 1
+ggplot(just_harris_high_quality, aes(x = end_date)) +
+  geom_point(aes(y = pct), color = "black") +
+  geom_line(aes(y = fitted_date), color = "blue", linetype = "dotted") +
+  theme_classic() +
+  scale_y_continuous(labels = scales::percent_format(scale = 1))+
+  labs(y = "Harris percent", x = "Date", title = "Linear Model: pct ~ end_date")
+
+
 
 #### Save model ####
 saveRDS(
