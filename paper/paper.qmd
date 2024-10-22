@@ -49,7 +49,7 @@ The dataset is about public opinions about U.S. presidential candidates, which a
 
 ## Outcome variables
 
-Our primary outcome variable is **support percentage (pct)**, which represents the percentage of respondents who support each candidate. This variable is modeled as the response variable in the MLR analyses.
+Our primary outcome variable is **support percentage (pct)**, which represents the percentage of respondents who support each candidate. This variable is modeled as the response variable in the MLR analyse.
 
 ```{r}
 #| label: fig-bills
@@ -119,18 +119,24 @@ Here we briefly describe the Bayesian analysis model used to investigate... Back
 
 ## Model set-up
 
-Define $y_i$ as the number of seconds that the plane remained aloft. Then $\beta_i$ is the wing width and $\gamma_i$ is the wing length, both measured in millimeters.  
+Our model is build from a transformed version of the MLR in above section, with transparency_score dropped as it has a significant level greater than 0.05.
+
+$y_i$ represent the number of individuals in the sample that support the Democratic party (this corresponds to num_party).
+The response is modeled as binomial: $y_i \sim \text{Binomial}(\text{sample\_size}_i, p_i)$, where $p_i$ is the probability that an individual in poll $i$ supports the Democratic party, and $\text{sample\_size}_i$ is the total number of individuals surveyed in poll $i$. 
 
 \begin{align} 
-y_i|\mu_i, \sigma &\sim \mbox{Normal}(\mu_i, \sigma) \\
-\mu_i &= \alpha + \beta_i + \gamma_i\\
-\alpha &\sim \mbox{Normal}(0, 2.5) \\
-\beta &\sim \mbox{Normal}(0, 2.5) \\
-\gamma &\sim \mbox{Normal}(0, 2.5) \\
-\sigma &\sim \mbox{Exponential}(1)
+y_i | p_i &\sim \mbox{Binomial}(\text{sample\_size}_i, p_i) \\
+\log \left( \frac{p_i}{1 - p_i} \right) &= \beta_0 + \beta_1 \log(\text{sample\_size}_i) + \beta_2 \, \text{pollscore}_i + \beta_3 \, \text{numeric\_grade}_i + \alpha_j \\
+\alpha_j &\sim \mbox{Normal}(0, \sigma_{\text{pollster}}) \\
+\beta_0 &\sim \mbox{Normal}(0, 5) \\
+\beta_1 &\sim \mbox{Normal}(0, 5) \\
+\beta_2 &\sim \mbox{Normal}(0, 5) \\
+\beta_3 &\sim \mbox{Normal}(0, 5) \\
+\sigma_{\text{pollster}} &\sim \mbox{Exponential}(1)
 \end{align}
 
-We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use the default priors from `rstanarm`.
+
+We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We first priors as default with “autoscale = TRUE”,
 
 
 ### Model justification

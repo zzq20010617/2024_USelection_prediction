@@ -152,7 +152,7 @@ plot(bayesian_model_1, pars = "(Intercept)", prob = 0.95)
 plot(bayesian_model_2, pars = "(Intercept)", prob = 0.95)
 
 # Model summary works the same as above for Bayesian models.
-
+# modelsummary(models = list("Model 1" = bayesian_model_1, "Model 2" = bayesian_model_2))
 
 #### Bayesian models and splines ####
 # Change date to be number of days since she declared - it's a counter not a date
