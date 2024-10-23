@@ -233,9 +233,9 @@ modelsummary::modelsummary(
 
 # Prediction
 
-To get a prediction by the Vayesian model we have, we first spline fit the model, and then create a data frame and generate posterior predictions by the new data frame.
-## Spline Fit for Bayesian model set-up
+To get a prediction by the Bayesian model we have, we first spline fit the model, and then create a data frame and generate posterior predictions by the new data frame.
 
+## Spline Fit for Bayesian model set-up
 We run the model in R [@citeR] using the `rstanarm` package of [@rstanarm]. We use priors $\text{Normal}(0, 5)$ to allow for more flexibility of predictors effects with “autoscale = TRUE”. Then we crate a data frame like [@tbl-newdata], we set the quality scale of predict data to the best to perform a poll that has high quality. the result is shown as [@sec-splresult]
 ```{r}
 #| echo: false
