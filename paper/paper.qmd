@@ -95,43 +95,6 @@ The dataset is about public opinions about U.S. presidential candidates, which a
 
 Our primary outcome variable is **support percentage (pct)**, which represents the percentage of respondents who support each candidate. This variable is modeled as the response variable in the MLR analyse.
 
-```{r}
-#| label: fig-bills
-#| fig-cap: Bills of penguins
-#| echo: false
-
-# ggplot(penguins, aes(x = island, fill = species)) +
-#   geom_bar(alpha = 0.8) +
-#   scale_fill_manual(values = c("darkorange","purple","cyan4"),
-#                     guide = "none") +
-#   theme_minimal() +
-#   facet_wrap(~species, ncol = 1) +
-#   coord_flip()
-```
-
-Talk more about it.
-
-And also planes (@fig-planes). (You can change the height and width, but don't worry about doing that until you have finished every other aspect of the paper - Quarto will try to make it look nice and the defaults usually work well once you have enough text.)
-
-```{r}
-#| label: fig-planes
-#| fig-cap: Relationship between wing length and width
-#| echo: false
-#| warning: false
-#| message: false
-
-# analysis_data <- read_csv(here::here("data/02-analysis_data/analysis_data.csv"))
-# 
-# analysis_data |> 
-#   ggplot(aes(x = width, y = length)) +
-#   geom_point(alpha = 0.8) +
-#   theme_minimal() +
-#   labs(x = "Wing width (mm)",
-#        y = "Wing length (mm)")
-```
-
-Talk way more about it. 
-
 ## Predictor variables {#sec-prevar}
 
 ### Sample Size
@@ -167,7 +130,7 @@ We first filtered our data by different parties, as the single linear model but 
 &+ \beta_4 \, \text{transparency\_score}_i + \beta_5 \, \text{days\_since\_start}_i + \epsilon_i
 \end{align}
 
-Response Variable is pct. Predictors are log(sample_size), pollscore, numeric_grade, transparency_score, and days_since_start, detail can be found in [@sec-octvar], and [@sec-prevar]
+Response Variable is pct. Predictors are log(sample_size), pollscore, numeric_grade, transparency_score, and days_since_start, detail can be find in [@sec-octvar], and [@sec-prevar]
 
 ### Result
 
@@ -273,7 +236,7 @@ modelsummary::modelsummary(
 To get a prediction by the Vayesian model we have, we first spline fit the model, and then create a data frame and generate posterior predictions by the new data frame.
 ## Spline Fit for Bayesian model set-up
 
-We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use priors $\text{Normal}(0, 5)$ to allow for more flexibility of predictors effects with “autoscale = TRUE”. Then we crate a data frame like [@tbl-newdata], we set the quality scale of predict data to the best to perform a poll that has high quality. the result is shown as [@sec-splresult]
+We run the model in R [@citeR] using the `rstanarm` package of [@rstanarm]. We use priors $\text{Normal}(0, 5)$ to allow for more flexibility of predictors effects with “autoscale = TRUE”. Then we crate a data frame like [@tbl-newdata], we set the quality scale of predict data to the best to perform a poll that has high quality. the result is shown as [@sec-splresult]
 ```{r}
 #| echo: false
 #| warning: false
@@ -381,7 +344,7 @@ ggplot(combined_data, aes(x = days_since_start, y = pct, color = pollster)) +
   ) +
   theme_minimal()
 ```
-The prediction graph contains prediction of spline fit model for two parties, blue line represents the DEM party's predicted percentage of support, and the red line represents the REP party's predicted percentage of support over time (measured in days since the start of 2024). We can tell that the predict support of DEM party is taking the lead by aroud 2 percent until the last day of the dataset.
+The prediction graph [@fig-splpredict] contains prediction of spline fit model for two parties, blue line represents the DEM party's predicted percentage of support, and the red line represents the REP party's predicted percentage of support over time (measured in days since the start of 2024). We can tell that the predicted support of DEM party is taking the lead by aroud 2 percent until the last day of the dataset.
 
 # Discussion
 
