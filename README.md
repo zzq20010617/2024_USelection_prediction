@@ -1,4 +1,4 @@
-# the US Presidential Election Forecasting
+# The US Presidential Election Forecasting
 
 ## Overview
 
