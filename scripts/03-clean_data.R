@@ -1,7 +1,7 @@
 #### Preamble ####
 # Purpose: Cleans the raw poll predicts data of United States president election 2024 from Five Thirty Eight 
 # Author: Ziqi Zhu, Yuanchen Miao, Claire Chang
-# Date: 22 October 2024
+# Date: 2  November 2024
 # Contact: ziqi.zhu@mail.utoronto.ca, vincent.miao@mail.utoronto.ca, claire.chang@mail.utoronto.ca
 # License: None
 # Pre-requisites: raw data must be obtained from poll-of-polls

@@ -1,8 +1,1423 @@
 pollster,sample_size,numeric_grade,pollscore,state,transparency_score,end_date,party,answer,pct
+TIPP,NA,1.8,-0.4,National,3,2024-11-01,DEM,Harris,48
+TIPP,NA,1.8,-0.4,National,3,2024-11-01,REP,Trump,48
+TIPP,NA,1.8,-0.4,National,3,2024-11-01,DEM,Harris,48.1
+TIPP,NA,1.8,-0.4,National,3,2024-11-01,REP,Trump,48.2
+TIPP,NA,1.8,-0.4,National,3,2024-11-01,IND,West,1
+TIPP,NA,1.8,-0.4,National,3,2024-11-01,GRE,Stein,0.8
+MassINC Polling Group,582,2.8,-0.8,Massachusetts,7,2024-11-01,DEM,Harris,61
+MassINC Polling Group,582,2.8,-0.8,Massachusetts,7,2024-11-01,REP,Trump,31
+MassINC Polling Group,582,2.8,-0.8,Massachusetts,7,2024-11-01,IND,Kennedy,2
+MassINC Polling Group,582,2.8,-0.8,Massachusetts,7,2024-11-01,GRE,Stein,1
+MassINC Polling Group,582,2.8,-0.8,Massachusetts,7,2024-11-01,IND,West,0
+MassINC Polling Group,582,2.8,-0.8,Massachusetts,7,2024-11-01,LIB,Oliver,0
+Stetson University Center for Public Opinion Research,452,1.5,0.3,Florida,6,2024-11-01,DEM,Harris,46
+Stetson University Center for Public Opinion Research,452,1.5,0.3,Florida,6,2024-11-01,REP,Trump,53
+ActiVote,400,NA,NA,Wisconsin,8,2024-11-01,DEM,Harris,50.9
+ActiVote,400,NA,NA,Wisconsin,8,2024-11-01,REP,Trump,49.1
+ActiVote,400,NA,NA,Minnesota,8,2024-11-01,DEM,Harris,52.3
+ActiVote,400,NA,NA,Minnesota,8,2024-11-01,REP,Trump,47.7
+ActiVote,400,NA,NA,Arizona,8,2024-11-01,DEM,Harris,49.1
+ActiVote,400,NA,NA,Arizona,8,2024-11-01,REP,Trump,50.9
+AtlasIntel,3490,2.7,-0.8,National,6,2024-10-31,DEM,Harris,47.2
+AtlasIntel,3490,2.7,-0.8,National,6,2024-10-31,REP,Trump,49.1
+AtlasIntel,3490,2.7,-0.8,National,6,2024-10-31,GRE,Stein,1
+AtlasIntel,3490,2.7,-0.8,National,6,2024-10-31,LIB,Oliver,0.2
+AtlasIntel,3490,2.7,-0.8,National,6,2024-10-31,DEM,Harris,48.2
+AtlasIntel,3490,2.7,-0.8,National,6,2024-10-31,REP,Trump,49.6
+AtlasIntel,1373,2.7,-0.8,North Carolina,6,2024-10-31,DEM,Harris,46.7
+AtlasIntel,1373,2.7,-0.8,North Carolina,6,2024-10-31,REP,Trump,50.7
+AtlasIntel,1373,2.7,-0.8,North Carolina,6,2024-10-31,GRE,Stein,0.7
+AtlasIntel,1373,2.7,-0.8,North Carolina,6,2024-10-31,LIB,Oliver,0.3
+AtlasIntel,1373,2.7,-0.8,North Carolina,6,2024-10-31,DEM,Harris,47
+AtlasIntel,1373,2.7,-0.8,North Carolina,6,2024-10-31,REP,Trump,50.7
+AtlasIntel,1005,2.7,-0.8,Arizona,6,2024-10-31,DEM,Harris,45.9
+AtlasIntel,1005,2.7,-0.8,Arizona,6,2024-10-31,REP,Trump,50.8
+AtlasIntel,1005,2.7,-0.8,Arizona,6,2024-10-31,GRE,Stein,1.1
+AtlasIntel,1005,2.7,-0.8,Arizona,6,2024-10-31,LIB,Oliver,0.5
+AtlasIntel,1005,2.7,-0.8,Arizona,6,2024-10-31,DEM,Harris,46.8
+AtlasIntel,1005,2.7,-0.8,Arizona,6,2024-10-31,REP,Trump,51
+AtlasIntel,1212,2.7,-0.8,Georgia,6,2024-10-31,DEM,Harris,47.2
+AtlasIntel,1212,2.7,-0.8,Georgia,6,2024-10-31,REP,Trump,48.8
+AtlasIntel,1212,2.7,-0.8,Georgia,6,2024-10-31,GRE,Stein,2
+AtlasIntel,1212,2.7,-0.8,Georgia,6,2024-10-31,LIB,Oliver,0.5
+AtlasIntel,1212,2.7,-0.8,Georgia,6,2024-10-31,DEM,Harris,47.8
+AtlasIntel,1212,2.7,-0.8,Georgia,6,2024-10-31,REP,Trump,50.1
+AtlasIntel,1136,2.7,-0.8,Michigan,6,2024-10-31,DEM,Harris,48.3
+AtlasIntel,1136,2.7,-0.8,Michigan,6,2024-10-31,REP,Trump,49.2
+AtlasIntel,1136,2.7,-0.8,Michigan,6,2024-10-31,GRE,Stein,1.7
+AtlasIntel,1136,2.7,-0.8,Michigan,6,2024-10-31,LIB,Oliver,0.1
+AtlasIntel,1136,2.7,-0.8,Michigan,6,2024-10-31,DEM,Harris,48.7
+AtlasIntel,1136,2.7,-0.8,Michigan,6,2024-10-31,REP,Trump,49.3
+AtlasIntel,845,2.7,-0.8,Nevada,6,2024-10-31,DEM,Harris,46.9
+AtlasIntel,845,2.7,-0.8,Nevada,6,2024-10-31,REP,Trump,50.5
+AtlasIntel,845,2.7,-0.8,Nevada,6,2024-10-31,DEM,Harris,47
+AtlasIntel,845,2.7,-0.8,Nevada,6,2024-10-31,REP,Trump,50.6
+AtlasIntel,1738,2.7,-0.8,Pennsylvania,6,2024-10-31,DEM,Harris,47.4
+AtlasIntel,1738,2.7,-0.8,Pennsylvania,6,2024-10-31,REP,Trump,48.5
+AtlasIntel,1738,2.7,-0.8,Pennsylvania,6,2024-10-31,GRE,Stein,1
+AtlasIntel,1738,2.7,-0.8,Pennsylvania,6,2024-10-31,LIB,Oliver,0.5
+AtlasIntel,1738,2.7,-0.8,Pennsylvania,6,2024-10-31,DEM,Harris,47.9
+AtlasIntel,1738,2.7,-0.8,Pennsylvania,6,2024-10-31,REP,Trump,49.4
+AtlasIntel,673,2.7,-0.8,Wisconsin,6,2024-10-31,DEM,Harris,48.2
+AtlasIntel,673,2.7,-0.8,Wisconsin,6,2024-10-31,REP,Trump,48.5
+AtlasIntel,673,2.7,-0.8,Wisconsin,6,2024-10-31,GRE,Stein,0.8
+AtlasIntel,673,2.7,-0.8,Wisconsin,6,2024-10-31,LIB,Oliver,0.1
+AtlasIntel,673,2.7,-0.8,Wisconsin,6,2024-10-31,DEM,Harris,49
+AtlasIntel,673,2.7,-0.8,Wisconsin,6,2024-10-31,REP,Trump,48.8
+Change Research,600,1.4,0.6,Nebraska,5,2024-10-31,DEM,Harris,39
+Change Research,600,1.4,0.6,Nebraska,5,2024-10-31,REP,Trump,57
+SoCal Strategies,984,NA,NA,National,9,2024-10-31,DEM,Harris,49.1
+SoCal Strategies,984,NA,NA,National,9,2024-10-31,REP,Trump,49.9
+SoCal Strategies,750,NA,NA,Arizona,9,2024-10-31,DEM,Harris,48.7
+SoCal Strategies,750,NA,NA,Arizona,9,2024-10-31,REP,Trump,49.5
+SoCal Strategies,850,NA,NA,Pennsylvania,9,2024-10-31,DEM,Harris,49.7
+SoCal Strategies,850,NA,NA,Pennsylvania,9,2024-10-31,REP,Trump,48.2
+Emerson,700,2.9,-1.1,Nevada,7,2024-10-31,DEM,Harris,48.6
+Emerson,700,2.9,-1.1,Nevada,7,2024-10-31,REP,Trump,48.3
+TIPP,1249,1.8,-0.4,National,3,2024-10-31,DEM,Harris,48
+TIPP,1249,1.8,-0.4,National,3,2024-10-31,REP,Trump,49
+TIPP,1249,1.8,-0.4,National,3,2024-10-31,DEM,Harris,47.8
+TIPP,1249,1.8,-0.4,National,3,2024-10-31,REP,Trump,48.5
+TIPP,1249,1.8,-0.4,National,3,2024-10-31,IND,West,1.2
+TIPP,1249,1.8,-0.4,National,3,2024-10-31,GRE,Stein,0.5
+OnMessage Inc.,800,1.1,0.2,Pennsylvania,1,2024-10-31,DEM,Harris,47
+OnMessage Inc.,800,1.1,0.2,Pennsylvania,1,2024-10-31,REP,Trump,49
+OnMessage Inc.,800,1.1,0.2,Michigan,1,2024-10-31,DEM,Harris,48
+OnMessage Inc.,800,1.1,0.2,Michigan,1,2024-10-31,REP,Trump,48
+OnMessage Inc.,800,1.1,0.2,Wisconsin,1,2024-10-31,DEM,Harris,47
+OnMessage Inc.,800,1.1,0.2,Wisconsin,1,2024-10-31,REP,Trump,48
+OnMessage Inc.,800,1.1,0.2,Arizona,1,2024-10-31,DEM,Harris,47
+OnMessage Inc.,800,1.1,0.2,Arizona,1,2024-10-31,REP,Trump,50
+SurveyUSA,632,2.8,-1.3,New Mexico,8,2024-10-31,DEM,Harris,50
+SurveyUSA,632,2.8,-1.3,New Mexico,8,2024-10-31,REP,Trump,44
+Susquehanna,400,2.3,-0.3,Nevada,5.5,2024-10-31,DEM,Harris,44.2
+Susquehanna,400,2.3,-0.3,Nevada,5.5,2024-10-31,REP,Trump,50.2
+Redfield & Wilton Strategies,652,1.8,0.4,Arizona,9,2024-10-31,DEM,Harris,47
+Redfield & Wilton Strategies,652,1.8,0.4,Arizona,9,2024-10-31,REP,Trump,48
+Redfield & Wilton Strategies,652,1.8,0.4,Arizona,9,2024-10-31,LIB,Oliver,1
+Redfield & Wilton Strategies,652,1.8,0.4,Arizona,9,2024-10-31,GRE,Stein,1
+Redfield & Wilton Strategies,1779,1.8,0.4,Georgia,9,2024-10-31,DEM,Harris,47
+Redfield & Wilton Strategies,1779,1.8,0.4,Georgia,9,2024-10-31,REP,Trump,48
+Redfield & Wilton Strategies,1779,1.8,0.4,Georgia,9,2024-10-31,LIB,Oliver,1
+Redfield & Wilton Strategies,1779,1.8,0.4,Georgia,9,2024-10-31,GRE,Stein,0
+Redfield & Wilton Strategies,1731,1.8,0.4,Michigan,9,2024-10-31,DEM,Harris,47
+Redfield & Wilton Strategies,1731,1.8,0.4,Michigan,9,2024-10-31,REP,Trump,47
+Redfield & Wilton Strategies,1731,1.8,0.4,Michigan,9,2024-10-31,LIB,Oliver,1
+Redfield & Wilton Strategies,1731,1.8,0.4,Michigan,9,2024-10-31,GRE,Stein,1
+Redfield & Wilton Strategies,690,1.8,0.4,Nevada,9,2024-10-31,DEM,Harris,47
+Redfield & Wilton Strategies,690,1.8,0.4,Nevada,9,2024-10-31,REP,Trump,48
+Redfield & Wilton Strategies,690,1.8,0.4,Nevada,9,2024-10-31,LIB,Oliver,1
+Redfield & Wilton Strategies,690,1.8,0.4,Nevada,9,2024-10-31,GRE,Stein,0
+Redfield & Wilton Strategies,1123,1.8,0.4,North Carolina,9,2024-10-31,DEM,Harris,47
+Redfield & Wilton Strategies,1123,1.8,0.4,North Carolina,9,2024-10-31,REP,Trump,48
+Redfield & Wilton Strategies,1123,1.8,0.4,North Carolina,9,2024-10-31,LIB,Oliver,1
+Redfield & Wilton Strategies,1123,1.8,0.4,North Carolina,9,2024-10-31,GRE,Stein,1
+Redfield & Wilton Strategies,1596,1.8,0.4,Pennsylvania,9,2024-10-31,DEM,Harris,48
+Redfield & Wilton Strategies,1596,1.8,0.4,Pennsylvania,9,2024-10-31,REP,Trump,48
+Redfield & Wilton Strategies,1596,1.8,0.4,Pennsylvania,9,2024-10-31,LIB,Oliver,1
+Redfield & Wilton Strategies,1596,1.8,0.4,Pennsylvania,9,2024-10-31,GRE,Stein,0
+Redfield & Wilton Strategies,932,1.8,0.4,Wisconsin,9,2024-10-31,DEM,Harris,48
+Redfield & Wilton Strategies,932,1.8,0.4,Wisconsin,9,2024-10-31,REP,Trump,47
+Redfield & Wilton Strategies,932,1.8,0.4,Wisconsin,9,2024-10-31,LIB,Oliver,1
+Redfield & Wilton Strategies,932,1.8,0.4,Wisconsin,9,2024-10-31,GRE,Stein,0
+Echelon Insights,1328,2.7,-0.8,National,9,2024-10-31,DEM,Harris,49
+Echelon Insights,1328,2.7,-0.8,National,9,2024-10-31,REP,Trump,47
+Echelon Insights,1328,2.7,-0.8,National,9,2024-10-31,IND,Kennedy,1
+Echelon Insights,1328,2.7,-0.8,National,9,2024-10-31,GRE,Stein,0
+Echelon Insights,1328,2.7,-0.8,National,9,2024-10-31,LIB,Oliver,1
+Echelon Insights,1328,2.7,-0.8,National,9,2024-10-31,IND,West,0
+Echelon Insights,1328,2.7,-0.8,National,9,2024-10-31,DEM,Harris,50
+Echelon Insights,1328,2.7,-0.8,National,9,2024-10-31,REP,Trump,48
+Noble Predictive Insights,593,2.4,-0.4,Nevada,6,2024-10-31,DEM,Harris,49
+Noble Predictive Insights,593,2.4,-0.4,Nevada,6,2024-10-31,REP,Trump,48
+Noble Predictive Insights,593,2.4,-0.4,Nevada,6,2024-10-31,LIB,Oliver,0
+Noble Predictive Insights,593,2.4,-0.4,Nevada,6,2024-10-31,CON,Skousen,0
+YouGov,880,3,-1.1,Arizona,9,2024-10-31,DEM,Harris,47
+YouGov,880,3,-1.1,Arizona,9,2024-10-31,REP,Trump,48
+YouGov,880,3,-1.1,Arizona,9,2024-10-31,GRE,Stein,1
+YouGov,880,3,-1.1,Arizona,9,2024-10-31,IND,West,0
+YouGov,856,3,-1.1,Arizona,9,2024-10-31,DEM,Harris,48
+YouGov,856,3,-1.1,Arizona,9,2024-10-31,REP,Trump,48
+YouGov,856,3,-1.1,Arizona,9,2024-10-31,GRE,Stein,0
+YouGov,856,3,-1.1,Arizona,9,2024-10-31,IND,West,0
+YouGov,880,3,-1.1,Arizona,9,2024-10-31,DEM,Harris,49
+YouGov,880,3,-1.1,Arizona,9,2024-10-31,REP,Trump,50
+YouGov,856,3,-1.1,Arizona,9,2024-10-31,DEM,Harris,49
+YouGov,856,3,-1.1,Arizona,9,2024-10-31,REP,Trump,50
+YouGov,984,3,-1.1,Georgia,9,2024-10-31,DEM,Harris,46
+YouGov,984,3,-1.1,Georgia,9,2024-10-31,REP,Trump,48
+YouGov,984,3,-1.1,Georgia,9,2024-10-31,GRE,Stein,1
+YouGov,984,3,-1.1,Georgia,9,2024-10-31,IND,West,1
+YouGov,939,3,-1.1,Georgia,9,2024-10-31,DEM,Harris,47
+YouGov,939,3,-1.1,Georgia,9,2024-10-31,REP,Trump,48
+YouGov,939,3,-1.1,Georgia,9,2024-10-31,GRE,Stein,0
+YouGov,939,3,-1.1,Georgia,9,2024-10-31,IND,West,0
+YouGov,984,3,-1.1,Georgia,9,2024-10-31,DEM,Harris,48
+YouGov,984,3,-1.1,Georgia,9,2024-10-31,REP,Trump,50
+YouGov,939,3,-1.1,Georgia,9,2024-10-31,DEM,Harris,48
+YouGov,939,3,-1.1,Georgia,9,2024-10-31,REP,Trump,50
+YouGov,985,3,-1.1,Michigan,9,2024-10-31,DEM,Harris,47
+YouGov,985,3,-1.1,Michigan,9,2024-10-31,REP,Trump,45
+YouGov,985,3,-1.1,Michigan,9,2024-10-31,GRE,Stein,2
+YouGov,985,3,-1.1,Michigan,9,2024-10-31,IND,West,0
+YouGov,942,3,-1.1,Michigan,9,2024-10-31,DEM,Harris,48
+YouGov,942,3,-1.1,Michigan,9,2024-10-31,REP,Trump,45
+YouGov,942,3,-1.1,Michigan,9,2024-10-31,GRE,Stein,2
+YouGov,942,3,-1.1,Michigan,9,2024-10-31,IND,West,0
+YouGov,985,3,-1.1,Michigan,9,2024-10-31,DEM,Harris,50
+YouGov,985,3,-1.1,Michigan,9,2024-10-31,REP,Trump,46
+YouGov,942,3,-1.1,Michigan,9,2024-10-31,DEM,Harris,50
+YouGov,942,3,-1.1,Michigan,9,2024-10-31,REP,Trump,47
+YouGov,790,3,-1.1,Nevada,9,2024-10-31,DEM,Harris,48
+YouGov,790,3,-1.1,Nevada,9,2024-10-31,REP,Trump,47
+YouGov,790,3,-1.1,Nevada,9,2024-10-31,GRE,Stein,0
+YouGov,790,3,-1.1,Nevada,9,2024-10-31,IND,West,0
+YouGov,773,3,-1.1,Nevada,9,2024-10-31,DEM,Harris,48
+YouGov,773,3,-1.1,Nevada,9,2024-10-31,REP,Trump,47
+YouGov,773,3,-1.1,Nevada,9,2024-10-31,GRE,Stein,0
+YouGov,773,3,-1.1,Nevada,9,2024-10-31,IND,West,0
+YouGov,790,3,-1.1,Nevada,9,2024-10-31,DEM,Harris,50
+YouGov,790,3,-1.1,Nevada,9,2024-10-31,REP,Trump,49
+YouGov,773,3,-1.1,Nevada,9,2024-10-31,DEM,Harris,50
+YouGov,773,3,-1.1,Nevada,9,2024-10-31,REP,Trump,49
+YouGov,987,3,-1.1,North Carolina,9,2024-10-31,DEM,Harris,47
+YouGov,987,3,-1.1,North Carolina,9,2024-10-31,REP,Trump,48
+YouGov,987,3,-1.1,North Carolina,9,2024-10-31,GRE,Stein,1
+YouGov,987,3,-1.1,North Carolina,9,2024-10-31,IND,West,0
+YouGov,949,3,-1.1,North Carolina,9,2024-10-31,DEM,Harris,48
+YouGov,949,3,-1.1,North Carolina,9,2024-10-31,REP,Trump,49
+YouGov,949,3,-1.1,North Carolina,9,2024-10-31,GRE,Stein,1
+YouGov,949,3,-1.1,North Carolina,9,2024-10-31,IND,West,0
+YouGov,987,3,-1.1,North Carolina,9,2024-10-31,DEM,Harris,49
+YouGov,987,3,-1.1,North Carolina,9,2024-10-31,REP,Trump,49
+YouGov,949,3,-1.1,North Carolina,9,2024-10-31,DEM,Harris,49
+YouGov,949,3,-1.1,North Carolina,9,2024-10-31,REP,Trump,50
+YouGov,982,3,-1.1,Pennsylvania,9,2024-10-31,DEM,Harris,48
+YouGov,982,3,-1.1,Pennsylvania,9,2024-10-31,REP,Trump,46
+YouGov,982,3,-1.1,Pennsylvania,9,2024-10-31,GRE,Stein,1
+YouGov,982,3,-1.1,Pennsylvania,9,2024-10-31,IND,West,0
+YouGov,956,3,-1.1,Pennsylvania,9,2024-10-31,DEM,Harris,49
+YouGov,956,3,-1.1,Pennsylvania,9,2024-10-31,REP,Trump,46
+YouGov,956,3,-1.1,Pennsylvania,9,2024-10-31,GRE,Stein,0
+YouGov,956,3,-1.1,Pennsylvania,9,2024-10-31,IND,West,0
+YouGov,982,3,-1.1,Pennsylvania,9,2024-10-31,DEM,Harris,50
+YouGov,982,3,-1.1,Pennsylvania,9,2024-10-31,REP,Trump,48
+YouGov,956,3,-1.1,Pennsylvania,9,2024-10-31,DEM,Harris,51
+YouGov,956,3,-1.1,Pennsylvania,9,2024-10-31,REP,Trump,48
+YouGov,889,3,-1.1,Wisconsin,9,2024-10-31,DEM,Harris,48
+YouGov,889,3,-1.1,Wisconsin,9,2024-10-31,REP,Trump,45
+YouGov,889,3,-1.1,Wisconsin,9,2024-10-31,GRE,Stein,3
+YouGov,889,3,-1.1,Wisconsin,9,2024-10-31,IND,West,0
+YouGov,867,3,-1.1,Wisconsin,9,2024-10-31,DEM,Harris,49
+YouGov,867,3,-1.1,Wisconsin,9,2024-10-31,REP,Trump,45
+YouGov,867,3,-1.1,Wisconsin,9,2024-10-31,GRE,Stein,2
+YouGov,867,3,-1.1,Wisconsin,9,2024-10-31,IND,West,0
+YouGov,889,3,-1.1,Wisconsin,9,2024-10-31,DEM,Harris,51
+YouGov,889,3,-1.1,Wisconsin,9,2024-10-31,REP,Trump,47
+YouGov,867,3,-1.1,Wisconsin,9,2024-10-31,DEM,Harris,51
+YouGov,867,3,-1.1,Wisconsin,9,2024-10-31,REP,Trump,47
+Data for Progress,908,2.6,-1.2,Pennsylvania,10,2024-10-31,DEM,Harris,50
+Data for Progress,908,2.6,-1.2,Pennsylvania,10,2024-10-31,REP,Trump,48
+Data for Progress,908,2.6,-1.2,Pennsylvania,10,2024-10-31,LIB,Oliver,0
+Data for Progress,908,2.6,-1.2,Pennsylvania,10,2024-10-31,GRE,Stein,1
+Data for Progress,972,2.6,-1.2,Georgia,10,2024-10-31,DEM,Harris,49
+Data for Progress,972,2.6,-1.2,Georgia,10,2024-10-31,REP,Trump,48
+Data for Progress,972,2.6,-1.2,Georgia,10,2024-10-31,LIB,Oliver,1
+Data for Progress,972,2.6,-1.2,Georgia,10,2024-10-31,IND,West,0
+Data for Progress,972,2.6,-1.2,Georgia,10,2024-10-31,GRE,Stein,0
+TIPP,1265,1.8,-0.4,National,3,2024-10-30,DEM,Harris,48
+TIPP,1265,1.8,-0.4,National,3,2024-10-30,REP,Trump,48
+TIPP,1265,1.8,-0.4,National,3,2024-10-30,DEM,Harris,48
+TIPP,1265,1.8,-0.4,National,3,2024-10-30,REP,Trump,48
+TIPP,1265,1.8,-0.4,National,3,2024-10-30,IND,West,1
+TIPP,1265,1.8,-0.4,National,3,2024-10-30,GRE,Stein,0.9
+American Pulse,822,NA,NA,National,6,2024-10-30,DEM,Harris,47.7
+American Pulse,822,NA,NA,National,6,2024-10-30,REP,Trump,45.9
+American Pulse,822,NA,NA,National,6,2024-10-30,IND,Kennedy,1.8
+American Pulse,822,NA,NA,National,6,2024-10-30,GRE,Stein,1
+American Pulse,822,NA,NA,National,6,2024-10-30,IND,West,0.9
+American Pulse,822,NA,NA,National,6,2024-10-30,LIB,Oliver,0.4
+American Pulse,822,NA,NA,National,6,2024-10-30,DEM,Harris,49
+American Pulse,822,NA,NA,National,6,2024-10-30,REP,Trump,47.2
+Keating Research,600,1.5,0.1,Colorado,3,2024-10-30,DEM,Harris,53
+Keating Research,600,1.5,0.1,Colorado,3,2024-10-30,REP,Trump,41
+TIPP,1038,1.8,-0.4,Wisconsin,3,2024-10-30,DEM,Harris,48
+TIPP,1038,1.8,-0.4,Wisconsin,3,2024-10-30,REP,Trump,46
+TIPP,831,1.8,-0.4,Wisconsin,3,2024-10-30,DEM,Harris,48
+TIPP,831,1.8,-0.4,Wisconsin,3,2024-10-30,REP,Trump,48
+TIPP,1038,1.8,-0.4,Wisconsin,3,2024-10-30,DEM,Harris,46
+TIPP,1038,1.8,-0.4,Wisconsin,3,2024-10-30,REP,Trump,44
+TIPP,1038,1.8,-0.4,Wisconsin,3,2024-10-30,IND,Kennedy,3
+TIPP,1038,1.8,-0.4,Wisconsin,3,2024-10-30,IND,West,1
+TIPP,1038,1.8,-0.4,Wisconsin,3,2024-10-30,GRE,Stein,1
+TIPP,831,1.8,-0.4,Wisconsin,3,2024-10-30,DEM,Harris,48
+TIPP,831,1.8,-0.4,Wisconsin,3,2024-10-30,REP,Trump,47
+TIPP,831,1.8,-0.4,Wisconsin,3,2024-10-30,IND,Kennedy,3
+TIPP,831,1.8,-0.4,Wisconsin,3,2024-10-30,IND,West,1
+TIPP,831,1.8,-0.4,Wisconsin,3,2024-10-30,GRE,Stein,1
+Noble Predictive Insights,775,2.4,-0.4,Arizona,6,2024-10-30,DEM,Harris,47
+Noble Predictive Insights,775,2.4,-0.4,Arizona,6,2024-10-30,REP,Trump,48
+Noble Predictive Insights,775,2.4,-0.4,Arizona,6,2024-10-30,LIB,Oliver,0
+Noble Predictive Insights,775,2.4,-0.4,Arizona,6,2024-10-30,GRE,Stein,2
+OnMessage Inc.,800,1.1,0.2,National,1,2024-10-30,DEM,Harris,45
+OnMessage Inc.,800,1.1,0.2,National,1,2024-10-30,REP,Trump,47
+Chism Strategies,520,2.4,-0.3,Virginia,1,2024-10-30,DEM,Harris,45.2
+Chism Strategies,520,2.4,-0.3,Virginia,1,2024-10-30,REP,Trump,44.5
+Chism Strategies,520,2.4,-0.3,Virginia,1,2024-10-30,LIB,Oliver,0.6
+Chism Strategies,520,2.4,-0.3,Virginia,1,2024-10-30,GRE,Stein,1.3
+Chism Strategies,534,2.4,-0.3,Minnesota,1,2024-10-30,DEM,Harris,48.3
+Chism Strategies,534,2.4,-0.3,Minnesota,1,2024-10-30,REP,Trump,42.9
+Chism Strategies,534,2.4,-0.3,Minnesota,1,2024-10-30,IND,Kennedy,0.9
+Chism Strategies,534,2.4,-0.3,Minnesota,1,2024-10-30,LIB,Oliver,0.3
+Chism Strategies,534,2.4,-0.3,Minnesota,1,2024-10-30,GRE,Stein,1
+Chism Strategies,510,2.4,-0.3,Maryland,1,2024-10-30,DEM,Harris,55.8
+Chism Strategies,510,2.4,-0.3,Maryland,1,2024-10-30,REP,Trump,33.3
+Chism Strategies,510,2.4,-0.3,Maryland,1,2024-10-30,IND,Kennedy,0.2
+Chism Strategies,510,2.4,-0.3,Maryland,1,2024-10-30,LIB,Oliver,0.2
+Chism Strategies,510,2.4,-0.3,Maryland,1,2024-10-30,GRE,Stein,1.3
+Echelon Insights,600,2.7,-0.8,Wisconsin,9,2024-10-30,DEM,Harris,48
+Echelon Insights,600,2.7,-0.8,Wisconsin,9,2024-10-30,REP,Trump,48
+Echelon Insights,600,2.7,-0.8,Wisconsin,9,2024-10-30,IND,Kennedy,0
+Echelon Insights,600,2.7,-0.8,Wisconsin,9,2024-10-30,GRE,Stein,1
+Echelon Insights,600,2.7,-0.8,Wisconsin,9,2024-10-30,LIB,Oliver,0
+Echelon Insights,600,2.7,-0.8,Wisconsin,9,2024-10-30,IND,West,0
+Echelon Insights,600,2.7,-0.8,Wisconsin,9,2024-10-30,DEM,Harris,49
+Echelon Insights,600,2.7,-0.8,Wisconsin,9,2024-10-30,REP,Trump,49
+Echelon Insights,600,2.7,-0.8,Michigan,9,2024-10-30,DEM,Harris,47
+Echelon Insights,600,2.7,-0.8,Michigan,9,2024-10-30,REP,Trump,47
+Echelon Insights,600,2.7,-0.8,Michigan,9,2024-10-30,IND,Kennedy,1
+Echelon Insights,600,2.7,-0.8,Michigan,9,2024-10-30,GRE,Stein,0
+Echelon Insights,600,2.7,-0.8,Michigan,9,2024-10-30,LIB,Oliver,0
+Echelon Insights,600,2.7,-0.8,Michigan,9,2024-10-30,IND,West,0
+Echelon Insights,600,2.7,-0.8,Michigan,9,2024-10-30,DEM,Harris,48
+Echelon Insights,600,2.7,-0.8,Michigan,9,2024-10-30,REP,Trump,48
+Echelon Insights,600,2.7,-0.8,Pennsylvania,9,2024-10-30,DEM,Harris,46
+Echelon Insights,600,2.7,-0.8,Pennsylvania,9,2024-10-30,REP,Trump,51
+Echelon Insights,600,2.7,-0.8,Pennsylvania,9,2024-10-30,GRE,Stein,1
+Echelon Insights,600,2.7,-0.8,Pennsylvania,9,2024-10-30,LIB,Oliver,0
+Echelon Insights,600,2.7,-0.8,Pennsylvania,9,2024-10-30,DEM,Harris,46
+Echelon Insights,600,2.7,-0.8,Pennsylvania,9,2024-10-30,REP,Trump,52
+Suffolk,500,2.9,-1,Pennsylvania,8,2024-10-30,DEM,Harris,48.6
+Suffolk,500,2.9,-1,Pennsylvania,8,2024-10-30,REP,Trump,48.6
+Suffolk,500,2.9,-1,Pennsylvania,8,2024-10-30,LIB,Oliver,0.6
+Suffolk,500,2.9,-1,Pennsylvania,8,2024-10-30,GRE,Stein,0.4
+Marist,1444,2.9,-0.9,Wisconsin,9,2024-10-30,DEM,Harris,50
+Marist,1444,2.9,-0.9,Wisconsin,9,2024-10-30,REP,Trump,48
+Marist,1330,2.9,-0.9,Wisconsin,9,2024-10-30,DEM,Harris,50
+Marist,1330,2.9,-0.9,Wisconsin,9,2024-10-30,REP,Trump,48
+Marist,1558,2.9,-0.9,Pennsylvania,9,2024-10-30,DEM,Harris,51
+Marist,1558,2.9,-0.9,Pennsylvania,9,2024-10-30,REP,Trump,47
+Marist,1400,2.9,-0.9,Pennsylvania,9,2024-10-30,DEM,Harris,50
+Marist,1400,2.9,-0.9,Pennsylvania,9,2024-10-30,REP,Trump,48
+Marist,1356,2.9,-0.9,Michigan,9,2024-10-30,DEM,Harris,51
+Marist,1356,2.9,-0.9,Michigan,9,2024-10-30,REP,Trump,48
+Marist,1214,2.9,-0.9,Michigan,9,2024-10-30,DEM,Harris,51
+Marist,1214,2.9,-0.9,Michigan,9,2024-10-30,REP,Trump,48
+Cygnal,611,2.1,-1.1,California,4,2024-10-30,DEM,Harris,55.4
+Cygnal,611,2.1,-1.1,California,4,2024-10-30,REP,Trump,30.9
+Cygnal,611,2.1,-1.1,California,4,2024-10-30,IND,Kennedy,4.4
+Cygnal,611,2.1,-1.1,California,4,2024-10-30,LIB,Oliver,0.6
+Cygnal,611,2.1,-1.1,California,4,2024-10-30,GRE,Stein,1.8
+Cygnal,611,2.1,-1.1,California,4,2024-10-30,PSL,De la Cruz,1.8
+Quantus Insights,1832,NA,NA,National,5.5,2024-10-30,DEM,Harris,48.3
+Quantus Insights,1832,NA,NA,National,5.5,2024-10-30,REP,Trump,49.1
+The Washington Post,1204,3,-1.2,Pennsylvania,9,2024-10-30,DEM,Harris,48
+The Washington Post,1204,3,-1.2,Pennsylvania,9,2024-10-30,REP,Trump,47
+The Washington Post,1204,3,-1.2,Pennsylvania,9,2024-10-30,DEM,Harris,48
+The Washington Post,1204,3,-1.2,Pennsylvania,9,2024-10-30,REP,Trump,47
+Data for Progress,1079,2.6,-1.2,Arizona,10,2024-10-30,DEM,Harris,47
+Data for Progress,1079,2.6,-1.2,Arizona,10,2024-10-30,REP,Trump,48
+Data for Progress,1079,2.6,-1.2,Arizona,10,2024-10-30,LIB,Oliver,0
+Data for Progress,1079,2.6,-1.2,Arizona,10,2024-10-30,GRE,Stein,1
+Data for Progress,721,2.6,-1.2,Nevada,10,2024-10-30,DEM,Harris,49
+Data for Progress,721,2.6,-1.2,Nevada,10,2024-10-30,REP,Trump,47
+Data for Progress,721,2.6,-1.2,Nevada,10,2024-10-30,LIB,Oliver,1
+Data for Progress,721,2.6,-1.2,Nevada,10,2024-10-30,CON,Skousen,0
+ActiVote,400,NA,NA,Utah,8,2024-10-30,DEM,Harris,40
+ActiVote,400,NA,NA,Utah,8,2024-10-30,REP,Trump,60
+ActiVote,400,NA,NA,Maryland,8,2024-10-30,DEM,Harris,63.5
+ActiVote,400,NA,NA,Maryland,8,2024-10-30,REP,Trump,36.5
+ActiVote,400,NA,NA,Massachusetts,8,2024-10-30,DEM,Harris,66.3
+ActiVote,400,NA,NA,Massachusetts,8,2024-10-30,REP,Trump,33.7
+ActiVote,400,NA,NA,Colorado,8,2024-10-30,DEM,Harris,56.6
+ActiVote,400,NA,NA,Colorado,8,2024-10-30,REP,Trump,43.4
+RABA Research,781,1.3,0.6,National,7,2024-10-29,DEM,Harris,48
+RABA Research,781,1.3,0.6,National,7,2024-10-29,REP,Trump,44
+SoCal Strategies,600,NA,NA,Wisconsin,9,2024-10-29,DEM,Harris,49
+SoCal Strategies,600,NA,NA,Wisconsin,9,2024-10-29,REP,Trump,49
+St. Anselm,2791,2.4,-0.5,New Hampshire,6,2024-10-29,DEM,Harris,51
+St. Anselm,2791,2.4,-0.5,New Hampshire,6,2024-10-29,REP,Trump,46
+St. Anselm,2791,2.4,-0.5,New Hampshire,6,2024-10-29,LIB,Oliver,1
+St. Anselm,2791,2.4,-0.5,New Hampshire,6,2024-10-29,IND,West,0
+St. Anselm,2791,2.4,-0.5,New Hampshire,6,2024-10-29,GRE,Stein,0
+Mitchell,NA,2.4,-0.2,Michigan,7,2024-10-29,DEM,Harris,47
+Mitchell,NA,2.4,-0.2,Michigan,7,2024-10-29,REP,Trump,48
+Quantus Insights,637,NA,NA,Wisconsin,5.5,2024-10-29,DEM,Harris,48.9
+Quantus Insights,637,NA,NA,Wisconsin,5.5,2024-10-29,REP,Trump,49.1
+Remington,721,2.6,-0.6,Missouri,7,2024-10-29,DEM,Harris,40
+Remington,721,2.6,-0.6,Missouri,7,2024-10-29,REP,Trump,54
+Remington,721,2.6,-0.6,Missouri,7,2024-10-29,LIB,Oliver,1
+Remington,721,2.6,-0.6,Missouri,7,2024-10-29,GRE,Stein,1
+TIPP,1302,1.8,-0.4,National,3,2024-10-29,DEM,Harris,48.3
+TIPP,1302,1.8,-0.4,National,3,2024-10-29,REP,Trump,47.5
+TIPP,1302,1.8,-0.4,National,3,2024-10-29,GRE,Stein,1.1
+TIPP,1302,1.8,-0.4,National,3,2024-10-29,IND,West,0.7
+TIPP,1302,1.8,-0.4,National,3,2024-10-29,DEM,Harris,48
+TIPP,1302,1.8,-0.4,National,3,2024-10-29,REP,Trump,47
+HarrisX,4523,1.5,-0.1,National,6,2024-10-29,DEM,Harris,51
+HarrisX,4523,1.5,-0.1,National,6,2024-10-29,REP,Trump,49
+HarrisX,3718,1.5,-0.1,National,6,2024-10-29,DEM,Harris,51
+HarrisX,3718,1.5,-0.1,National,6,2024-10-29,REP,Trump,49
+HarrisX,4523,1.5,-0.1,National,6,2024-10-29,DEM,Harris,48
+HarrisX,4523,1.5,-0.1,National,6,2024-10-29,REP,Trump,47
+HarrisX,4523,1.5,-0.1,National,6,2024-10-29,IND,West,3
+HarrisX,4523,1.5,-0.1,National,6,2024-10-29,GRE,Stein,2
+HarrisX,3718,1.5,-0.1,National,6,2024-10-29,DEM,Harris,49
+HarrisX,3718,1.5,-0.1,National,6,2024-10-29,REP,Trump,48
+HarrisX,3718,1.5,-0.1,National,6,2024-10-29,IND,West,2
+HarrisX,3718,1.5,-0.1,National,6,2024-10-29,GRE,Stein,1
+Cygnal,600,2.1,-1.1,Virginia,4,2024-10-29,DEM,Harris,50.3
+Cygnal,600,2.1,-1.1,Virginia,4,2024-10-29,REP,Trump,42.7
+Cygnal,600,2.1,-1.1,Virginia,4,2024-10-29,GRE,Stein,1.1
+Cygnal,600,2.1,-1.1,Virginia,4,2024-10-29,IND,West,0.6
+Cygnal,600,2.1,-1.1,Virginia,4,2024-10-29,PSL,De la Cruz,0.3
+Cygnal,600,2.1,-1.1,Virginia,4,2024-10-29,LIB,Oliver,0.3
+Big Data Poll,2814,1.1,0.2,National,7,2024-10-29,DEM,Harris,49.7
+Big Data Poll,2814,1.1,0.2,National,7,2024-10-29,REP,Trump,50.3
+Big Data Poll,2992,1.1,0.2,National,7,2024-10-29,DEM,Harris,49.9
+Big Data Poll,2992,1.1,0.2,National,7,2024-10-29,REP,Trump,50.1
+Big Data Poll,2814,1.1,0.2,National,7,2024-10-29,DEM,Harris,47.3
+Big Data Poll,2814,1.1,0.2,National,7,2024-10-29,REP,Trump,48
+Big Data Poll,2814,1.1,0.2,National,7,2024-10-29,LIB,Oliver,1.8
+Big Data Poll,2814,1.1,0.2,National,7,2024-10-29,IND,West,0.6
+Big Data Poll,2814,1.1,0.2,National,7,2024-10-29,GRE,Stein,1.2
+Big Data Poll,2992,1.1,0.2,National,7,2024-10-29,DEM,Harris,46.8
+Big Data Poll,2992,1.1,0.2,National,7,2024-10-29,REP,Trump,47
+Big Data Poll,2992,1.1,0.2,National,7,2024-10-29,LIB,Oliver,1.8
+Big Data Poll,2992,1.1,0.2,National,7,2024-10-29,IND,West,1.1
+Big Data Poll,2992,1.1,0.2,National,7,2024-10-29,GRE,Stein,2
+YouGov,1446,3,-1.1,National,9,2024-10-29,DEM,Harris,47
+YouGov,1446,3,-1.1,National,9,2024-10-29,REP,Trump,46
+YouGov,1446,3,-1.1,National,9,2024-10-29,GRE,Stein,1
+YouGov,1446,3,-1.1,National,9,2024-10-29,IND,West,0
+YouGov,1310,3,-1.1,National,9,2024-10-29,DEM,Harris,49
+YouGov,1310,3,-1.1,National,9,2024-10-29,REP,Trump,47
+YouGov,1310,3,-1.1,National,9,2024-10-29,GRE,Stein,1
+YouGov,1310,3,-1.1,National,9,2024-10-29,IND,West,0
+J.L. Partners,1000,1.6,0.2,National,6,2024-10-29,DEM,Harris,46
+J.L. Partners,1000,1.6,0.2,National,6,2024-10-29,REP,Trump,49
+J.L. Partners,1000,1.6,0.2,National,6,2024-10-29,IND,Kennedy,1
+J.L. Partners,1000,1.6,0.2,National,6,2024-10-29,GRE,Stein,1
+J.L. Partners,1000,1.6,0.2,National,6,2024-10-29,LIB,Oliver,1
+J.L. Partners,1000,1.6,0.2,National,6,2024-10-29,IND,West,0
+J.L. Partners,1000,1.6,0.2,National,6,2024-10-29,DEM,Harris,47
+J.L. Partners,1000,1.6,0.2,National,6,2024-10-29,REP,Trump,50
+AtlasIntel,3032,2.7,-0.8,National,6,2024-10-29,DEM,Harris,47
+AtlasIntel,3032,2.7,-0.8,National,6,2024-10-29,REP,Trump,49.5
+AtlasIntel,3032,2.7,-0.8,National,6,2024-10-29,GRE,Stein,0.8
+AtlasIntel,3032,2.7,-0.8,National,6,2024-10-29,IND,West,0.3
+AtlasIntel,3032,2.7,-0.8,National,6,2024-10-29,LIB,Oliver,0.2
+AtlasIntel,3032,2.7,-0.8,National,6,2024-10-29,DEM,Harris,48.1
+AtlasIntel,3032,2.7,-0.8,National,6,2024-10-29,REP,Trump,49.8
+AtlasIntel,1458,2.7,-0.8,Arizona,6,2024-10-29,DEM,Harris,46.4
+AtlasIntel,1458,2.7,-0.8,Arizona,6,2024-10-29,REP,Trump,50.6
+AtlasIntel,1458,2.7,-0.8,Arizona,6,2024-10-29,GRE,Stein,1
+AtlasIntel,1458,2.7,-0.8,Arizona,6,2024-10-29,LIB,Oliver,0.1
+AtlasIntel,1458,2.7,-0.8,Arizona,6,2024-10-29,DEM,Harris,47.3
+AtlasIntel,1458,2.7,-0.8,Arizona,6,2024-10-29,REP,Trump,50.8
+AtlasIntel,1429,2.7,-0.8,Georgia,6,2024-10-29,DEM,Harris,47.1
+AtlasIntel,1429,2.7,-0.8,Georgia,6,2024-10-29,REP,Trump,50.2
+AtlasIntel,1429,2.7,-0.8,Georgia,6,2024-10-29,GRE,Stein,0.9
+AtlasIntel,1429,2.7,-0.8,Georgia,6,2024-10-29,LIB,Oliver,0.6
+AtlasIntel,1429,2.7,-0.8,Georgia,6,2024-10-29,DEM,Harris,47.5
+AtlasIntel,1429,2.7,-0.8,Georgia,6,2024-10-29,REP,Trump,50.9
+AtlasIntel,983,2.7,-0.8,Michigan,6,2024-10-29,DEM,Harris,47.9
+AtlasIntel,983,2.7,-0.8,Michigan,6,2024-10-29,REP,Trump,49.2
+AtlasIntel,983,2.7,-0.8,Michigan,6,2024-10-29,GRE,Stein,1.8
+AtlasIntel,983,2.7,-0.8,Michigan,6,2024-10-29,LIB,Oliver,0.2
+AtlasIntel,983,2.7,-0.8,Michigan,6,2024-10-29,DEM,Harris,48.1
+AtlasIntel,983,2.7,-0.8,Michigan,6,2024-10-29,REP,Trump,49.3
+AtlasIntel,1083,2.7,-0.8,Nevada,6,2024-10-29,DEM,Harris,47.5
+AtlasIntel,1083,2.7,-0.8,Nevada,6,2024-10-29,REP,Trump,48.4
+AtlasIntel,1083,2.7,-0.8,Nevada,6,2024-10-29,DEM,Harris,47.6
+AtlasIntel,1083,2.7,-0.8,Nevada,6,2024-10-29,REP,Trump,48.5
+AtlasIntel,1665,2.7,-0.8,North Carolina,6,2024-10-29,DEM,Harris,48.5
+AtlasIntel,1665,2.7,-0.8,North Carolina,6,2024-10-29,REP,Trump,48.4
+AtlasIntel,1665,2.7,-0.8,North Carolina,6,2024-10-29,GRE,Stein,0.8
+AtlasIntel,1665,2.7,-0.8,North Carolina,6,2024-10-29,LIB,Oliver,0.4
+AtlasIntel,1665,2.7,-0.8,North Carolina,6,2024-10-29,DEM,Harris,48.9
+AtlasIntel,1665,2.7,-0.8,North Carolina,6,2024-10-29,REP,Trump,48.4
+AtlasIntel,1299,2.7,-0.8,Pennsylvania,6,2024-10-29,DEM,Harris,46.6
+AtlasIntel,1299,2.7,-0.8,Pennsylvania,6,2024-10-29,REP,Trump,48.7
+AtlasIntel,1299,2.7,-0.8,Pennsylvania,6,2024-10-29,GRE,Stein,0.9
+AtlasIntel,1299,2.7,-0.8,Pennsylvania,6,2024-10-29,LIB,Oliver,0.6
+AtlasIntel,1299,2.7,-0.8,Pennsylvania,6,2024-10-29,DEM,Harris,46.9
+AtlasIntel,1299,2.7,-0.8,Pennsylvania,6,2024-10-29,REP,Trump,49.6
+AtlasIntel,1470,2.7,-0.8,Wisconsin,6,2024-10-29,DEM,Harris,48.1
+AtlasIntel,1470,2.7,-0.8,Wisconsin,6,2024-10-29,REP,Trump,48.7
+AtlasIntel,1470,2.7,-0.8,Wisconsin,6,2024-10-29,GRE,Stein,0.6
+AtlasIntel,1470,2.7,-0.8,Wisconsin,6,2024-10-29,LIB,Oliver,0.5
+AtlasIntel,1470,2.7,-0.8,Wisconsin,6,2024-10-29,DEM,Harris,48.5
+AtlasIntel,1470,2.7,-0.8,Wisconsin,6,2024-10-29,REP,Trump,49
+Roanoke College,851,2.6,-0.4,Virginia,7,2024-10-29,DEM,Harris,51
+Roanoke College,851,2.6,-0.4,Virginia,7,2024-10-29,REP,Trump,41
+Roanoke College,851,2.6,-0.4,Virginia,7,2024-10-29,IND,West,2
+Roanoke College,851,2.6,-0.4,Virginia,7,2024-10-29,GRE,Stein,1
+Roanoke College,851,2.6,-0.4,Virginia,7,2024-10-29,LIB,Oliver,2
+SurveyUSA,1079,2.8,-1.3,Maine,8,2024-10-29,DEM,Harris,51
+SurveyUSA,1079,2.8,-1.3,Maine,8,2024-10-29,REP,Trump,43
+SurveyUSA,1079,2.8,-1.3,Maine,8,2024-10-29,GRE,Stein,1
+SurveyUSA,1079,2.8,-1.3,Maine,8,2024-10-29,LIB,Oliver,1
+SurveyUSA,1079,2.8,-1.3,Maine,8,2024-10-29,IND,West,1
+SurveyUSA,482,2.8,-1.3,Maine CD-1,8,2024-10-29,DEM,Harris,58
+SurveyUSA,482,2.8,-1.3,Maine CD-1,8,2024-10-29,REP,Trump,37
+SurveyUSA,482,2.8,-1.3,Maine CD-1,8,2024-10-29,IND,West,1
+SurveyUSA,482,2.8,-1.3,Maine CD-1,8,2024-10-29,GRE,Stein,1
+SurveyUSA,482,2.8,-1.3,Maine CD-1,8,2024-10-29,LIB,Oliver,0
+SurveyUSA,484,2.8,-1.3,Maine CD-2,8,2024-10-29,DEM,Harris,44
+SurveyUSA,484,2.8,-1.3,Maine CD-2,8,2024-10-29,REP,Trump,49
+SurveyUSA,484,2.8,-1.3,Maine CD-2,8,2024-10-29,LIB,Oliver,1
+SurveyUSA,484,2.8,-1.3,Maine CD-2,8,2024-10-29,IND,West,1
+SurveyUSA,484,2.8,-1.3,Maine CD-2,8,2024-10-29,GRE,Stein,1
+UC Berkeley,4341,2.5,-0.2,California,9,2024-10-29,DEM,Harris,57
+UC Berkeley,4341,2.5,-0.2,California,9,2024-10-29,REP,Trump,35
+UC Berkeley,4341,2.5,-0.2,California,9,2024-10-29,IND,Kennedy,1
+UC Berkeley,4341,2.5,-0.2,California,9,2024-10-29,GRE,Stein,1
+UC Berkeley,4341,2.5,-0.2,California,9,2024-10-29,PSL,De la Cruz,0
+UC Berkeley,4341,2.5,-0.2,California,9,2024-10-29,LIB,Oliver,0
+ActiVote,400,NA,NA,South Carolina,8,2024-10-29,DEM,Harris,41.5
+ActiVote,400,NA,NA,South Carolina,8,2024-10-29,REP,Trump,58.5
+ActiVote,400,NA,NA,Washington,8,2024-10-29,DEM,Harris,59.1
+ActiVote,400,NA,NA,Washington,8,2024-10-29,REP,Trump,40.9
+ActiVote,400,NA,NA,Oklahoma,8,2024-10-29,DEM,Harris,33.2
+ActiVote,400,NA,NA,Oklahoma,8,2024-10-29,REP,Trump,66.8
+TIPP,1291,1.8,-0.4,National,3,2024-10-28,DEM,Harris,48
+TIPP,1291,1.8,-0.4,National,3,2024-10-28,REP,Trump,47
+Data Orbital,550,2.9,-0.9,Arizona,10,2024-10-28,DEM,Harris,41.9
+Data Orbital,550,2.9,-0.9,Arizona,10,2024-10-28,REP,Trump,49.7
+Data Orbital,550,2.9,-0.9,Arizona,10,2024-10-28,LIB,Oliver,0.7
+Data Orbital,550,2.9,-0.9,Arizona,10,2024-10-28,GRE,Stein,1
+Quantus Insights,844,NA,NA,Michigan,5.5,2024-10-28,DEM,Harris,49.2
+Quantus Insights,844,NA,NA,Michigan,5.5,2024-10-28,REP,Trump,48.5
+Cygnal,600,2.1,-1.1,Texas,4,2024-10-28,DEM,Harris,43
+Cygnal,600,2.1,-1.1,Texas,4,2024-10-28,REP,Trump,51
+Cygnal,600,2.1,-1.1,Florida,4,2024-10-28,DEM,Harris,43.1
+Cygnal,600,2.1,-1.1,Florida,4,2024-10-28,REP,Trump,48.2
+Cygnal,600,2.1,-1.1,Florida,4,2024-10-28,LIB,Oliver,0.7
+Cygnal,600,2.1,-1.1,Florida,4,2024-10-28,GRE,Stein,1.1
+Cygnal,600,2.1,-1.1,Florida,4,2024-10-28,OTH,Sonski,0.7
+Cygnal,600,2.1,-1.1,Florida,4,2024-10-28,CON,Terry,0.4
+Cygnal,600,2.1,-1.1,Florida,4,2024-10-28,PSL,De la Cruz,0.7
+Cygnal,600,2.1,-1.1,Wyoming,4,2024-10-28,DEM,Harris,26.5
+Cygnal,600,2.1,-1.1,Wyoming,4,2024-10-28,REP,Trump,69
+Cygnal,600,2.1,-1.1,Wyoming,4,2024-10-28,LIB,Oliver,2.4
+Trafalgar Group,1091,0.7,0.6,North Carolina,4,2024-10-28,DEM,Harris,46.2
+Trafalgar Group,1091,0.7,0.6,North Carolina,4,2024-10-28,REP,Trump,49.4
+Trafalgar Group,1082,0.7,0.6,Nevada,4,2024-10-28,DEM,Harris,47.8
+Trafalgar Group,1082,0.7,0.6,Nevada,4,2024-10-28,REP,Trump,47.6
+Trafalgar Group,1127,0.7,0.6,Ohio,4,2024-10-28,DEM,Harris,45.6
+Trafalgar Group,1127,0.7,0.6,Ohio,4,2024-10-28,REP,Trump,51.7
+Noble Predictive Insights,695,2.4,-0.4,Utah,6,2024-10-28,DEM,Harris,34
+Noble Predictive Insights,695,2.4,-0.4,Utah,6,2024-10-28,REP,Trump,54
+Noble Predictive Insights,695,2.4,-0.4,Utah,6,2024-10-28,LIB,Oliver,1
+Noble Predictive Insights,695,2.4,-0.4,Utah,6,2024-10-28,GRE,Stein,0
+Noble Predictive Insights,695,2.4,-0.4,Utah,6,2024-10-28,CON,Skousen,1
+Noble Predictive Insights,695,2.4,-0.4,Utah,6,2024-10-28,IND,West,0
+Noble Predictive Insights,695,2.4,-0.4,Utah,6,2024-10-28,PSL,De la Cruz,1
+HarrisX,1717,1.5,-0.1,National,6,2024-10-28,DEM,Harris,50
+HarrisX,1717,1.5,-0.1,National,6,2024-10-28,REP,Trump,50
+HarrisX,1475,1.5,-0.1,National,6,2024-10-28,DEM,Harris,50
+HarrisX,1475,1.5,-0.1,National,6,2024-10-28,REP,Trump,50
+HarrisX,1717,1.5,-0.1,National,6,2024-10-28,DEM,Harris,49
+HarrisX,1717,1.5,-0.1,National,6,2024-10-28,REP,Trump,48
+HarrisX,1717,1.5,-0.1,National,6,2024-10-28,IND,West,2
+HarrisX,1717,1.5,-0.1,National,6,2024-10-28,GRE,Stein,1
+HarrisX,1475,1.5,-0.1,National,6,2024-10-28,DEM,Harris,49
+HarrisX,1475,1.5,-0.1,National,6,2024-10-28,REP,Trump,49
+HarrisX,1475,1.5,-0.1,National,6,2024-10-28,IND,West,1
+HarrisX,1475,1.5,-0.1,National,6,2024-10-28,GRE,Stein,1
+SurveyUSA,728,2.8,-1.3,Minnesota,8,2024-10-28,DEM,Harris,51
+SurveyUSA,728,2.8,-1.3,Minnesota,8,2024-10-28,REP,Trump,43
+Monmouth,824,2.9,-0.9,Pennsylvania,9,2024-10-28,DEM,Harris,46
+Monmouth,824,2.9,-0.9,Pennsylvania,9,2024-10-28,REP,Trump,47
+Quinnipiac,2186,2.8,-0.5,Pennsylvania,9,2024-10-28,DEM,Harris,46
+Quinnipiac,2186,2.8,-0.5,Pennsylvania,9,2024-10-28,REP,Trump,47
+Quinnipiac,2186,2.8,-0.5,Pennsylvania,9,2024-10-28,GRE,Stein,2
+Quinnipiac,2186,2.8,-0.5,Pennsylvania,9,2024-10-28,LIB,Oliver,1
+Quinnipiac,2186,2.8,-0.5,Pennsylvania,9,2024-10-28,DEM,Harris,47
+Quinnipiac,2186,2.8,-0.5,Pennsylvania,9,2024-10-28,REP,Trump,49
+Beacon/Shaw,1310,2.8,-1.1,Pennsylvania,9,2024-10-28,DEM,Harris,48
+Beacon/Shaw,1310,2.8,-1.1,Pennsylvania,9,2024-10-28,REP,Trump,46
+Beacon/Shaw,1310,2.8,-1.1,Pennsylvania,9,2024-10-28,GRE,Stein,1
+Beacon/Shaw,1310,2.8,-1.1,Pennsylvania,9,2024-10-28,LIB,Oliver,1
+Beacon/Shaw,1057,2.8,-1.1,Pennsylvania,9,2024-10-28,DEM,Harris,48
+Beacon/Shaw,1057,2.8,-1.1,Pennsylvania,9,2024-10-28,REP,Trump,48
+Beacon/Shaw,1057,2.8,-1.1,Pennsylvania,9,2024-10-28,GRE,Stein,1
+Beacon/Shaw,1057,2.8,-1.1,Pennsylvania,9,2024-10-28,LIB,Oliver,0
+Beacon/Shaw,1310,2.8,-1.1,Pennsylvania,9,2024-10-28,DEM,Harris,50
+Beacon/Shaw,1310,2.8,-1.1,Pennsylvania,9,2024-10-28,REP,Trump,48
+Beacon/Shaw,1057,2.8,-1.1,Pennsylvania,9,2024-10-28,DEM,Harris,49
+Beacon/Shaw,1057,2.8,-1.1,Pennsylvania,9,2024-10-28,REP,Trump,50
+Beacon/Shaw,988,2.8,-1.1,Michigan,9,2024-10-28,DEM,Harris,48
+Beacon/Shaw,988,2.8,-1.1,Michigan,9,2024-10-28,REP,Trump,46
+Beacon/Shaw,988,2.8,-1.1,Michigan,9,2024-10-28,IND,Kennedy,3
+Beacon/Shaw,988,2.8,-1.1,Michigan,9,2024-10-28,IND,West,1
+Beacon/Shaw,988,2.8,-1.1,Michigan,9,2024-10-28,GRE,Stein,0
+Beacon/Shaw,988,2.8,-1.1,Michigan,9,2024-10-28,LIB,Oliver,1
+Beacon/Shaw,1275,2.8,-1.1,Michigan,9,2024-10-28,DEM,Harris,49
+Beacon/Shaw,1275,2.8,-1.1,Michigan,9,2024-10-28,REP,Trump,45
+Beacon/Shaw,1275,2.8,-1.1,Michigan,9,2024-10-28,IND,Kennedy,3
+Beacon/Shaw,1275,2.8,-1.1,Michigan,9,2024-10-28,IND,West,1
+Beacon/Shaw,1275,2.8,-1.1,Michigan,9,2024-10-28,GRE,Stein,0
+Beacon/Shaw,1275,2.8,-1.1,Michigan,9,2024-10-28,LIB,Oliver,1
+Beacon/Shaw,988,2.8,-1.1,Michigan,9,2024-10-28,DEM,Harris,49
+Beacon/Shaw,988,2.8,-1.1,Michigan,9,2024-10-28,REP,Trump,49
+Beacon/Shaw,1275,2.8,-1.1,Michigan,9,2024-10-28,DEM,Harris,50
+Beacon/Shaw,1275,2.8,-1.1,Michigan,9,2024-10-28,REP,Trump,48
+Beacon/Shaw,872,2.8,-1.1,North Carolina,9,2024-10-28,DEM,Harris,47
+Beacon/Shaw,872,2.8,-1.1,North Carolina,9,2024-10-28,REP,Trump,49
+Beacon/Shaw,872,2.8,-1.1,North Carolina,9,2024-10-28,IND,West,1
+Beacon/Shaw,872,2.8,-1.1,North Carolina,9,2024-10-28,GRE,Stein,1
+Beacon/Shaw,872,2.8,-1.1,North Carolina,9,2024-10-28,LIB,Oliver,1
+Beacon/Shaw,1113,2.8,-1.1,North Carolina,9,2024-10-28,DEM,Harris,48
+Beacon/Shaw,1113,2.8,-1.1,North Carolina,9,2024-10-28,REP,Trump,47
+Beacon/Shaw,1113,2.8,-1.1,North Carolina,9,2024-10-28,IND,West,1
+Beacon/Shaw,1113,2.8,-1.1,North Carolina,9,2024-10-28,GRE,Stein,1
+Beacon/Shaw,1113,2.8,-1.1,North Carolina,9,2024-10-28,LIB,Oliver,1
+Beacon/Shaw,872,2.8,-1.1,North Carolina,9,2024-10-28,DEM,Harris,49
+Beacon/Shaw,872,2.8,-1.1,North Carolina,9,2024-10-28,REP,Trump,50
+Beacon/Shaw,1113,2.8,-1.1,North Carolina,9,2024-10-28,DEM,Harris,50
+Beacon/Shaw,1113,2.8,-1.1,North Carolina,9,2024-10-28,REP,Trump,49
+The Washington Post,1003,3,-1.2,Michigan,9,2024-10-28,DEM,Harris,47
+The Washington Post,1003,3,-1.2,Michigan,9,2024-10-28,REP,Trump,46
+The Washington Post,1003,3,-1.2,Michigan,9,2024-10-28,DEM,Harris,45
+The Washington Post,1003,3,-1.2,Michigan,9,2024-10-28,REP,Trump,47
+EPIC/MRA,600,1.9,-0.7,Michigan,3,2024-10-28,DEM,Harris,48
+EPIC/MRA,600,1.9,-0.7,Michigan,3,2024-10-28,REP,Trump,45
+EPIC/MRA,600,1.9,-0.7,Michigan,3,2024-10-28,GRE,Stein,3
+EPIC/MRA,600,1.9,-0.7,Michigan,3,2024-10-28,IND,Kennedy,3
+EPIC/MRA,600,1.9,-0.7,Michigan,3,2024-10-28,IND,West,1
+CNN/SSRS,726,2.8,-0.6,Michigan,10,2024-10-28,DEM,Harris,48
+CNN/SSRS,726,2.8,-0.6,Michigan,10,2024-10-28,REP,Trump,43
+CNN/SSRS,726,2.8,-0.6,Michigan,10,2024-10-28,IND,Kennedy,3
+CNN/SSRS,726,2.8,-0.6,Michigan,10,2024-10-28,IND,West,1
+CNN/SSRS,726,2.8,-0.6,Michigan,10,2024-10-28,GRE,Stein,2
+CNN/SSRS,726,2.8,-0.6,Michigan,10,2024-10-28,LIB,Oliver,0
+CNN/SSRS,819,2.8,-0.6,Pennsylvania,10,2024-10-28,DEM,Harris,48
+CNN/SSRS,819,2.8,-0.6,Pennsylvania,10,2024-10-28,REP,Trump,48
+CNN/SSRS,819,2.8,-0.6,Pennsylvania,10,2024-10-28,GRE,Stein,1
+CNN/SSRS,819,2.8,-0.6,Pennsylvania,10,2024-10-28,LIB,Oliver,1
+CNN/SSRS,736,2.8,-0.6,Wisconsin,10,2024-10-28,DEM,Harris,51
+CNN/SSRS,736,2.8,-0.6,Wisconsin,10,2024-10-28,REP,Trump,45
+CNN/SSRS,736,2.8,-0.6,Wisconsin,10,2024-10-28,IND,Kennedy,1
+CNN/SSRS,736,2.8,-0.6,Wisconsin,10,2024-10-28,IND,West,0
+CNN/SSRS,736,2.8,-0.6,Wisconsin,10,2024-10-28,GRE,Stein,1
+CNN/SSRS,736,2.8,-0.6,Wisconsin,10,2024-10-28,LIB,Oliver,0
+CNN/SSRS,732,2.8,-0.6,Georgia,10,2024-10-28,DEM,Harris,47
+CNN/SSRS,732,2.8,-0.6,Georgia,10,2024-10-28,REP,Trump,48
+CNN/SSRS,732,2.8,-0.6,Georgia,10,2024-10-28,GRE,Stein,1
+CNN/SSRS,732,2.8,-0.6,Georgia,10,2024-10-28,LIB,Oliver,1
+CNN/SSRS,750,2.8,-0.6,North Carolina,10,2024-10-28,DEM,Harris,48
+CNN/SSRS,750,2.8,-0.6,North Carolina,10,2024-10-28,REP,Trump,47
+CNN/SSRS,750,2.8,-0.6,North Carolina,10,2024-10-28,IND,West,1
+CNN/SSRS,750,2.8,-0.6,North Carolina,10,2024-10-28,GRE,Stein,1
+CNN/SSRS,750,2.8,-0.6,North Carolina,10,2024-10-28,LIB,Oliver,1
+YouGov,1273,3,-1.1,Pennsylvania,9,2024-10-28,DEM,Harris,49
+YouGov,1273,3,-1.1,Pennsylvania,9,2024-10-28,REP,Trump,49
+YouGov,1206,3,-1.1,Nebraska,9,2024-10-28,DEM,Harris,40
+YouGov,1206,3,-1.1,Nebraska,9,2024-10-28,REP,Trump,55
+YouGov,1206,3,-1.1,Nebraska,9,2024-10-28,GRE,Stein,0
+YouGov,1206,3,-1.1,Nebraska,9,2024-10-28,IND,West,0
+YouGov,1206,3,-1.1,Nebraska,9,2024-10-28,LIB,Oliver,1
+YouGov,408,3,-1.1,Nebraska CD-1,9,2024-10-28,DEM,Harris,43
+YouGov,408,3,-1.1,Nebraska CD-1,9,2024-10-28,REP,Trump,51
+YouGov,408,3,-1.1,Nebraska CD-1,9,2024-10-28,GRE,Stein,0
+YouGov,408,3,-1.1,Nebraska CD-1,9,2024-10-28,IND,West,0
+YouGov,408,3,-1.1,Nebraska CD-1,9,2024-10-28,LIB,Oliver,3
+YouGov,393,3,-1.1,Nebraska CD-2,9,2024-10-28,DEM,Harris,52
+YouGov,393,3,-1.1,Nebraska CD-2,9,2024-10-28,REP,Trump,44
+YouGov,393,3,-1.1,Nebraska CD-2,9,2024-10-28,GRE,Stein,1
+YouGov,393,3,-1.1,Nebraska CD-2,9,2024-10-28,IND,West,0
+YouGov,393,3,-1.1,Nebraska CD-2,9,2024-10-28,LIB,Oliver,1
+YouGov,404,3,-1.1,Nebraska CD-3,9,2024-10-28,DEM,Harris,25
+YouGov,404,3,-1.1,Nebraska CD-3,9,2024-10-28,REP,Trump,70
+YouGov,404,3,-1.1,Nebraska CD-3,9,2024-10-28,GRE,Stein,0
+YouGov,404,3,-1.1,Nebraska CD-3,9,2024-10-28,IND,West,0
+YouGov,404,3,-1.1,Nebraska CD-3,9,2024-10-28,LIB,Oliver,0
+ActiVote,400,NA,NA,Ohio,8,2024-10-28,DEM,Harris,45.9
+ActiVote,400,NA,NA,Ohio,8,2024-10-28,REP,Trump,54.1
+ActiVote,400,NA,NA,Tennessee,8,2024-10-28,DEM,Harris,38.3
+ActiVote,400,NA,NA,Tennessee,8,2024-10-28,REP,Trump,61.7
+ActiVote,400,NA,NA,Illinois,8,2024-10-28,DEM,Harris,58.4
+ActiVote,400,NA,NA,Illinois,8,2024-10-28,REP,Trump,41.6
+ActiVote,400,NA,NA,Indiana,8,2024-10-28,DEM,Harris,42.3
+ActiVote,400,NA,NA,Indiana,8,2024-10-28,REP,Trump,57.7
+ActiVote,400,NA,NA,Virginia,8,2024-10-28,DEM,Harris,54.1
+ActiVote,400,NA,NA,Virginia,8,2024-10-28,REP,Trump,45.9
+ActiVote,400,NA,NA,New Jersey,8,2024-10-28,DEM,Harris,56.9
+ActiVote,400,NA,NA,New Jersey,8,2024-10-28,REP,Trump,43.1
+InsiderAdvantage,800,2,-0.3,Pennsylvania,5,2024-10-27,DEM,Harris,47.4
+InsiderAdvantage,800,2,-0.3,Pennsylvania,5,2024-10-27,REP,Trump,48.4
+InsiderAdvantage,800,2,-0.3,Michigan,5,2024-10-27,DEM,Harris,47.9
+InsiderAdvantage,800,2,-0.3,Michigan,5,2024-10-27,REP,Trump,48.5
+Cygnal,600,2.1,-1.1,New York,4,2024-10-27,DEM,Harris,56.8
+Cygnal,600,2.1,-1.1,New York,4,2024-10-27,REP,Trump,39
+InsiderAdvantage,800,2,-0.3,Wisconsin,5,2024-10-27,DEM,Harris,48
+InsiderAdvantage,800,2,-0.3,Wisconsin,5,2024-10-27,REP,Trump,49
+SoCal Strategies,658,NA,NA,Georgia,9,2024-10-27,DEM,Harris,49
+SoCal Strategies,658,NA,NA,Georgia,9,2024-10-27,REP,Trump,50
+TIPP,1288,1.8,-0.4,National,3,2024-10-27,DEM,Harris,48
+TIPP,1288,1.8,-0.4,National,3,2024-10-27,REP,Trump,48
+Morning Consult,8807,1.9,-0.3,National,3,2024-10-27,DEM,Harris,50
+Morning Consult,8807,1.9,-0.3,National,3,2024-10-27,REP,Trump,47
+Emerson,1000,2.9,-1.1,Michigan,7,2024-10-27,DEM,Harris,49.3
+Emerson,1000,2.9,-1.1,Michigan,7,2024-10-27,REP,Trump,49.8
+Ipsos,975,2.8,-0.9,National,9.5,2024-10-27,DEM,Harris,44
+Ipsos,975,2.8,-0.9,National,9.5,2024-10-27,REP,Trump,43
+Ipsos,850,2.8,-0.9,National,9.5,2024-10-27,DEM,Harris,47
+Ipsos,850,2.8,-0.9,National,9.5,2024-10-27,REP,Trump,46
+Ipsos,1150,2.8,-0.9,National,9.5,2024-10-27,DEM,Harris,40
+Ipsos,1150,2.8,-0.9,National,9.5,2024-10-27,REP,Trump,41
+Redfield & Wilton Strategies,901,1.8,0.4,Arizona,9,2024-10-27,DEM,Harris,47
+Redfield & Wilton Strategies,901,1.8,0.4,Arizona,9,2024-10-27,REP,Trump,49
+Redfield & Wilton Strategies,901,1.8,0.4,Arizona,9,2024-10-27,LIB,Oliver,1
+Redfield & Wilton Strategies,901,1.8,0.4,Arizona,9,2024-10-27,GRE,Stein,1
+Redfield & Wilton Strategies,1112,1.8,0.4,Georgia,9,2024-10-27,DEM,Harris,47
+Redfield & Wilton Strategies,1112,1.8,0.4,Georgia,9,2024-10-27,REP,Trump,48
+Redfield & Wilton Strategies,1112,1.8,0.4,Georgia,9,2024-10-27,LIB,Oliver,1
+Redfield & Wilton Strategies,1112,1.8,0.4,Georgia,9,2024-10-27,GRE,Stein,0
+Redfield & Wilton Strategies,728,1.8,0.4,Michigan,9,2024-10-27,DEM,Harris,49
+Redfield & Wilton Strategies,728,1.8,0.4,Michigan,9,2024-10-27,REP,Trump,48
+Redfield & Wilton Strategies,728,1.8,0.4,Michigan,9,2024-10-27,LIB,Oliver,0
+Redfield & Wilton Strategies,728,1.8,0.4,Michigan,9,2024-10-27,GRE,Stein,1
+Redfield & Wilton Strategies,531,1.8,0.4,Nevada,9,2024-10-27,DEM,Harris,47
+Redfield & Wilton Strategies,531,1.8,0.4,Nevada,9,2024-10-27,REP,Trump,47
+Redfield & Wilton Strategies,531,1.8,0.4,Nevada,9,2024-10-27,LIB,Oliver,1
+Redfield & Wilton Strategies,531,1.8,0.4,Nevada,9,2024-10-27,GRE,Stein,0
+Redfield & Wilton Strategies,770,1.8,0.4,North Carolina,9,2024-10-27,DEM,Harris,46
+Redfield & Wilton Strategies,770,1.8,0.4,North Carolina,9,2024-10-27,REP,Trump,48
+Redfield & Wilton Strategies,770,1.8,0.4,North Carolina,9,2024-10-27,LIB,Oliver,1
+Redfield & Wilton Strategies,770,1.8,0.4,North Carolina,9,2024-10-27,GRE,Stein,1
+Redfield & Wilton Strategies,1116,1.8,0.4,Pennsylvania,9,2024-10-27,DEM,Harris,48
+Redfield & Wilton Strategies,1116,1.8,0.4,Pennsylvania,9,2024-10-27,REP,Trump,48
+Redfield & Wilton Strategies,1116,1.8,0.4,Pennsylvania,9,2024-10-27,LIB,Oliver,1
+Redfield & Wilton Strategies,1116,1.8,0.4,Pennsylvania,9,2024-10-27,GRE,Stein,0
+Redfield & Wilton Strategies,746,1.8,0.4,Wisconsin,9,2024-10-27,DEM,Harris,49
+Redfield & Wilton Strategies,746,1.8,0.4,Wisconsin,9,2024-10-27,REP,Trump,47
+Redfield & Wilton Strategies,746,1.8,0.4,Wisconsin,9,2024-10-27,LIB,Oliver,1
+Redfield & Wilton Strategies,746,1.8,0.4,Wisconsin,9,2024-10-27,GRE,Stein,0
+RABA Research,589,1.3,0.6,Arizona,7,2024-10-27,DEM,Harris,45
+RABA Research,589,1.3,0.6,Arizona,7,2024-10-27,REP,Trump,43
+Suffolk,500,2.9,-1,Michigan,8,2024-10-27,DEM,Harris,47
+Suffolk,500,2.9,-1,Michigan,8,2024-10-27,REP,Trump,47.4
+Suffolk,500,2.9,-1,Michigan,8,2024-10-27,LIB,Oliver,0.2
+Suffolk,500,2.9,-1,Michigan,8,2024-10-27,CON,Terry,0
+Suffolk,500,2.9,-1,Michigan,8,2024-10-27,GRE,Stein,1.4
+Suffolk,500,2.9,-1,Michigan,8,2024-10-27,IND,Kennedy,1.4
+Suffolk,500,2.9,-1,Michigan,8,2024-10-27,IND,Kishore,0.2
+Suffolk,500,2.9,-1,Michigan,8,2024-10-27,IND,West,1
+Angus Reid,1928,2,-0.1,National,6,2024-10-27,DEM,Harris,49
+Angus Reid,1928,2,-0.1,National,6,2024-10-27,REP,Trump,47
+Susquehanna,400,2.3,-0.3,Michigan,5.5,2024-10-27,DEM,Harris,51.7
+Susquehanna,400,2.3,-0.3,Michigan,5.5,2024-10-27,REP,Trump,46.6
+Noble Predictive Insights,707,2.4,-0.4,National,6,2024-10-27,DEM,Harris,49
+Noble Predictive Insights,707,2.4,-0.4,National,6,2024-10-27,REP,Trump,46
+Noble Predictive Insights,707,2.4,-0.4,National,6,2024-10-27,LIB,Oliver,1
+Noble Predictive Insights,707,2.4,-0.4,National,6,2024-10-27,GRE,Stein,2
+ActiVote,400,NA,NA,Texas,8,2024-10-27,DEM,Harris,45
+ActiVote,400,NA,NA,Texas,8,2024-10-27,REP,Trump,55
+Florida Atlantic University/Mainstreet Research,937,NA,NA,National,6,2024-10-27,DEM,Harris,48
+Florida Atlantic University/Mainstreet Research,937,NA,NA,National,6,2024-10-27,REP,Trump,47
+Florida Atlantic University/Mainstreet Research,911,NA,NA,National,6,2024-10-27,DEM,Harris,49
+Florida Atlantic University/Mainstreet Research,911,NA,NA,National,6,2024-10-27,REP,Trump,47
+Florida Atlantic University/Mainstreet Research,913,NA,NA,Florida,6,2024-10-27,DEM,Harris,44
+Florida Atlantic University/Mainstreet Research,913,NA,NA,Florida,6,2024-10-27,REP,Trump,53
+Florida Atlantic University/Mainstreet Research,897,NA,NA,Florida,6,2024-10-27,DEM,Harris,44
+Florida Atlantic University/Mainstreet Research,897,NA,NA,Florida,6,2024-10-27,REP,Trump,53
+ActiVote,400,NA,NA,Florida,8,2024-10-27,DEM,Harris,44.2
+ActiVote,400,NA,NA,Florida,8,2024-10-27,REP,Trump,55.8
+ActiVote,400,NA,NA,New York,8,2024-10-27,DEM,Harris,59
+ActiVote,400,NA,NA,New York,8,2024-10-27,REP,Trump,41
+ActiVote,400,NA,NA,California,8,2024-10-27,DEM,Harris,62.8
+ActiVote,400,NA,NA,California,8,2024-10-27,REP,Trump,37.2
+ActiVote,400,NA,NA,Missouri,8,2024-10-27,DEM,Harris,42
+ActiVote,400,NA,NA,Missouri,8,2024-10-27,REP,Trump,58
+University of Wyoming,662,0.6,1.2,Wyoming,2,2024-10-27,DEM,Harris,28.4
+University of Wyoming,662,0.6,1.2,Wyoming,2,2024-10-27,REP,Trump,63.4
+TIPP,1292,1.8,-0.4,National,3,2024-10-26,DEM,Harris,48
+TIPP,1292,1.8,-0.4,National,3,2024-10-26,REP,Trump,48
+Trafalgar Group,1087,0.7,0.6,Georgia,4,2024-10-26,DEM,Harris,45.9
+Trafalgar Group,1087,0.7,0.6,Georgia,4,2024-10-26,REP,Trump,48.3
+Trafalgar Group,1094,0.7,0.6,Arizona,4,2024-10-26,DEM,Harris,46
+Trafalgar Group,1094,0.7,0.6,Arizona,4,2024-10-26,REP,Trump,48.1
+Patriot Polling,796,1.1,0.6,Michigan,5,2024-10-26,DEM,Harris,49
+Patriot Polling,796,1.1,0.6,Michigan,5,2024-10-26,REP,Trump,50
+Praecones Analytica,622,2,0,New Hampshire,8.5,2024-10-26,DEM,Harris,49.8
+Praecones Analytica,622,2,0,New Hampshire,8.5,2024-10-26,REP,Trump,50.2
+Morning Consult,8472,1.9,-0.3,National,3,2024-10-26,DEM,Harris,50
+Morning Consult,8472,1.9,-0.3,National,3,2024-10-26,REP,Trump,46
+Emerson,1000,2.9,-1.1,Massachusetts,7,2024-10-26,DEM,Harris,60.2
+Emerson,1000,2.9,-1.1,Massachusetts,7,2024-10-26,REP,Trump,37.2
+Cygnal,1507,2.1,-1.1,National,4,2024-10-26,DEM,Harris,46.1
+Cygnal,1507,2.1,-1.1,National,4,2024-10-26,REP,Trump,45
+Cygnal,1507,2.1,-1.1,National,4,2024-10-26,IND,Kennedy,3.4
+Cygnal,1507,2.1,-1.1,National,4,2024-10-26,GRE,Stein,1.4
+Cygnal,1507,2.1,-1.1,National,4,2024-10-26,IND,West,0.6
+Cygnal,1507,2.1,-1.1,National,4,2024-10-26,LIB,Oliver,0.9
+Cygnal,1507,2.1,-1.1,National,4,2024-10-26,DEM,Harris,49.9
+Cygnal,1507,2.1,-1.1,National,4,2024-10-26,REP,Trump,46.9
+Siena/NYT,1180,3,-1.5,Texas,9,2024-10-26,DEM,Harris,41
+Siena/NYT,1180,3,-1.5,Texas,9,2024-10-26,REP,Trump,52
+Siena/NYT,1180,3,-1.5,Texas,9,2024-10-26,DEM,Harris,40
+Siena/NYT,1180,3,-1.5,Texas,9,2024-10-26,REP,Trump,50
+Siena/NYT,1180,3,-1.5,Texas,9,2024-10-26,GRE,Stein,2
+Siena/NYT,1180,3,-1.5,Texas,9,2024-10-26,LIB,Oliver,2
+Siena/NYT,1180,3,-1.5,Texas,9,2024-10-26,DEM,Harris,42
+Siena/NYT,1180,3,-1.5,Texas,9,2024-10-26,REP,Trump,52
+Siena/NYT,1180,3,-1.5,Texas,9,2024-10-26,DEM,Harris,40
+Siena/NYT,1180,3,-1.5,Texas,9,2024-10-26,REP,Trump,51
+Siena/NYT,1180,3,-1.5,Texas,9,2024-10-26,GRE,Stein,1
+Siena/NYT,1180,3,-1.5,Texas,9,2024-10-26,LIB,Oliver,1
+Siena/NYT,1194,3,-1.5,Nebraska,9,2024-10-26,DEM,Harris,40
+Siena/NYT,1194,3,-1.5,Nebraska,9,2024-10-26,REP,Trump,55
+Siena/NYT,1194,3,-1.5,Nebraska,9,2024-10-26,DEM,Harris,38
+Siena/NYT,1194,3,-1.5,Nebraska,9,2024-10-26,REP,Trump,53
+Siena/NYT,1194,3,-1.5,Nebraska,9,2024-10-26,GRE,Stein,0
+Siena/NYT,1194,3,-1.5,Nebraska,9,2024-10-26,IND,West,0
+Siena/NYT,1194,3,-1.5,Nebraska,9,2024-10-26,LIB,Oliver,1
+Siena/NYT,1194,3,-1.5,Nebraska,9,2024-10-26,DEM,Harris,40
+Siena/NYT,1194,3,-1.5,Nebraska,9,2024-10-26,REP,Trump,55
+Siena/NYT,1194,3,-1.5,Nebraska,9,2024-10-26,DEM,Harris,39
+Siena/NYT,1194,3,-1.5,Nebraska,9,2024-10-26,REP,Trump,53
+Siena/NYT,1194,3,-1.5,Nebraska,9,2024-10-26,GRE,Stein,0
+Siena/NYT,1194,3,-1.5,Nebraska,9,2024-10-26,IND,West,0
+Siena/NYT,1194,3,-1.5,Nebraska,9,2024-10-26,LIB,Oliver,1
+Siena/NYT,500,3,-1.5,Nebraska CD-2,9,2024-10-26,DEM,Harris,54
+Siena/NYT,500,3,-1.5,Nebraska CD-2,9,2024-10-26,REP,Trump,42
+Siena/NYT,500,3,-1.5,Nebraska CD-2,9,2024-10-26,DEM,Harris,53
+Siena/NYT,500,3,-1.5,Nebraska CD-2,9,2024-10-26,REP,Trump,41
+Siena/NYT,500,3,-1.5,Nebraska CD-2,9,2024-10-26,GRE,Stein,0
+Siena/NYT,500,3,-1.5,Nebraska CD-2,9,2024-10-26,IND,West,0
+Siena/NYT,500,3,-1.5,Nebraska CD-2,9,2024-10-26,LIB,Oliver,1
+SurveyUSA,853,2.8,-1.3,North Carolina,8,2024-10-26,DEM,Harris,47
+SurveyUSA,853,2.8,-1.3,North Carolina,8,2024-10-26,REP,Trump,47
+North Star Opinion Research,600,1.1,0.3,Pennsylvania,3,2024-10-26,DEM,Harris,47
+North Star Opinion Research,600,1.1,0.3,Pennsylvania,3,2024-10-26,REP,Trump,47
+North Star Opinion Research,600,1.1,0.3,Pennsylvania,3,2024-10-26,LIB,Oliver,1
+North Star Opinion Research,600,1.1,0.3,Pennsylvania,3,2024-10-26,GRE,Stein,1
+CNN/SSRS,781,2.8,-0.6,Arizona,10,2024-10-26,DEM,Harris,48
+CNN/SSRS,781,2.8,-0.6,Arizona,10,2024-10-26,REP,Trump,47
+CNN/SSRS,781,2.8,-0.6,Arizona,10,2024-10-26,GRE,Stein,1
+CNN/SSRS,781,2.8,-0.6,Arizona,10,2024-10-26,LIB,Oliver,2
+CNN/SSRS,683,2.8,-0.6,Nevada,10,2024-10-26,DEM,Harris,47
+CNN/SSRS,683,2.8,-0.6,Nevada,10,2024-10-26,REP,Trump,48
+CNN/SSRS,683,2.8,-0.6,Nevada,10,2024-10-26,LIB,Oliver,1
+TIPP,1333,1.8,-0.4,National,3,2024-10-25,DEM,Harris,48
+TIPP,1333,1.8,-0.4,National,3,2024-10-25,REP,Trump,48
+YouGov,2154,3,-1.1,National,9,2024-10-25,DEM,Harris,50
+YouGov,2154,3,-1.1,National,9,2024-10-25,REP,Trump,49
+Emerson,1000,2.9,-1.1,Montana,7,2024-10-25,DEM,Harris,39.6
+Emerson,1000,2.9,-1.1,Montana,7,2024-10-25,REP,Trump,58.6
+St. Pete Polls,1227,2.4,-0.3,Florida,7,2024-10-25,DEM,Harris,44.6
+St. Pete Polls,1227,2.4,-0.3,Florida,7,2024-10-25,REP,Trump,50.3
+Morning Consult,8443,1.9,-0.3,National,3,2024-10-25,DEM,Harris,50
+Morning Consult,8443,1.9,-0.3,National,3,2024-10-25,REP,Trump,46
+The Citadel,1241,NA,NA,South Carolina,10,2024-10-25,DEM,Harris,41
+The Citadel,1241,NA,NA,South Carolina,10,2024-10-25,REP,Trump,53
+The Citadel,1241,NA,NA,South Carolina,10,2024-10-25,GRE,Stein,0
+The Citadel,1241,NA,NA,South Carolina,10,2024-10-25,LIB,Oliver,0
+The Citadel,1241,NA,NA,South Carolina,10,2024-10-25,IND,West,0
+The Citadel,1136,NA,NA,South Carolina,10,2024-10-25,DEM,Harris,42
+The Citadel,1136,NA,NA,South Carolina,10,2024-10-25,REP,Trump,54
+The Citadel,1136,NA,NA,South Carolina,10,2024-10-25,GRE,Stein,0
+The Citadel,1136,NA,NA,South Carolina,10,2024-10-25,LIB,Oliver,0
+The Citadel,1136,NA,NA,South Carolina,10,2024-10-25,IND,West,0
+The Citadel,1218,NA,NA,Georgia,10,2024-10-25,DEM,Harris,47
+The Citadel,1218,NA,NA,Georgia,10,2024-10-25,REP,Trump,48
+The Citadel,1218,NA,NA,Georgia,10,2024-10-25,GRE,Stein,1
+The Citadel,1218,NA,NA,Georgia,10,2024-10-25,LIB,Oliver,0
+The Citadel,1218,NA,NA,Georgia,10,2024-10-25,IND,West,1
+The Citadel,1126,NA,NA,Georgia,10,2024-10-25,DEM,Harris,47
+The Citadel,1126,NA,NA,Georgia,10,2024-10-25,REP,Trump,49
+The Citadel,1126,NA,NA,Georgia,10,2024-10-25,GRE,Stein,1
+The Citadel,1126,NA,NA,Georgia,10,2024-10-25,LIB,Oliver,0
+The Citadel,1126,NA,NA,Georgia,10,2024-10-25,IND,West,0
+CES / YouGov,78247,3,-1.1,National,10,2024-10-25,DEM,Harris,51
+CES / YouGov,78247,3,-1.1,National,10,2024-10-25,REP,Trump,46
+CES / YouGov,48732,3,-1.1,National,10,2024-10-25,DEM,Harris,51
+CES / YouGov,48732,3,-1.1,National,10,2024-10-25,REP,Trump,47
+CES / YouGov,2077,3,-1.1,Arizona,10,2024-10-25,DEM,Harris,49
+CES / YouGov,2077,3,-1.1,Arizona,10,2024-10-25,REP,Trump,49
+CES / YouGov,2066,3,-1.1,Arizona,10,2024-10-25,DEM,Harris,47
+CES / YouGov,2066,3,-1.1,Arizona,10,2024-10-25,REP,Trump,51
+CES / YouGov,5952,3,-1.1,Florida,10,2024-10-25,DEM,Harris,47
+CES / YouGov,5952,3,-1.1,Florida,10,2024-10-25,REP,Trump,51
+CES / YouGov,5916,3,-1.1,Florida,10,2024-10-25,DEM,Harris,46
+CES / YouGov,5916,3,-1.1,Florida,10,2024-10-25,REP,Trump,52
+CES / YouGov,2682,3,-1.1,Georgia,10,2024-10-25,DEM,Harris,48
+CES / YouGov,2682,3,-1.1,Georgia,10,2024-10-25,REP,Trump,49
+CES / YouGov,2663,3,-1.1,Georgia,10,2024-10-25,DEM,Harris,46
+CES / YouGov,2663,3,-1.1,Georgia,10,2024-10-25,REP,Trump,51
+CES / YouGov,2347,3,-1.1,Michigan,10,2024-10-25,DEM,Harris,52
+CES / YouGov,2347,3,-1.1,Michigan,10,2024-10-25,REP,Trump,45
+CES / YouGov,2336,3,-1.1,Michigan,10,2024-10-25,DEM,Harris,51
+CES / YouGov,2336,3,-1.1,Michigan,10,2024-10-25,REP,Trump,46
+CES / YouGov,1278,3,-1.1,Minnesota,10,2024-10-25,DEM,Harris,52
+CES / YouGov,1278,3,-1.1,Minnesota,10,2024-10-25,REP,Trump,44
+CES / YouGov,1275,3,-1.1,Minnesota,10,2024-10-25,DEM,Harris,53
+CES / YouGov,1275,3,-1.1,Minnesota,10,2024-10-25,REP,Trump,43
+CES / YouGov,940,3,-1.1,Nevada,10,2024-10-25,DEM,Harris,53
+CES / YouGov,940,3,-1.1,Nevada,10,2024-10-25,REP,Trump,44
+CES / YouGov,933,3,-1.1,Nevada,10,2024-10-25,DEM,Harris,51
+CES / YouGov,933,3,-1.1,Nevada,10,2024-10-25,REP,Trump,47
+CES / YouGov,380,3,-1.1,New Hampshire,10,2024-10-25,DEM,Harris,52
+CES / YouGov,380,3,-1.1,New Hampshire,10,2024-10-25,REP,Trump,45
+CES / YouGov,375,3,-1.1,New Hampshire,10,2024-10-25,DEM,Harris,52
+CES / YouGov,375,3,-1.1,New Hampshire,10,2024-10-25,REP,Trump,45
+CES / YouGov,2330,3,-1.1,North Carolina,10,2024-10-25,DEM,Harris,49
+CES / YouGov,2330,3,-1.1,North Carolina,10,2024-10-25,REP,Trump,48
+CES / YouGov,2308,3,-1.1,North Carolina,10,2024-10-25,DEM,Harris,48
+CES / YouGov,2308,3,-1.1,North Carolina,10,2024-10-25,REP,Trump,50
+CES / YouGov,3120,3,-1.1,Ohio,10,2024-10-25,DEM,Harris,45
+CES / YouGov,3120,3,-1.1,Ohio,10,2024-10-25,REP,Trump,52
+CES / YouGov,3091,3,-1.1,Ohio,10,2024-10-25,DEM,Harris,45
+CES / YouGov,3091,3,-1.1,Ohio,10,2024-10-25,REP,Trump,52
+CES / YouGov,3708,3,-1.1,Pennsylvania,10,2024-10-25,DEM,Harris,50
+CES / YouGov,3708,3,-1.1,Pennsylvania,10,2024-10-25,REP,Trump,47
+CES / YouGov,3685,3,-1.1,Pennsylvania,10,2024-10-25,DEM,Harris,49
+CES / YouGov,3685,3,-1.1,Pennsylvania,10,2024-10-25,REP,Trump,48
+CES / YouGov,6526,3,-1.1,Texas,10,2024-10-25,DEM,Harris,47
+CES / YouGov,6526,3,-1.1,Texas,10,2024-10-25,REP,Trump,51
+CES / YouGov,6473,3,-1.1,Texas,10,2024-10-25,DEM,Harris,47
+CES / YouGov,6473,3,-1.1,Texas,10,2024-10-25,REP,Trump,51
+CES / YouGov,2027,3,-1.1,Virginia,10,2024-10-25,DEM,Harris,53
+CES / YouGov,2027,3,-1.1,Virginia,10,2024-10-25,REP,Trump,44
+CES / YouGov,2015,3,-1.1,Virginia,10,2024-10-25,DEM,Harris,52
+CES / YouGov,2015,3,-1.1,Virginia,10,2024-10-25,REP,Trump,44
+CES / YouGov,1552,3,-1.1,Wisconsin,10,2024-10-25,DEM,Harris,51
+CES / YouGov,1552,3,-1.1,Wisconsin,10,2024-10-25,REP,Trump,46
+CES / YouGov,1542,3,-1.1,Wisconsin,10,2024-10-25,DEM,Harris,50
+CES / YouGov,1542,3,-1.1,Wisconsin,10,2024-10-25,REP,Trump,47
+Emerson,1000,2.9,-1.1,National,7,2024-10-24,DEM,Harris,49.3
+Emerson,1000,2.9,-1.1,National,7,2024-10-24,REP,Trump,49.3
+Cygnal,600,2.1,-1.1,New Jersey,4,2024-10-24,DEM,Harris,51.8
+Cygnal,600,2.1,-1.1,New Jersey,4,2024-10-24,REP,Trump,40.3
+Cygnal,600,2.1,-1.1,New Jersey,4,2024-10-24,DEM,Harris,51.8
+Cygnal,600,2.1,-1.1,New Jersey,4,2024-10-24,REP,Trump,40.3
+TIPP,1357,1.8,-0.4,National,3,2024-10-24,DEM,Harris,49
+TIPP,1357,1.8,-0.4,National,3,2024-10-24,REP,Trump,47
+Quantus Insights,725,NA,NA,Virginia,5.5,2024-10-24,DEM,Harris,48.9
+Quantus Insights,725,NA,NA,Virginia,5.5,2024-10-24,REP,Trump,47.8
+Glengariff Group Inc.,600,1.5,-0.2,Michigan,1,2024-10-24,DEM,Harris,46.7
+Glengariff Group Inc.,600,1.5,-0.2,Michigan,1,2024-10-24,REP,Trump,43.7
+Glengariff Group Inc.,600,1.5,-0.2,Michigan,1,2024-10-24,IND,Kennedy,3.9
+Glengariff Group Inc.,600,1.5,-0.2,Michigan,1,2024-10-24,GRE,Stein,1.6
+Glengariff Group Inc.,600,1.5,-0.2,Michigan,1,2024-10-24,LIB,Oliver,1
+Morning Consult,8669,1.9,-0.3,National,3,2024-10-24,DEM,Harris,50
+Morning Consult,8669,1.9,-0.3,National,3,2024-10-24,REP,Trump,46
+National Public Affairs,829,NA,NA,Georgia,2,2024-10-24,DEM,Harris,47
+National Public Affairs,829,NA,NA,Georgia,2,2024-10-24,REP,Trump,49
+ActiVote,1000,NA,NA,National,8,2024-10-24,DEM,Harris,50.1
+ActiVote,1000,NA,NA,National,8,2024-10-24,REP,Trump,49.9
+Deltapoll,3041,NA,NA,National,6,2024-10-24,DEM,Harris,51
+Deltapoll,3041,NA,NA,National,6,2024-10-24,REP,Trump,48
+Marquette Law School,753,3,-1.1,Wisconsin,10,2024-10-24,DEM,Harris,50
+Marquette Law School,753,3,-1.1,Wisconsin,10,2024-10-24,REP,Trump,49
+Marquette Law School,753,3,-1.1,Wisconsin,10,2024-10-24,DEM,Harris,46
+Marquette Law School,753,3,-1.1,Wisconsin,10,2024-10-24,REP,Trump,44
+Marquette Law School,753,3,-1.1,Wisconsin,10,2024-10-24,IND,Kennedy,5
+Marquette Law School,753,3,-1.1,Wisconsin,10,2024-10-24,PSL,De la Cruz,0
+Marquette Law School,753,3,-1.1,Wisconsin,10,2024-10-24,LIB,Oliver,2
+Marquette Law School,753,3,-1.1,Wisconsin,10,2024-10-24,GRE,Stein,1
+Marquette Law School,753,3,-1.1,Wisconsin,10,2024-10-24,CON,Terry,0
+Marquette Law School,753,3,-1.1,Wisconsin,10,2024-10-24,IND,West,1
+Marquette Law School,834,3,-1.1,Wisconsin,10,2024-10-24,DEM,Harris,51
+Marquette Law School,834,3,-1.1,Wisconsin,10,2024-10-24,REP,Trump,49
+Marquette Law School,834,3,-1.1,Wisconsin,10,2024-10-24,DEM,Harris,46
+Marquette Law School,834,3,-1.1,Wisconsin,10,2024-10-24,REP,Trump,43
+Marquette Law School,834,3,-1.1,Wisconsin,10,2024-10-24,IND,Kennedy,5
+Marquette Law School,834,3,-1.1,Wisconsin,10,2024-10-24,LIB,Oliver,2
+Marquette Law School,834,3,-1.1,Wisconsin,10,2024-10-24,GRE,Stein,1
+Marquette Law School,834,3,-1.1,Wisconsin,10,2024-10-24,CON,Terry,0
+Marquette Law School,834,3,-1.1,Wisconsin,10,2024-10-24,IND,West,1
+Marquette Law School,834,3,-1.1,Wisconsin,10,2024-10-24,PSL,De la Cruz,0
+University of Massachusetts Lowell/YouGov,600,2.9,-1,Michigan,9,2024-10-24,DEM,Harris,49
+University of Massachusetts Lowell/YouGov,600,2.9,-1,Michigan,9,2024-10-24,REP,Trump,45
+University of Massachusetts Lowell/YouGov,600,2.9,-1,Michigan,9,2024-10-24,IND,Kennedy,1
+University of Massachusetts Lowell/YouGov,600,2.9,-1,Michigan,9,2024-10-24,GRE,Stein,0
+University of Massachusetts Lowell/YouGov,600,2.9,-1,Michigan,9,2024-10-24,LIB,Oliver,1
+University of Massachusetts Lowell/YouGov,600,2.9,-1,Michigan,9,2024-10-24,CON,Terry,0
+University of Massachusetts Lowell/YouGov,600,2.9,-1,Michigan,9,2024-10-24,IND,West,0
+University of Massachusetts Lowell/YouGov,600,2.9,-1,Michigan,9,2024-10-24,IND,Kishore,0
+University of Akron,1241,NA,NA,Ohio,3.5,2024-10-24,DEM,Harris,44
+University of Akron,1241,NA,NA,Ohio,3.5,2024-10-24,REP,Trump,51
+TIPP,1294,1.8,-0.4,National,3,2024-10-23,DEM,Harris,50
+TIPP,1294,1.8,-0.4,National,3,2024-10-23,REP,Trump,47
+Emerson,915,2.9,-1.1,New Hampshire,7,2024-10-23,DEM,Harris,50.9
+Emerson,915,2.9,-1.1,New Hampshire,7,2024-10-23,REP,Trump,47.2
+OnMessage Inc.,800,1.1,0.2,National,1,2024-10-23,DEM,Harris,46
+OnMessage Inc.,800,1.1,0.2,National,1,2024-10-23,REP,Trump,47
+Tufts,1033,1.8,0,National,5,2024-10-23,DEM,Harris,49
+Tufts,1033,1.8,0,National,5,2024-10-23,REP,Trump,45
+Tufts,633,1.8,0,National,5,2024-10-23,DEM,Harris,49
+Tufts,633,1.8,0,National,5,2024-10-23,REP,Trump,48
+Morning Consult,8882,1.9,-0.3,National,3,2024-10-23,DEM,Harris,49
+Morning Consult,8882,1.9,-0.3,National,3,2024-10-23,REP,Trump,47
+Siena/NYT,2516,3,-1.5,National,9,2024-10-23,DEM,Harris,47
+Siena/NYT,2516,3,-1.5,National,9,2024-10-23,REP,Trump,47
+Siena/NYT,2516,3,-1.5,National,9,2024-10-23,DEM,Harris,45
+Siena/NYT,2516,3,-1.5,National,9,2024-10-23,REP,Trump,46
+Siena/NYT,2516,3,-1.5,National,9,2024-10-23,GRE,Stein,2
+Siena/NYT,2516,3,-1.5,National,9,2024-10-23,LIB,Oliver,0
+Siena/NYT,2516,3,-1.5,National,9,2024-10-23,DEM,Harris,48
+Siena/NYT,2516,3,-1.5,National,9,2024-10-23,REP,Trump,48
+Siena/NYT,2516,3,-1.5,National,9,2024-10-23,DEM,Harris,46
+Siena/NYT,2516,3,-1.5,National,9,2024-10-23,REP,Trump,47
+Siena/NYT,2516,3,-1.5,National,9,2024-10-23,GRE,Stein,2
+Siena/NYT,2516,3,-1.5,National,9,2024-10-23,LIB,Oliver,0
+CNN/SSRS,1704,2.8,-0.6,National,10,2024-10-23,DEM,Harris,47
+CNN/SSRS,1704,2.8,-0.6,National,10,2024-10-23,REP,Trump,47
+CNN/SSRS,1704,2.8,-0.6,National,10,2024-10-23,GRE,Stein,1
+CNN/SSRS,1704,2.8,-0.6,National,10,2024-10-23,LIB,Oliver,2
+CNN/SSRS,1704,2.8,-0.6,National,10,2024-10-23,DEM,Harris,47
+CNN/SSRS,1704,2.8,-0.6,National,10,2024-10-23,REP,Trump,46
+CNN/SSRS,1704,2.8,-0.6,National,10,2024-10-23,GRE,Stein,1
+CNN/SSRS,1704,2.8,-0.6,National,10,2024-10-23,LIB,Oliver,2
+Suffolk,500,2.9,-1,Wisconsin,8,2024-10-23,DEM,Harris,46.6
+Suffolk,500,2.9,-1,Wisconsin,8,2024-10-23,REP,Trump,48
+Suffolk,500,2.9,-1,Wisconsin,8,2024-10-23,CON,Terry,0.2
+Suffolk,500,2.9,-1,Wisconsin,8,2024-10-23,LIB,Oliver,0.4
+Suffolk,500,2.9,-1,Wisconsin,8,2024-10-23,GRE,Stein,0.8
+Suffolk,500,2.9,-1,Wisconsin,8,2024-10-23,PSL,De la Cruz,0.2
+Suffolk,500,2.9,-1,Wisconsin,8,2024-10-23,IND,West,0.4
+Suffolk,500,2.9,-1,Wisconsin,8,2024-10-23,IND,Kennedy,1.2
+Washington Post/George Mason University,1004,2.7,-0.8,Virginia,9,2024-10-23,DEM,Harris,49
+Washington Post/George Mason University,1004,2.7,-0.8,Virginia,9,2024-10-23,REP,Trump,43
+Washington Post/George Mason University,1004,2.7,-0.8,Virginia,9,2024-10-23,DEM,Harris,48
+Washington Post/George Mason University,1004,2.7,-0.8,Virginia,9,2024-10-23,REP,Trump,42
+Big Village,2026,1.2,1.7,National,9,2024-10-23,DEM,Harris,46.2
+Big Village,2026,1.2,1.7,National,9,2024-10-23,REP,Trump,41.1
+Big Village,1739,1.2,1.7,National,9,2024-10-23,DEM,Harris,49
+Big Village,1739,1.2,1.7,National,9,2024-10-23,REP,Trump,43.2
+Big Village,1592,1.2,1.7,National,9,2024-10-23,DEM,Harris,51.6
+Big Village,1592,1.2,1.7,National,9,2024-10-23,REP,Trump,45
+Clarity,1314,1.6,-0.2,National,1,2024-10-23,DEM,Harris,50
+Clarity,1314,1.6,-0.2,National,1,2024-10-23,REP,Trump,46
+Clarity,1314,1.6,-0.2,National,1,2024-10-23,DEM,Harris,55
+Clarity,1314,1.6,-0.2,National,1,2024-10-23,REP,Vance,42
+University of Massachusetts Lowell/YouGov,650,2.9,-1,North Carolina,9,2024-10-23,DEM,Harris,45
+University of Massachusetts Lowell/YouGov,650,2.9,-1,North Carolina,9,2024-10-23,REP,Trump,47
+University of Massachusetts Lowell/YouGov,650,2.9,-1,North Carolina,9,2024-10-23,LIB,Oliver,0
+University of Massachusetts Lowell/YouGov,650,2.9,-1,North Carolina,9,2024-10-23,GRE,Stein,1
+University of Massachusetts Lowell/YouGov,650,2.9,-1,North Carolina,9,2024-10-23,CON,Terry,0
+University of Massachusetts Lowell/YouGov,650,2.9,-1,North Carolina,9,2024-10-23,IND,West,1
+University of Massachusetts Lowell/YouGov,800,2.9,-1,Pennsylvania,9,2024-10-23,DEM,Harris,48
+University of Massachusetts Lowell/YouGov,800,2.9,-1,Pennsylvania,9,2024-10-23,REP,Trump,47
+University of Massachusetts Lowell/YouGov,800,2.9,-1,Pennsylvania,9,2024-10-23,GRE,Stein,1
+University of Massachusetts Lowell/YouGov,800,2.9,-1,Pennsylvania,9,2024-10-23,LIB,Oliver,1
+University of Massachusetts Lowell/YouGov,600,2.9,-1,New Hampshire,9,2024-10-23,DEM,Harris,50
+University of Massachusetts Lowell/YouGov,600,2.9,-1,New Hampshire,9,2024-10-23,REP,Trump,43
+University of Massachusetts Lowell/YouGov,600,2.9,-1,New Hampshire,9,2024-10-23,GRE,Stein,1
+University of Massachusetts Lowell/YouGov,600,2.9,-1,New Hampshire,9,2024-10-23,LIB,Oliver,1
+HarrisX,1512,1.5,-0.1,National,6,2024-10-22,DEM,Harris,49
+HarrisX,1512,1.5,-0.1,National,6,2024-10-22,REP,Trump,51
+HarrisX,1244,1.5,-0.1,National,6,2024-10-22,DEM,Harris,49
+HarrisX,1244,1.5,-0.1,National,6,2024-10-22,REP,Trump,51
+HarrisX,1512,1.5,-0.1,National,6,2024-10-22,DEM,Harris,48
+HarrisX,1512,1.5,-0.1,National,6,2024-10-22,REP,Trump,48
+HarrisX,1512,1.5,-0.1,National,6,2024-10-22,IND,West,3
+HarrisX,1512,1.5,-0.1,National,6,2024-10-22,GRE,Stein,1
+HarrisX,1244,1.5,-0.1,National,6,2024-10-22,DEM,Harris,48
+HarrisX,1244,1.5,-0.1,National,6,2024-10-22,REP,Trump,49
+HarrisX,1244,1.5,-0.1,National,6,2024-10-22,IND,West,2
+HarrisX,1244,1.5,-0.1,National,6,2024-10-22,GRE,Stein,0
+Emerson,860,2.9,-1.1,Pennsylvania,7,2024-10-22,DEM,Harris,49
+Emerson,860,2.9,-1.1,Pennsylvania,7,2024-10-22,REP,Trump,50.7
+Emerson,950,2.9,-1.1,North Carolina,7,2024-10-22,DEM,Harris,48.2
+Emerson,950,2.9,-1.1,North Carolina,7,2024-10-22,REP,Trump,50.2
+Emerson,800,2.9,-1.1,Wisconsin,7,2024-10-22,DEM,Harris,49.2
+Emerson,800,2.9,-1.1,Wisconsin,7,2024-10-22,REP,Trump,49.9
+TIPP,1294,1.8,-0.4,National,3,2024-10-22,DEM,Harris,49
+TIPP,1294,1.8,-0.4,National,3,2024-10-22,REP,Trump,47
+Redfield & Wilton Strategies,710,1.8,0.4,Arizona,9,2024-10-22,DEM,Harris,46
+Redfield & Wilton Strategies,710,1.8,0.4,Arizona,9,2024-10-22,REP,Trump,48
+Redfield & Wilton Strategies,710,1.8,0.4,Arizona,9,2024-10-22,LIB,Oliver,1
+Redfield & Wilton Strategies,710,1.8,0.4,Arizona,9,2024-10-22,GRE,Stein,1
+Redfield & Wilton Strategies,1168,1.8,0.4,Georgia,9,2024-10-22,DEM,Harris,47
+Redfield & Wilton Strategies,1168,1.8,0.4,Georgia,9,2024-10-22,REP,Trump,48
+Redfield & Wilton Strategies,1168,1.8,0.4,Georgia,9,2024-10-22,LIB,Oliver,1
+Redfield & Wilton Strategies,1168,1.8,0.4,Georgia,9,2024-10-22,GRE,Stein,0
+Redfield & Wilton Strategies,1115,1.8,0.4,Michigan,9,2024-10-22,DEM,Harris,47
+Redfield & Wilton Strategies,1115,1.8,0.4,Michigan,9,2024-10-22,REP,Trump,47
+Redfield & Wilton Strategies,1115,1.8,0.4,Michigan,9,2024-10-22,LIB,Oliver,0
+Redfield & Wilton Strategies,1115,1.8,0.4,Michigan,9,2024-10-22,GRE,Stein,1
+Redfield & Wilton Strategies,540,1.8,0.4,Nevada,9,2024-10-22,DEM,Harris,46
+Redfield & Wilton Strategies,540,1.8,0.4,Nevada,9,2024-10-22,REP,Trump,47
+Redfield & Wilton Strategies,540,1.8,0.4,Nevada,9,2024-10-22,LIB,Oliver,0
+Redfield & Wilton Strategies,540,1.8,0.4,Nevada,9,2024-10-22,GRE,Stein,0
+Redfield & Wilton Strategies,679,1.8,0.4,North Carolina,9,2024-10-22,DEM,Harris,47
+Redfield & Wilton Strategies,679,1.8,0.4,North Carolina,9,2024-10-22,REP,Trump,48
+Redfield & Wilton Strategies,679,1.8,0.4,North Carolina,9,2024-10-22,LIB,Oliver,0
+Redfield & Wilton Strategies,679,1.8,0.4,North Carolina,9,2024-10-22,GRE,Stein,1
+Redfield & Wilton Strategies,1586,1.8,0.4,Pennsylvania,9,2024-10-22,DEM,Harris,48
+Redfield & Wilton Strategies,1586,1.8,0.4,Pennsylvania,9,2024-10-22,REP,Trump,47
+Redfield & Wilton Strategies,1586,1.8,0.4,Pennsylvania,9,2024-10-22,LIB,Oliver,1
+Redfield & Wilton Strategies,1586,1.8,0.4,Pennsylvania,9,2024-10-22,GRE,Stein,0
+Redfield & Wilton Strategies,557,1.8,0.4,Wisconsin,9,2024-10-22,DEM,Harris,49
+Redfield & Wilton Strategies,557,1.8,0.4,Wisconsin,9,2024-10-22,REP,Trump,47
+Redfield & Wilton Strategies,557,1.8,0.4,Wisconsin,9,2024-10-22,LIB,Oliver,1
+Redfield & Wilton Strategies,557,1.8,0.4,Wisconsin,9,2024-10-22,GRE,Stein,0
+Alaska Survey Research,1703,1.9,-0.1,Alaska,7,2024-10-22,DEM,Harris,43
+Alaska Survey Research,1703,1.9,-0.1,Alaska,7,2024-10-22,REP,Trump,51
+Alaska Survey Research,1703,1.9,-0.1,Alaska,7,2024-10-22,IND,Kennedy,7
+Alaska Survey Research,1703,1.9,-0.1,Alaska,7,2024-10-22,DEM,Harris,45
+Alaska Survey Research,1703,1.9,-0.1,Alaska,7,2024-10-22,REP,Trump,55
+Morning Consult,8914,1.9,-0.3,National,3,2024-10-22,DEM,Harris,50
+Morning Consult,8914,1.9,-0.3,National,3,2024-10-22,REP,Trump,46
+YouGov,1422,3,-1.1,National,9,2024-10-22,DEM,Harris,48
+YouGov,1422,3,-1.1,National,9,2024-10-22,REP,Trump,46
+YouGov,1422,3,-1.1,National,9,2024-10-22,GRE,Stein,1
+YouGov,1422,3,-1.1,National,9,2024-10-22,IND,West,0
+YouGov,1293,3,-1.1,National,9,2024-10-22,DEM,Harris,49
+YouGov,1293,3,-1.1,National,9,2024-10-22,REP,Trump,46
+YouGov,1293,3,-1.1,National,9,2024-10-22,GRE,Stein,1
+YouGov,1293,3,-1.1,National,9,2024-10-22,IND,West,0
+Fabrizio/GBAO,1500,NA,NA,National,6,2024-10-22,DEM,Harris,45
+Fabrizio/GBAO,1500,NA,NA,National,6,2024-10-22,REP,Trump,47
+Fabrizio/GBAO,1500,NA,NA,National,6,2024-10-22,IND,Kennedy,2
+Fabrizio/GBAO,1500,NA,NA,National,6,2024-10-22,GRE,Stein,1
+Fabrizio/GBAO,1500,NA,NA,National,6,2024-10-22,IND,West,1
+Fabrizio/GBAO,1500,NA,NA,National,6,2024-10-22,LIB,Oliver,0
+Fabrizio/GBAO,1500,NA,NA,National,6,2024-10-22,DEM,Harris,46
+Fabrizio/GBAO,1500,NA,NA,National,6,2024-10-22,REP,Trump,49
+Emerson,825,2.9,-1.1,South Dakota,7,2024-10-22,DEM,Harris,36.5
+Emerson,825,2.9,-1.1,South Dakota,7,2024-10-22,REP,Trump,62
+OnMessage Inc.,600,1.1,0.2,Nevada,1,2024-10-22,DEM,Harris,47
+OnMessage Inc.,600,1.1,0.2,Nevada,1,2024-10-22,REP,Trump,50
+OnMessage Inc.,600,1.1,0.2,Nevada,1,2024-10-22,LIB,Oliver,0
+OnMessage Inc.,600,1.1,0.2,Ohio,1,2024-10-22,DEM,Harris,44
+OnMessage Inc.,600,1.1,0.2,Ohio,1,2024-10-22,REP,Trump,52
+OnMessage Inc.,600,1.1,0.2,Ohio,1,2024-10-22,GRE,Stein,1
+OnMessage Inc.,600,1.1,0.2,Ohio,1,2024-10-22,LIB,Oliver,1
+OnMessage Inc.,600,1.1,0.2,Wisconsin,1,2024-10-22,DEM,Harris,47
+OnMessage Inc.,600,1.1,0.2,Wisconsin,1,2024-10-22,REP,Trump,48
+OnMessage Inc.,600,1.1,0.2,Wisconsin,1,2024-10-22,GRE,Stein,1
+OnMessage Inc.,600,1.1,0.2,Wisconsin,1,2024-10-22,LIB,Oliver,0
+Ipsos,2808,2.8,-0.9,National,9.5,2024-10-22,DEM,Harris,48
+Ipsos,2808,2.8,-0.9,National,9.5,2024-10-22,REP,Trump,47
+Ipsos,2808,2.8,-0.9,National,9.5,2024-10-22,IND,West,0
+Ipsos,2808,2.8,-0.9,National,9.5,2024-10-22,GRE,Stein,1
+Ipsos,2808,2.8,-0.9,National,9.5,2024-10-22,LIB,Oliver,1
+Ipsos,2392,2.8,-0.9,National,9.5,2024-10-22,DEM,Harris,49
+Ipsos,2392,2.8,-0.9,National,9.5,2024-10-22,REP,Trump,47
+Ipsos,2392,2.8,-0.9,National,9.5,2024-10-22,IND,West,0
+Ipsos,2392,2.8,-0.9,National,9.5,2024-10-22,GRE,Stein,1
+Ipsos,2392,2.8,-0.9,National,9.5,2024-10-22,LIB,Oliver,1
+Ipsos,1913,2.8,-0.9,National,9.5,2024-10-22,DEM,Harris,51
+Ipsos,1913,2.8,-0.9,National,9.5,2024-10-22,REP,Trump,47
+Ipsos,1913,2.8,-0.9,National,9.5,2024-10-22,IND,West,0
+Ipsos,1913,2.8,-0.9,National,9.5,2024-10-22,GRE,Stein,0
+Ipsos,1913,2.8,-0.9,National,9.5,2024-10-22,LIB,Oliver,1
+East Carolina University,950,2.6,-0.5,South Carolina,7,2024-10-22,DEM,Harris,42
+East Carolina University,950,2.6,-0.5,South Carolina,7,2024-10-22,REP,Trump,55.1
+East Carolina University,950,2.6,-0.5,South Carolina,7,2024-10-22,LIB,Oliver,0.5
+Susquehanna,500,2.3,-0.3,Pennsylvania,5.5,2024-10-22,DEM,Harris,46
+Susquehanna,500,2.3,-0.3,Pennsylvania,5.5,2024-10-22,REP,Trump,45.8
+Marist,1356,2.9,-0.9,Georgia,9,2024-10-22,DEM,Harris,49
+Marist,1356,2.9,-0.9,Georgia,9,2024-10-22,REP,Trump,48
+Marist,1193,2.9,-0.9,Georgia,9,2024-10-22,DEM,Harris,49
+Marist,1193,2.9,-0.9,Georgia,9,2024-10-22,REP,Trump,49
+Marist,1410,2.9,-0.9,North Carolina,9,2024-10-22,DEM,Harris,48
+Marist,1410,2.9,-0.9,North Carolina,9,2024-10-22,REP,Trump,49
+Marist,1226,2.9,-0.9,North Carolina,9,2024-10-22,DEM,Harris,48
+Marist,1226,2.9,-0.9,North Carolina,9,2024-10-22,REP,Trump,50
+Marist,1329,2.9,-0.9,Arizona,9,2024-10-22,DEM,Harris,49
+Marist,1329,2.9,-0.9,Arizona,9,2024-10-22,REP,Trump,49
+Marist,1193,2.9,-0.9,Arizona,9,2024-10-22,DEM,Harris,49
+Marist,1193,2.9,-0.9,Arizona,9,2024-10-22,REP,Trump,50
+University of Maryland/Washington Post,1000,2.5,-0.3,Maryland,8,2024-10-22,DEM,Harris,61
+University of Maryland/Washington Post,1000,2.5,-0.3,Maryland,8,2024-10-22,REP,Trump,33
+Paradigm,1000,NA,NA,National,3.5,2024-10-22,DEM,Harris,48
+Paradigm,1000,NA,NA,National,3.5,2024-10-22,REP,Trump,46
+Hunt Research,1234,NA,NA,Florida,7,2024-10-22,DEM,Harris,44.8
+Hunt Research,1234,NA,NA,Florida,7,2024-10-22,REP,Trump,49.9
+Hunt Research,1234,NA,NA,Florida,7,2024-10-22,DEM,Harris,43.7
+Hunt Research,1234,NA,NA,Florida,7,2024-10-22,REP,Trump,49.7
+Hunt Research,1234,NA,NA,Florida,7,2024-10-22,LIB,Oliver,0.4
+Hunt Research,1234,NA,NA,Florida,7,2024-10-22,GRE,Stein,0.4
+Embold Research,1734,1.4,0.6,Minnesota,6,2024-10-22,DEM,Harris,47.7
+Embold Research,1734,1.4,0.6,Minnesota,6,2024-10-22,REP,Trump,45.1
+Rutgers-Eagleton,451,2.3,0,New Jersey,10,2024-10-22,DEM,Harris,55
+Rutgers-Eagleton,451,2.3,0,New Jersey,10,2024-10-22,REP,Trump,35
+Rutgers-Eagleton,478,2.3,0,New Jersey,10,2024-10-22,DEM,Harris,51
+Rutgers-Eagleton,478,2.3,0,New Jersey,10,2024-10-22,REP,Trump,37
+Redfield & Wilton Strategies,1189,1.8,0.4,National,9,2024-10-21,DEM,Harris,45
+Redfield & Wilton Strategies,1189,1.8,0.4,National,9,2024-10-21,REP,Trump,47
+Redfield & Wilton Strategies,1189,1.8,0.4,National,9,2024-10-21,LIB,Oliver,2
+Redfield & Wilton Strategies,1189,1.8,0.4,National,9,2024-10-21,GRE,Stein,1
+SoCal Strategies,702,NA,NA,North Carolina,9,2024-10-21,DEM,Harris,46.3
+SoCal Strategies,702,NA,NA,North Carolina,9,2024-10-21,REP,Trump,48.7
+TIPP,1268,1.8,-0.4,National,3,2024-10-21,DEM,Harris,48
+TIPP,1268,1.8,-0.4,National,3,2024-10-21,REP,Trump,48
+Emerson,865,2.9,-1.1,Maryland,7,2024-10-21,DEM,Harris,64
+Emerson,865,2.9,-1.1,Maryland,7,2024-10-21,REP,Trump,34.4
+Morning Consult,8940,1.9,-0.3,National,3,2024-10-21,DEM,Harris,50
+Morning Consult,8940,1.9,-0.3,National,3,2024-10-21,REP,Trump,46
+YouGov,1266,3,-1.1,National,9,2024-10-21,DEM,Harris,47
+YouGov,1266,3,-1.1,National,9,2024-10-21,REP,Trump,45
+YouGov,1266,3,-1.1,National,9,2024-10-21,GRE,Stein,2
+YouGov,1266,3,-1.1,National,9,2024-10-21,IND,West,0
+YouGov,1189,3,-1.1,National,9,2024-10-21,DEM,Harris,48
+YouGov,1189,3,-1.1,National,9,2024-10-21,REP,Trump,45
+YouGov,1189,3,-1.1,National,9,2024-10-21,GRE,Stein,2
+YouGov,1189,3,-1.1,National,9,2024-10-21,IND,West,0
+Emerson,815,2.9,-1.1,Texas,7,2024-10-21,DEM,Harris,45.9
+Emerson,815,2.9,-1.1,Texas,7,2024-10-21,REP,Trump,53.1
+Change Research,815,1.4,0.6,Nebraska,5,2024-10-21,DEM,Harris,41
+Change Research,815,1.4,0.6,Nebraska,5,2024-10-21,REP,Trump,55
+Monmouth,802,2.9,-0.9,National,9,2024-10-21,DEM,Harris,47
+Monmouth,802,2.9,-0.9,National,9,2024-10-21,REP,Trump,44
+Quinnipiac,1136,2.8,-0.5,Michigan,9,2024-10-21,DEM,Harris,49
+Quinnipiac,1136,2.8,-0.5,Michigan,9,2024-10-21,REP,Trump,46
+Quinnipiac,1136,2.8,-0.5,Michigan,9,2024-10-21,GRE,Stein,1
+Quinnipiac,1136,2.8,-0.5,Michigan,9,2024-10-21,LIB,Oliver,0
+Quinnipiac,1136,2.8,-0.5,Michigan,9,2024-10-21,IND,West,1
+Quinnipiac,1136,2.8,-0.5,Michigan,9,2024-10-21,CON,Terry,0
+Quinnipiac,1136,2.8,-0.5,Michigan,9,2024-10-21,DEM,Harris,50
+Quinnipiac,1136,2.8,-0.5,Michigan,9,2024-10-21,REP,Trump,46
+Quinnipiac,1108,2.8,-0.5,Wisconsin,9,2024-10-21,DEM,Harris,48
+Quinnipiac,1108,2.8,-0.5,Wisconsin,9,2024-10-21,REP,Trump,48
+Quinnipiac,1108,2.8,-0.5,Wisconsin,9,2024-10-21,GRE,Stein,0
+Quinnipiac,1108,2.8,-0.5,Wisconsin,9,2024-10-21,LIB,Oliver,0
+Quinnipiac,1108,2.8,-0.5,Wisconsin,9,2024-10-21,IND,West,0
+Quinnipiac,1108,2.8,-0.5,Wisconsin,9,2024-10-21,CON,Terry,0
+Quinnipiac,1108,2.8,-0.5,Wisconsin,9,2024-10-21,PSL,De la Cruz,0
+Quinnipiac,1108,2.8,-0.5,Wisconsin,9,2024-10-21,DEM,Harris,48
+Quinnipiac,1108,2.8,-0.5,Wisconsin,9,2024-10-21,REP,Trump,48
+Ipsos,3481,2.8,-0.9,National,9.5,2024-10-21,DEM,Harris,46
+Ipsos,3481,2.8,-0.9,National,9.5,2024-10-21,REP,Trump,43
+Ipsos,3307,2.8,-0.9,National,9.5,2024-10-21,DEM,Harris,48
+Ipsos,3307,2.8,-0.9,National,9.5,2024-10-21,REP,Trump,45
+Ipsos,4129,2.8,-0.9,National,9.5,2024-10-21,DEM,Harris,41
+Ipsos,4129,2.8,-0.9,National,9.5,2024-10-21,REP,Trump,39
+Ipsos,4129,2.8,-0.9,National,9.5,2024-10-21,DEM,Harris,41
+Ipsos,4129,2.8,-0.9,National,9.5,2024-10-21,REP,Trump,39
+Ipsos,4129,2.8,-0.9,National,9.5,2024-10-21,LIB,Oliver,1
+Ipsos,4129,2.8,-0.9,National,9.5,2024-10-21,GRE,Stein,1
+Ipsos,4129,2.8,-0.9,National,9.5,2024-10-21,IND,West,1
+Ipsos,3481,2.8,-0.9,National,9.5,2024-10-21,DEM,Harris,45
+Ipsos,3481,2.8,-0.9,National,9.5,2024-10-21,REP,Trump,43
+Ipsos,3481,2.8,-0.9,National,9.5,2024-10-21,LIB,Oliver,1
+Ipsos,3481,2.8,-0.9,National,9.5,2024-10-21,GRE,Stein,1
+Ipsos,3481,2.8,-0.9,National,9.5,2024-10-21,IND,West,1
+Ipsos,3307,2.8,-0.9,National,9.5,2024-10-21,DEM,Harris,47
+Ipsos,3307,2.8,-0.9,National,9.5,2024-10-21,REP,Trump,45
+Ipsos,3307,2.8,-0.9,National,9.5,2024-10-21,LIB,Oliver,1
+Ipsos,3307,2.8,-0.9,National,9.5,2024-10-21,GRE,Stein,1
+Ipsos,3307,2.8,-0.9,National,9.5,2024-10-21,IND,West,1
+University of Texas at Tyler,956,1.8,0.1,Texas,8.5,2024-10-21,DEM,Harris,46
+University of Texas at Tyler,956,1.8,0.1,Texas,8.5,2024-10-21,REP,Trump,51
+University of Texas at Tyler,956,1.8,0.1,Texas,8.5,2024-10-21,GRE,Stein,1
+University of Texas at Tyler,956,1.8,0.1,Texas,8.5,2024-10-21,LIB,Oliver,1
+Bowling Green State University/YouGov,1000,NA,NA,Ohio,7,2024-10-21,DEM,Harris,43
+Bowling Green State University/YouGov,1000,NA,NA,Ohio,7,2024-10-21,REP,Trump,50
+InsiderAdvantage,800,2,-0.3,Nevada,5,2024-10-20,DEM,Harris,47.7
+InsiderAdvantage,800,2,-0.3,Nevada,5,2024-10-20,REP,Trump,47.9
+InsiderAdvantage,800,2,-0.3,Arizona,5,2024-10-20,DEM,Harris,47
+InsiderAdvantage,800,2,-0.3,Arizona,5,2024-10-20,REP,Trump,49.5
+InsiderAdvantage,800,2,-0.3,North Carolina,5,2024-10-20,DEM,Harris,46.8
+InsiderAdvantage,800,2,-0.3,North Carolina,5,2024-10-20,REP,Trump,48.7
+HighGround,400,1.8,-0.3,Arizona,4.5,2024-10-20,DEM,Harris,46.2
+HighGround,400,1.8,-0.3,Arizona,4.5,2024-10-20,REP,Trump,46.8
+TIPP,1244,1.8,-0.4,National,3,2024-10-20,DEM,Harris,47
+TIPP,1244,1.8,-0.4,National,3,2024-10-20,REP,Trump,48
+Trafalgar Group,1083,0.7,0.6,Wisconsin,4,2024-10-20,DEM,Harris,46.6
+Trafalgar Group,1083,0.7,0.6,Wisconsin,4,2024-10-20,REP,Trump,46.8
+Trafalgar Group,1090,0.7,0.6,Michigan,4,2024-10-20,DEM,Harris,44.2
+Trafalgar Group,1090,0.7,0.6,Michigan,4,2024-10-20,REP,Trump,46
+Morning Consult,8570,1.9,-0.3,National,3,2024-10-20,DEM,Harris,50
+Morning Consult,8570,1.9,-0.3,National,3,2024-10-20,REP,Trump,46
+Emerson,860,2.9,-1.1,Florida,7,2024-10-20,DEM,Harris,45.9
+Emerson,860,2.9,-1.1,Florida,7,2024-10-20,REP,Trump,53.6
+Quantus Insights,840,NA,NA,Pennsylvania,5.5,2024-10-20,DEM,Harris,48.2
+Quantus Insights,840,NA,NA,Pennsylvania,5.5,2024-10-20,REP,Trump,50.3
+SurveyUSA/High Point University,1164,2.8,-1.3,North Carolina,10,2024-10-20,DEM,Harris,47
+SurveyUSA/High Point University,1164,2.8,-1.3,North Carolina,10,2024-10-20,REP,Trump,46
+Axis Research,411,NA,NA,Maine CD-2,2,2024-10-20,DEM,Harris,41
+Axis Research,411,NA,NA,Maine CD-2,2,2024-10-20,REP,Trump,50
+Morning Consult,915,1.9,-0.3,Arizona,3,2024-10-20,DEM,Harris,48
+Morning Consult,915,1.9,-0.3,Arizona,3,2024-10-20,REP,Trump,48
+Morning Consult,915,1.9,-0.3,Arizona,3,2024-10-20,GRE,Stein,1
+Morning Consult,915,1.9,-0.3,Arizona,3,2024-10-20,LIB,Oliver,2
+Morning Consult,915,1.9,-0.3,Arizona,3,2024-10-20,DEM,Harris,49
+Morning Consult,915,1.9,-0.3,Arizona,3,2024-10-20,REP,Trump,49
+Morning Consult,861,1.9,-0.3,Arizona,3,2024-10-20,DEM,Harris,48
+Morning Consult,861,1.9,-0.3,Arizona,3,2024-10-20,REP,Trump,48
+Morning Consult,861,1.9,-0.3,Arizona,3,2024-10-20,GRE,Stein,1
+Morning Consult,861,1.9,-0.3,Arizona,3,2024-10-20,LIB,Oliver,2
+Morning Consult,861,1.9,-0.3,Arizona,3,2024-10-20,DEM,Harris,49
+Morning Consult,861,1.9,-0.3,Arizona,3,2024-10-20,REP,Trump,49
+Morning Consult,914,1.9,-0.3,Georgia,3,2024-10-20,DEM,Harris,48
+Morning Consult,914,1.9,-0.3,Georgia,3,2024-10-20,REP,Trump,47
+Morning Consult,914,1.9,-0.3,Georgia,3,2024-10-20,GRE,Stein,0
+Morning Consult,914,1.9,-0.3,Georgia,3,2024-10-20,LIB,Oliver,2
+Morning Consult,914,1.9,-0.3,Georgia,3,2024-10-20,DEM,Harris,48
+Morning Consult,914,1.9,-0.3,Georgia,3,2024-10-20,REP,Trump,49
+Morning Consult,855,1.9,-0.3,Georgia,3,2024-10-20,DEM,Harris,48
+Morning Consult,855,1.9,-0.3,Georgia,3,2024-10-20,REP,Trump,49
+Morning Consult,855,1.9,-0.3,Georgia,3,2024-10-20,GRE,Stein,0
+Morning Consult,855,1.9,-0.3,Georgia,3,2024-10-20,LIB,Oliver,1
+Morning Consult,855,1.9,-0.3,Georgia,3,2024-10-20,DEM,Harris,48
+Morning Consult,855,1.9,-0.3,Georgia,3,2024-10-20,REP,Trump,50
+Morning Consult,756,1.9,-0.3,Michigan,3,2024-10-20,DEM,Harris,47
+Morning Consult,756,1.9,-0.3,Michigan,3,2024-10-20,REP,Trump,45
+Morning Consult,756,1.9,-0.3,Michigan,3,2024-10-20,GRE,Stein,1
+Morning Consult,756,1.9,-0.3,Michigan,3,2024-10-20,LIB,Oliver,2
+Morning Consult,756,1.9,-0.3,Michigan,3,2024-10-20,DEM,Harris,48
+Morning Consult,756,1.9,-0.3,Michigan,3,2024-10-20,REP,Trump,46
+Morning Consult,705,1.9,-0.3,Michigan,3,2024-10-20,DEM,Harris,49
+Morning Consult,705,1.9,-0.3,Michigan,3,2024-10-20,REP,Trump,46
+Morning Consult,705,1.9,-0.3,Michigan,3,2024-10-20,GRE,Stein,1
+Morning Consult,705,1.9,-0.3,Michigan,3,2024-10-20,LIB,Oliver,2
+Morning Consult,705,1.9,-0.3,Michigan,3,2024-10-20,DEM,Harris,50
+Morning Consult,705,1.9,-0.3,Michigan,3,2024-10-20,REP,Trump,46
+Morning Consult,449,1.9,-0.3,Nevada,3,2024-10-20,DEM,Harris,48
+Morning Consult,449,1.9,-0.3,Nevada,3,2024-10-20,REP,Trump,47
+Morning Consult,449,1.9,-0.3,Nevada,3,2024-10-20,GRE,Stein,0
+Morning Consult,449,1.9,-0.3,Nevada,3,2024-10-20,LIB,Oliver,2
+Morning Consult,449,1.9,-0.3,Nevada,3,2024-10-20,DEM,Harris,49
+Morning Consult,449,1.9,-0.3,Nevada,3,2024-10-20,REP,Trump,48
+Morning Consult,420,1.9,-0.3,Nevada,3,2024-10-20,DEM,Harris,48
+Morning Consult,420,1.9,-0.3,Nevada,3,2024-10-20,REP,Trump,48
+Morning Consult,420,1.9,-0.3,Nevada,3,2024-10-20,GRE,Stein,0
+Morning Consult,420,1.9,-0.3,Nevada,3,2024-10-20,LIB,Oliver,1
+Morning Consult,420,1.9,-0.3,Nevada,3,2024-10-20,DEM,Harris,49
+Morning Consult,420,1.9,-0.3,Nevada,3,2024-10-20,REP,Trump,48
+Morning Consult,755,1.9,-0.3,North Carolina,3,2024-10-20,DEM,Harris,46
+Morning Consult,755,1.9,-0.3,North Carolina,3,2024-10-20,REP,Trump,49
+Morning Consult,755,1.9,-0.3,North Carolina,3,2024-10-20,GRE,Stein,1
+Morning Consult,755,1.9,-0.3,North Carolina,3,2024-10-20,LIB,Oliver,3
+Morning Consult,755,1.9,-0.3,North Carolina,3,2024-10-20,DEM,Harris,47
+Morning Consult,755,1.9,-0.3,North Carolina,3,2024-10-20,REP,Trump,50
+Morning Consult,702,1.9,-0.3,North Carolina,3,2024-10-20,DEM,Harris,48
+Morning Consult,702,1.9,-0.3,North Carolina,3,2024-10-20,REP,Trump,49
+Morning Consult,702,1.9,-0.3,North Carolina,3,2024-10-20,GRE,Stein,1
+Morning Consult,702,1.9,-0.3,North Carolina,3,2024-10-20,LIB,Oliver,1
+Morning Consult,702,1.9,-0.3,North Carolina,3,2024-10-20,DEM,Harris,48
+Morning Consult,702,1.9,-0.3,North Carolina,3,2024-10-20,REP,Trump,50
+Morning Consult,866,1.9,-0.3,Pennsylvania,3,2024-10-20,DEM,Harris,48
+Morning Consult,866,1.9,-0.3,Pennsylvania,3,2024-10-20,REP,Trump,48
+Morning Consult,866,1.9,-0.3,Pennsylvania,3,2024-10-20,GRE,Stein,0
+Morning Consult,866,1.9,-0.3,Pennsylvania,3,2024-10-20,LIB,Oliver,2
+Morning Consult,866,1.9,-0.3,Pennsylvania,3,2024-10-20,DEM,Harris,48
+Morning Consult,866,1.9,-0.3,Pennsylvania,3,2024-10-20,REP,Trump,48
+Morning Consult,812,1.9,-0.3,Pennsylvania,3,2024-10-20,DEM,Harris,50
+Morning Consult,812,1.9,-0.3,Pennsylvania,3,2024-10-20,REP,Trump,48
+Morning Consult,812,1.9,-0.3,Pennsylvania,3,2024-10-20,GRE,Stein,0
+Morning Consult,812,1.9,-0.3,Pennsylvania,3,2024-10-20,LIB,Oliver,1
+Morning Consult,812,1.9,-0.3,Pennsylvania,3,2024-10-20,DEM,Harris,50
+Morning Consult,812,1.9,-0.3,Pennsylvania,3,2024-10-20,REP,Trump,48
+Morning Consult,635,1.9,-0.3,Wisconsin,3,2024-10-20,DEM,Harris,47
+Morning Consult,635,1.9,-0.3,Wisconsin,3,2024-10-20,REP,Trump,47
+Morning Consult,635,1.9,-0.3,Wisconsin,3,2024-10-20,GRE,Stein,1
+Morning Consult,635,1.9,-0.3,Wisconsin,3,2024-10-20,LIB,Oliver,3
+Morning Consult,635,1.9,-0.3,Wisconsin,3,2024-10-20,DEM,Harris,48
+Morning Consult,635,1.9,-0.3,Wisconsin,3,2024-10-20,REP,Trump,48
+Morning Consult,624,1.9,-0.3,Wisconsin,3,2024-10-20,DEM,Harris,47
+Morning Consult,624,1.9,-0.3,Wisconsin,3,2024-10-20,REP,Trump,47
+Morning Consult,624,1.9,-0.3,Wisconsin,3,2024-10-20,GRE,Stein,1
+Morning Consult,624,1.9,-0.3,Wisconsin,3,2024-10-20,LIB,Oliver,3
+Morning Consult,624,1.9,-0.3,Wisconsin,3,2024-10-20,DEM,Harris,48
+Morning Consult,624,1.9,-0.3,Wisconsin,3,2024-10-20,REP,Trump,48
+U. Arizona/TrueDot,846,NA,NA,Arizona,5,2024-10-20,DEM,Harris,46.15
+U. Arizona/TrueDot,846,NA,NA,Arizona,5,2024-10-20,REP,Trump,45.48
+Cherry Communications,614,1,0.2,Florida,1,2024-10-20,DEM,Harris,45
+Cherry Communications,614,1,0.2,Florida,1,2024-10-20,REP,Trump,51
+Franklin and Marshall College,794,2.4,-0.1,Pennsylvania,8.5,2024-10-20,DEM,Harris,49
+Franklin and Marshall College,794,2.4,-0.1,Pennsylvania,8.5,2024-10-20,REP,Trump,45
+Franklin and Marshall College,794,2.4,-0.1,Pennsylvania,8.5,2024-10-20,GRE,Stein,2
+Franklin and Marshall College,794,2.4,-0.1,Pennsylvania,8.5,2024-10-20,LIB,Oliver,1
+Franklin and Marshall College,583,2.4,-0.1,Pennsylvania,8.5,2024-10-20,DEM,Harris,49
+Franklin and Marshall College,583,2.4,-0.1,Pennsylvania,8.5,2024-10-20,REP,Trump,50
+Franklin and Marshall College,794,2.4,-0.1,Pennsylvania,8.5,2024-10-20,DEM,Harris,48
+Franklin and Marshall College,794,2.4,-0.1,Pennsylvania,8.5,2024-10-20,REP,Trump,44
+ActiVote,400,NA,NA,Florida,8,2024-10-20,DEM,Harris,45.4
+ActiVote,400,NA,NA,Florida,8,2024-10-20,REP,Trump,54.6
+TIPP,1254,1.8,-0.4,National,3,2024-10-19,DEM,Harris,47
+TIPP,1254,1.8,-0.4,National,3,2024-10-19,REP,Trump,49
+Trafalgar Group,1084,0.7,0.6,Pennsylvania,4,2024-10-19,DEM,Harris,43.3
+Trafalgar Group,1084,0.7,0.6,Pennsylvania,4,2024-10-19,REP,Trump,46.3
+Morning Consult,8170,1.9,-0.3,National,3,2024-10-19,DEM,Harris,50
+Morning Consult,8170,1.9,-0.3,National,3,2024-10-19,REP,Trump,46
+Hart/POS,1000,2.6,-0.7,National,4,2024-10-19,DEM,Harris,46
+Hart/POS,1000,2.6,-0.7,National,4,2024-10-19,REP,Trump,48
+HarrisX,813,1.5,-0.1,Utah,6,2024-10-19,DEM,Harris,31
+HarrisX,813,1.5,-0.1,Utah,6,2024-10-19,REP,Trump,63
+HarrisX,813,1.5,-0.1,Utah,6,2024-10-19,IND,West,4
+HarrisX,813,1.5,-0.1,Utah,6,2024-10-19,GRE,Stein,2
+ActiVote,400,NA,NA,Colorado,8,2024-10-19,DEM,Harris,58.7
+ActiVote,400,NA,NA,Colorado,8,2024-10-19,REP,Trump,41.3
+ActiVote,400,NA,NA,Oklahoma,8,2024-10-19,DEM,Harris,33.9
+ActiVote,400,NA,NA,Oklahoma,8,2024-10-19,REP,Trump,66.1
+TIPP,1223,1.8,-0.4,National,3,2024-10-18,DEM,Harris,48
+TIPP,1223,1.8,-0.4,National,3,2024-10-18,REP,Trump,47
+Redfield & Wilton Strategies,691,1.8,0.4,Arizona,9,2024-10-18,DEM,Harris,46
+Redfield & Wilton Strategies,691,1.8,0.4,Arizona,9,2024-10-18,REP,Trump,49
+Redfield & Wilton Strategies,691,1.8,0.4,Arizona,9,2024-10-18,LIB,Oliver,1
+Redfield & Wilton Strategies,691,1.8,0.4,Arizona,9,2024-10-18,GRE,Stein,1
+Redfield & Wilton Strategies,1275,1.8,0.4,Florida,9,2024-10-18,DEM,Harris,45
+Redfield & Wilton Strategies,1275,1.8,0.4,Florida,9,2024-10-18,REP,Trump,49
+Redfield & Wilton Strategies,1275,1.8,0.4,Florida,9,2024-10-18,LIB,Oliver,1
+Redfield & Wilton Strategies,1275,1.8,0.4,Florida,9,2024-10-18,GRE,Stein,0
+Redfield & Wilton Strategies,1008,1.8,0.4,Michigan,9,2024-10-18,DEM,Harris,47
+Redfield & Wilton Strategies,1008,1.8,0.4,Michigan,9,2024-10-18,REP,Trump,47
+Redfield & Wilton Strategies,1008,1.8,0.4,Michigan,9,2024-10-18,LIB,Oliver,1
+Redfield & Wilton Strategies,1008,1.8,0.4,Michigan,9,2024-10-18,GRE,Stein,0
+Redfield & Wilton Strategies,529,1.8,0.4,Nevada,9,2024-10-18,DEM,Harris,46
+Redfield & Wilton Strategies,529,1.8,0.4,Nevada,9,2024-10-18,REP,Trump,47
+Redfield & Wilton Strategies,529,1.8,0.4,Nevada,9,2024-10-18,LIB,Oliver,1
+Redfield & Wilton Strategies,529,1.8,0.4,Nevada,9,2024-10-18,GRE,Stein,1
+Redfield & Wilton Strategies,622,1.8,0.4,Wisconsin,9,2024-10-18,DEM,Harris,47
+Redfield & Wilton Strategies,622,1.8,0.4,Wisconsin,9,2024-10-18,REP,Trump,46
+Redfield & Wilton Strategies,622,1.8,0.4,Wisconsin,9,2024-10-18,LIB,Oliver,1
+Redfield & Wilton Strategies,622,1.8,0.4,Wisconsin,9,2024-10-18,GRE,Stein,0
+Redfield & Wilton Strategies,843,1.8,0.4,North Carolina,9,2024-10-18,DEM,Harris,45
+Redfield & Wilton Strategies,843,1.8,0.4,North Carolina,9,2024-10-18,REP,Trump,48
+Redfield & Wilton Strategies,843,1.8,0.4,North Carolina,9,2024-10-18,LIB,Oliver,0
+Redfield & Wilton Strategies,843,1.8,0.4,North Carolina,9,2024-10-18,GRE,Stein,1
+Redfield & Wilton Strategies,1019,1.8,0.4,Georgia,9,2024-10-18,DEM,Harris,47
+Redfield & Wilton Strategies,1019,1.8,0.4,Georgia,9,2024-10-18,REP,Trump,48
+Redfield & Wilton Strategies,1019,1.8,0.4,Georgia,9,2024-10-18,LIB,Oliver,1
+Redfield & Wilton Strategies,1019,1.8,0.4,Georgia,9,2024-10-18,GRE,Stein,1
+Redfield & Wilton Strategies,1256,1.8,0.4,Pennsylvania,9,2024-10-18,DEM,Harris,48
+Redfield & Wilton Strategies,1256,1.8,0.4,Pennsylvania,9,2024-10-18,REP,Trump,48
+Redfield & Wilton Strategies,1256,1.8,0.4,Pennsylvania,9,2024-10-18,LIB,Oliver,1
+Redfield & Wilton Strategies,1256,1.8,0.4,Pennsylvania,9,2024-10-18,GRE,Stein,0
+Morning Consult,8204,1.9,-0.3,National,3,2024-10-18,DEM,Harris,50
+Morning Consult,8204,1.9,-0.3,National,3,2024-10-18,REP,Trump,46
+WPAi,502,1.7,-0.1,Oklahoma,3,2024-10-18,DEM,Harris,29
+WPAi,502,1.7,-0.1,Oklahoma,3,2024-10-18,REP,Trump,65
+WPAi,502,1.7,-0.1,Oklahoma,3,2024-10-18,IND,Garrity,1
+WPAi,502,1.7,-0.1,Oklahoma,3,2024-10-18,LIB,Oliver,1
+Suffolk,1000,2.9,-1,National,8,2024-10-18,DEM,Harris,45.3
+Suffolk,1000,2.9,-1,National,8,2024-10-18,REP,Trump,44.4
+Suffolk,1000,2.9,-1,National,8,2024-10-18,GRE,Stein,0.8
+Suffolk,1000,2.9,-1,National,8,2024-10-18,IND,West,1
+Suffolk,1000,2.9,-1,National,8,2024-10-18,LIB,Oliver,0.8
+Suffolk,1000,2.9,-1,National,8,2024-10-18,DEM,Harris,49.7
+Suffolk,1000,2.9,-1,National,8,2024-10-18,REP,Trump,48.7
 Bullfinch,600,NA,NA,Wisconsin,4,2024-10-18,DEM,Harris,50
 Bullfinch,600,NA,NA,Wisconsin,4,2024-10-18,REP,Trump,47
 Bullfinch,600,NA,NA,Wisconsin,4,2024-10-18,DEM,Harris,48
 Bullfinch,600,NA,NA,Wisconsin,4,2024-10-18,REP,Trump,46
+Research & Polling,1024,2.1,-0.9,New Mexico,3.5,2024-10-18,DEM,Harris,50
+Research & Polling,1024,2.1,-0.9,New Mexico,3.5,2024-10-18,REP,Trump,41
+Research & Polling,1024,2.1,-0.9,New Mexico,3.5,2024-10-18,IND,Kennedy,3
+U. North Florida,977,2.8,-0.6,Florida,10,2024-10-18,DEM,Harris,43
+U. North Florida,977,2.8,-0.6,Florida,10,2024-10-18,REP,Trump,53
+Dartmouth Poll,2211,NA,NA,New Hampshire,6,2024-10-18,DEM,Harris,58.5
+Dartmouth Poll,2211,NA,NA,New Hampshire,6,2024-10-18,REP,Trump,37.7
 PPP,571,1.4,0,Washington,4,2024-10-17,DEM,Harris,55
 PPP,571,1.4,0,Washington,4,2024-10-17,REP,Trump,40
 PPP,716,1.4,0,Oregon,4,2024-10-17,DEM,Harris,53
@@ -11,8 +1426,71 @@ TIPP,1257,1.8,-0.4,National,3,2024-10-17,DEM,Harris,49
 TIPP,1257,1.8,-0.4,National,3,2024-10-17,REP,Trump,47
 Quantus Insights,1045,NA,NA,National,5.5,2024-10-17,DEM,Harris,49.4
 Quantus Insights,1045,NA,NA,National,5.5,2024-10-17,REP,Trump,48.6
+Morning Consult,8484,1.9,-0.3,National,3,2024-10-17,DEM,Harris,50
+Morning Consult,8484,1.9,-0.3,National,3,2024-10-17,REP,Trump,46
 RMG Research,788,2.3,-0.4,Florida,5,2024-10-17,DEM,Harris,47
 RMG Research,788,2.3,-0.4,Florida,5,2024-10-17,REP,Trump,52
+Siena,872,2.7,-0.8,New York,7,2024-10-17,DEM,Harris,54
+Siena,872,2.7,-0.8,New York,7,2024-10-17,REP,Trump,37
+Siena,872,2.7,-0.8,New York,7,2024-10-17,GRE,Stein,1
+Siena,872,2.7,-0.8,New York,7,2024-10-17,LIB,Oliver,1
+Siena,872,2.7,-0.8,New York,7,2024-10-17,IND,West,1
+Siena,872,2.7,-0.8,New York,7,2024-10-17,DEM,Harris,58
+Siena,872,2.7,-0.8,New York,7,2024-10-17,REP,Trump,39
+AtlasIntel,4180,2.7,-0.8,National,6,2024-10-17,DEM,Harris,47.6
+AtlasIntel,4180,2.7,-0.8,National,6,2024-10-17,REP,Trump,50.7
+AtlasIntel,4180,2.7,-0.8,National,6,2024-10-17,GRE,Stein,0.8
+AtlasIntel,4180,2.7,-0.8,National,6,2024-10-17,LIB,Oliver,0.1
+AtlasIntel,4180,2.7,-0.8,National,6,2024-10-17,IND,West,0.1
+AtlasIntel,4180,2.7,-0.8,National,6,2024-10-17,DEM,Harris,48.1
+AtlasIntel,4180,2.7,-0.8,National,6,2024-10-17,REP,Trump,50.8
+AtlasIntel,1440,2.7,-0.8,Arizona,6,2024-10-17,DEM,Harris,48.6
+AtlasIntel,1440,2.7,-0.8,Arizona,6,2024-10-17,REP,Trump,49.2
+AtlasIntel,1440,2.7,-0.8,Arizona,6,2024-10-17,GRE,Stein,0.7
+AtlasIntel,1440,2.7,-0.8,Arizona,6,2024-10-17,LIB,Oliver,0.1
+AtlasIntel,1440,2.7,-0.8,Arizona,6,2024-10-17,DEM,Harris,49.3
+AtlasIntel,1440,2.7,-0.8,Arizona,6,2024-10-17,REP,Trump,49.2
+AtlasIntel,1411,2.7,-0.8,Georgia,6,2024-10-17,DEM,Harris,48.1
+AtlasIntel,1411,2.7,-0.8,Georgia,6,2024-10-17,REP,Trump,49.5
+AtlasIntel,1411,2.7,-0.8,Georgia,6,2024-10-17,LIB,Oliver,1.3
+AtlasIntel,1411,2.7,-0.8,Georgia,6,2024-10-17,IND,West,0.2
+AtlasIntel,1411,2.7,-0.8,Georgia,6,2024-10-17,GRE,Stein,0.2
+AtlasIntel,1411,2.7,-0.8,Georgia,6,2024-10-17,DEM,Harris,48.4
+AtlasIntel,1411,2.7,-0.8,Georgia,6,2024-10-17,REP,Trump,50.1
+AtlasIntel,1529,2.7,-0.8,Michigan,6,2024-10-17,DEM,Harris,46.8
+AtlasIntel,1529,2.7,-0.8,Michigan,6,2024-10-17,REP,Trump,49.6
+AtlasIntel,1529,2.7,-0.8,Michigan,6,2024-10-17,GRE,Stein,1.1
+AtlasIntel,1529,2.7,-0.8,Michigan,6,2024-10-17,IND,Kennedy,0.7
+AtlasIntel,1529,2.7,-0.8,Michigan,6,2024-10-17,LIB,Oliver,0.2
+AtlasIntel,1529,2.7,-0.8,Michigan,6,2024-10-17,IND,West,0.1
+AtlasIntel,1529,2.7,-0.8,Michigan,6,2024-10-17,DEM,Harris,47.3
+AtlasIntel,1529,2.7,-0.8,Michigan,6,2024-10-17,REP,Trump,50.2
+AtlasIntel,1171,2.7,-0.8,Nevada,6,2024-10-17,DEM,Harris,48.1
+AtlasIntel,1171,2.7,-0.8,Nevada,6,2024-10-17,REP,Trump,48.4
+AtlasIntel,1171,2.7,-0.8,Nevada,6,2024-10-17,GRE,Stein,1.7
+AtlasIntel,1171,2.7,-0.8,Nevada,6,2024-10-17,LIB,Oliver,0
+AtlasIntel,1171,2.7,-0.8,Nevada,6,2024-10-17,DEM,Harris,48.4
+AtlasIntel,1171,2.7,-0.8,Nevada,6,2024-10-17,REP,Trump,48.3
+AtlasIntel,1674,2.7,-0.8,North Carolina,6,2024-10-17,DEM,Harris,49.5
+AtlasIntel,1674,2.7,-0.8,North Carolina,6,2024-10-17,REP,Trump,48.8
+AtlasIntel,1674,2.7,-0.8,North Carolina,6,2024-10-17,GRE,Stein,1.1
+AtlasIntel,1674,2.7,-0.8,North Carolina,6,2024-10-17,LIB,Oliver,0.1
+AtlasIntel,1674,2.7,-0.8,North Carolina,6,2024-10-17,IND,West,0.1
+AtlasIntel,1674,2.7,-0.8,North Carolina,6,2024-10-17,DEM,Harris,50.5
+AtlasIntel,1674,2.7,-0.8,North Carolina,6,2024-10-17,REP,Trump,48.8
+AtlasIntel,2048,2.7,-0.8,Pennsylvania,6,2024-10-17,DEM,Harris,46.5
+AtlasIntel,2048,2.7,-0.8,Pennsylvania,6,2024-10-17,REP,Trump,49.8
+AtlasIntel,2048,2.7,-0.8,Pennsylvania,6,2024-10-17,GRE,Stein,1.9
+AtlasIntel,2048,2.7,-0.8,Pennsylvania,6,2024-10-17,LIB,Oliver,0.5
+AtlasIntel,2048,2.7,-0.8,Pennsylvania,6,2024-10-17,DEM,Harris,47.4
+AtlasIntel,2048,2.7,-0.8,Pennsylvania,6,2024-10-17,REP,Trump,49.9
+AtlasIntel,932,2.7,-0.8,Wisconsin,6,2024-10-17,DEM,Harris,48.9
+AtlasIntel,932,2.7,-0.8,Wisconsin,6,2024-10-17,REP,Trump,48.2
+AtlasIntel,932,2.7,-0.8,Wisconsin,6,2024-10-17,LIB,Oliver,0.8
+AtlasIntel,932,2.7,-0.8,Wisconsin,6,2024-10-17,IND,Kennedy,0.7
+AtlasIntel,932,2.7,-0.8,Wisconsin,6,2024-10-17,GRE,Stein,0.2
+AtlasIntel,932,2.7,-0.8,Wisconsin,6,2024-10-17,DEM,Harris,49
+AtlasIntel,932,2.7,-0.8,Wisconsin,6,2024-10-17,REP,Trump,48.4
 Bullfinch,600,NA,NA,Michigan,4,2024-10-17,DEM,Harris,53
 Bullfinch,600,NA,NA,Michigan,4,2024-10-17,REP,Trump,45
 Bullfinch,600,NA,NA,Michigan,4,2024-10-17,DEM,Harris,51
@@ -21,8 +1499,34 @@ Bullfinch,600,NA,NA,Pennsylvania,4,2024-10-17,DEM,Harris,49
 Bullfinch,600,NA,NA,Pennsylvania,4,2024-10-17,REP,Trump,49
 Bullfinch,600,NA,NA,Pennsylvania,4,2024-10-17,DEM,Harris,49
 Bullfinch,600,NA,NA,Pennsylvania,4,2024-10-17,REP,Trump,48
+Elon U.,800,2.5,-0.6,North Carolina,8,2024-10-17,DEM,Harris,46
+Elon U.,800,2.5,-0.6,North Carolina,8,2024-10-17,REP,Trump,46
 ActiVote,1000,NA,NA,National,8,2024-10-17,DEM,Harris,48.9
 ActiVote,1000,NA,NA,National,8,2024-10-17,REP,Trump,51.1
+YouGov,1139,3,-1.1,California,9,2024-10-17,DEM,Harris,63
+YouGov,1139,3,-1.1,California,9,2024-10-17,REP,Trump,34
+YouGov,1139,3,-1.1,California,9,2024-10-17,DEM,Harris,63
+YouGov,1139,3,-1.1,California,9,2024-10-17,REP,Trump,34
+YouGov,1062,3,-1.1,Pennsylvania,9,2024-10-17,DEM,Harris,50
+YouGov,1062,3,-1.1,Pennsylvania,9,2024-10-17,REP,Trump,47
+YouGov,1043,3,-1.1,Pennsylvania,9,2024-10-17,DEM,Harris,50
+YouGov,1043,3,-1.1,Pennsylvania,9,2024-10-17,REP,Trump,48
+YouGov,1094,3,-1.1,Florida,9,2024-10-17,DEM,Harris,46
+YouGov,1094,3,-1.1,Florida,9,2024-10-17,REP,Trump,51
+YouGov,1076,3,-1.1,Florida,9,2024-10-17,DEM,Harris,46
+YouGov,1076,3,-1.1,Florida,9,2024-10-17,REP,Trump,51
+YouGov,1108,3,-1.1,Texas,9,2024-10-17,DEM,Harris,45
+YouGov,1108,3,-1.1,Texas,9,2024-10-17,REP,Trump,50
+YouGov,1075,3,-1.1,Texas,9,2024-10-17,DEM,Harris,46
+YouGov,1075,3,-1.1,Texas,9,2024-10-17,REP,Trump,51
+YouGov,1089,3,-1.1,New York,9,2024-10-17,DEM,Harris,58
+YouGov,1089,3,-1.1,New York,9,2024-10-17,REP,Trump,38
+YouGov,1089,3,-1.1,New York,9,2024-10-17,DEM,Harris,58
+YouGov,1089,3,-1.1,New York,9,2024-10-17,REP,Trump,38
+YouGov,1500,3,-1.1,National,9,2024-10-17,DEM,Harris,50
+YouGov,1500,3,-1.1,National,9,2024-10-17,REP,Trump,46
+YouGov,1500,3,-1.1,National,9,2024-10-17,DEM,Harris,51
+YouGov,1500,3,-1.1,National,9,2024-10-17,REP,Trump,46
 ActiVote,400,NA,NA,Georgia,8,2024-10-17,DEM,Harris,49.3
 ActiVote,400,NA,NA,Georgia,8,2024-10-17,REP,Trump,50.7
 ActiVote,400,NA,NA,South Carolina,8,2024-10-17,DEM,Harris,41.6
@@ -47,16 +1551,35 @@ TIPP,813,1.8,-0.4,Georgia,3,2024-10-16,DEM,Harris,49
 TIPP,813,1.8,-0.4,Georgia,3,2024-10-16,REP,Trump,48.5
 TIPP,813,1.8,-0.4,Georgia,3,2024-10-16,IND,West,0.5
 TIPP,813,1.8,-0.4,Georgia,3,2024-10-16,GRE,Stein,0.8
+Morning Consult,8756,1.9,-0.3,National,3,2024-10-16,DEM,Harris,50
+Morning Consult,8756,1.9,-0.3,National,3,2024-10-16,REP,Trump,46
+Mason-Dixon,500,2.6,-1.1,South Dakota,6,2024-10-16,DEM,Harris,33
+Mason-Dixon,500,2.6,-1.1,South Dakota,6,2024-10-16,REP,Trump,59
 YouGov,1435,3,-1.1,Arizona,9,2024-10-16,DEM,Harris,48
 YouGov,1435,3,-1.1,Arizona,9,2024-10-16,REP,Trump,51
+UMass Amherst/YouGov,1412,2.4,-0.4,National,7.5,2024-10-16,DEM,Harris,48
+UMass Amherst/YouGov,1412,2.4,-0.4,National,7.5,2024-10-16,REP,Trump,46
 RMG Research,787,2.3,-0.4,Wisconsin,5,2024-10-16,DEM,Harris,49
 RMG Research,787,2.3,-0.4,Wisconsin,5,2024-10-16,REP,Trump,50
 RMG Research,789,2.3,-0.4,Michigan,5,2024-10-16,DEM,Harris,49
 RMG Research,789,2.3,-0.4,Michigan,5,2024-10-16,REP,Trump,49
+U. Georgia SPIA,1000,2.2,-0.2,Georgia,7,2024-10-16,DEM,Harris,43.4
+U. Georgia SPIA,1000,2.2,-0.2,Georgia,7,2024-10-16,REP,Trump,47
+U. Georgia SPIA,1000,2.2,-0.2,Georgia,7,2024-10-16,LIB,Oliver,0.4
+U. Georgia SPIA,1000,2.2,-0.2,Georgia,7,2024-10-16,GRE,Stein,0.4
+MSU - Billings,760,1.5,0.3,Montana,7,2024-10-16,DEM,Harris,34
+MSU - Billings,760,1.5,0.3,Montana,7,2024-10-16,REP,Trump,52
+MSU - Billings,760,1.5,0.3,Montana,7,2024-10-16,LIB,Oliver,2
+MSU - Billings,760,1.5,0.3,Montana,7,2024-10-16,GRE,Stein,1
+MSU - Billings,760,1.5,0.3,Montana,7,2024-10-16,IND,Kennedy,3
 Gateway Political Strategies,2540,NA,NA,National,2,2024-10-16,DEM,Harris,53
 Gateway Political Strategies,2540,NA,NA,National,2,2024-10-16,REP,Trump,47
 ActiVote,400,NA,NA,Texas,8,2024-10-16,DEM,Harris,44.2
 ActiVote,400,NA,NA,Texas,8,2024-10-16,REP,Trump,55.8
+Fort Hays State University,608,0.9,1,Kansas,8,2024-10-16,DEM,Harris,39.4
+Fort Hays State University,608,0.9,1,Kansas,8,2024-10-16,REP,Trump,49.9
+Fort Hays State University,517,0.9,1,Kansas,8,2024-10-16,DEM,Harris,43.2
+Fort Hays State University,517,0.9,1,Kansas,8,2024-10-16,REP,Trump,48.2
 ActiVote,400,NA,NA,Tennessee,8,2024-10-16,DEM,Harris,37.6
 ActiVote,400,NA,NA,Tennessee,8,2024-10-16,REP,Trump,62.4
 ActiVote,400,NA,NA,Massachusetts,8,2024-10-16,DEM,Harris,66.6
@@ -65,6 +1588,8 @@ InsiderAdvantage,800,2,-0.3,Georgia,5,2024-10-15,DEM,Harris,47
 InsiderAdvantage,800,2,-0.3,Georgia,5,2024-10-15,REP,Trump,49
 TIPP,1248,1.8,-0.4,National,3,2024-10-15,DEM,Harris,50
 TIPP,1248,1.8,-0.4,National,3,2024-10-15,REP,Trump,46
+Morning Consult,8839,1.9,-0.3,National,3,2024-10-15,DEM,Harris,50
+Morning Consult,8839,1.9,-0.3,National,3,2024-10-15,REP,Trump,46
 YouGov,1457,3,-1.1,National,9,2024-10-15,DEM,Harris,48
 YouGov,1457,3,-1.1,National,9,2024-10-15,REP,Trump,45
 YouGov,1457,3,-1.1,National,9,2024-10-15,GRE,Stein,1
@@ -73,6 +1598,17 @@ YouGov,1314,3,-1.1,National,9,2024-10-15,DEM,Harris,49
 YouGov,1314,3,-1.1,National,9,2024-10-15,REP,Trump,45
 YouGov,1314,3,-1.1,National,9,2024-10-15,GRE,Stein,1
 YouGov,1314,3,-1.1,National,9,2024-10-15,IND,West,0
+Fabrizio/Impact,600,1.7,-0.3,Nevada,2,2024-10-15,DEM,Harris,46
+Fabrizio/Impact,600,1.7,-0.3,Nevada,2,2024-10-15,REP,Trump,47
+Fabrizio/Impact,600,1.7,-0.3,Nevada,2,2024-10-15,LIB,Oliver,1
+Fabrizio/Impact,600,1.7,-0.3,Nevada,2,2024-10-15,DEM,Harris,47
+Fabrizio/Impact,600,1.7,-0.3,Nevada,2,2024-10-15,REP,Trump,49
+PPIC,1137,2.5,-0.4,California,10,2024-10-15,DEM,Harris,59
+PPIC,1137,2.5,-0.4,California,10,2024-10-15,REP,Trump,33
+PPIC,1137,2.5,-0.4,California,10,2024-10-15,IND,Kennedy,3
+PPIC,1137,2.5,-0.4,California,10,2024-10-15,LIB,Oliver,0
+PPIC,1137,2.5,-0.4,California,10,2024-10-15,GRE,Stein,1
+PPIC,1137,2.5,-0.4,California,10,2024-10-15,PSL,De la Cruz,1
 Morning Consult,653,1.9,-0.3,Arizona,3,2024-10-15,DEM,Harris,49
 Morning Consult,653,1.9,-0.3,Arizona,3,2024-10-15,REP,Trump,48
 Morning Consult,1002,1.9,-0.3,Georgia,3,2024-10-15,DEM,Harris,48
@@ -93,6 +1629,34 @@ Morning Consult,2048,1.9,-0.3,Texas,3,2024-10-15,DEM,Harris,46
 Morning Consult,2048,1.9,-0.3,Texas,3,2024-10-15,REP,Trump,50
 Morning Consult,527,1.9,-0.3,Wisconsin,3,2024-10-15,DEM,Harris,47
 Morning Consult,527,1.9,-0.3,Wisconsin,3,2024-10-15,REP,Trump,48
+Washington Post/George Mason University,580,2.7,-0.8,Arizona,9,2024-10-15,DEM,Harris,44
+Washington Post/George Mason University,580,2.7,-0.8,Arizona,9,2024-10-15,REP,Trump,50
+Washington Post/George Mason University,580,2.7,-0.8,Arizona,9,2024-10-15,DEM,Harris,46
+Washington Post/George Mason University,580,2.7,-0.8,Arizona,9,2024-10-15,REP,Trump,49
+Washington Post/George Mason University,730,2.7,-0.8,Georgia,9,2024-10-15,DEM,Harris,50
+Washington Post/George Mason University,730,2.7,-0.8,Georgia,9,2024-10-15,REP,Trump,44
+Washington Post/George Mason University,730,2.7,-0.8,Georgia,9,2024-10-15,DEM,Harris,51
+Washington Post/George Mason University,730,2.7,-0.8,Georgia,9,2024-10-15,REP,Trump,47
+Washington Post/George Mason University,687,2.7,-0.8,Michigan,9,2024-10-15,DEM,Harris,46
+Washington Post/George Mason University,687,2.7,-0.8,Michigan,9,2024-10-15,REP,Trump,47
+Washington Post/George Mason University,687,2.7,-0.8,Michigan,9,2024-10-15,DEM,Harris,49
+Washington Post/George Mason University,687,2.7,-0.8,Michigan,9,2024-10-15,REP,Trump,47
+Washington Post/George Mason University,652,2.7,-0.8,Nevada,9,2024-10-15,DEM,Harris,47
+Washington Post/George Mason University,652,2.7,-0.8,Nevada,9,2024-10-15,REP,Trump,44
+Washington Post/George Mason University,652,2.7,-0.8,Nevada,9,2024-10-15,DEM,Harris,48
+Washington Post/George Mason University,652,2.7,-0.8,Nevada,9,2024-10-15,REP,Trump,48
+Washington Post/George Mason University,965,2.7,-0.8,North Carolina,9,2024-10-15,DEM,Harris,45
+Washington Post/George Mason University,965,2.7,-0.8,North Carolina,9,2024-10-15,REP,Trump,49
+Washington Post/George Mason University,965,2.7,-0.8,North Carolina,9,2024-10-15,DEM,Harris,47
+Washington Post/George Mason University,965,2.7,-0.8,North Carolina,9,2024-10-15,REP,Trump,50
+Washington Post/George Mason University,707,2.7,-0.8,Pennsylvania,9,2024-10-15,DEM,Harris,49
+Washington Post/George Mason University,707,2.7,-0.8,Pennsylvania,9,2024-10-15,REP,Trump,46
+Washington Post/George Mason University,707,2.7,-0.8,Pennsylvania,9,2024-10-15,DEM,Harris,49
+Washington Post/George Mason University,707,2.7,-0.8,Pennsylvania,9,2024-10-15,REP,Trump,47
+Washington Post/George Mason University,695,2.7,-0.8,Wisconsin,9,2024-10-15,DEM,Harris,50
+Washington Post/George Mason University,695,2.7,-0.8,Wisconsin,9,2024-10-15,REP,Trump,46
+Washington Post/George Mason University,695,2.7,-0.8,Wisconsin,9,2024-10-15,DEM,Harris,50
+Washington Post/George Mason University,695,2.7,-0.8,Wisconsin,9,2024-10-15,REP,Trump,47
 Mitchell,589,2.4,-0.2,Michigan,7,2024-10-14,DEM,Harris,47
 Mitchell,589,2.4,-0.2,Michigan,7,2024-10-14,REP,Trump,47
 Mitchell,589,2.4,-0.2,Michigan,7,2024-10-14,GRE,Stein,1
@@ -153,6 +1717,8 @@ Cygnal,600,2.1,-1.1,North Carolina,4,2024-10-14,LIB,Oliver,0.9
 Cygnal,600,2.1,-1.1,North Carolina,4,2024-10-14,CON,Terry,0.1
 Cygnal,600,2.1,-1.1,North Carolina,4,2024-10-14,GRE,Stein,0.4
 Cygnal,600,2.1,-1.1,North Carolina,4,2024-10-14,IND,West,0.6
+Morning Consult,8929,1.9,-0.3,National,3,2024-10-14,DEM,Harris,50
+Morning Consult,8929,1.9,-0.3,National,3,2024-10-14,REP,Trump,46
 Beacon/Shaw,1110,2.8,-1.1,National,9,2024-10-14,DEM,Harris,48
 Beacon/Shaw,1110,2.8,-1.1,National,9,2024-10-14,REP,Trump,50
 Beacon/Shaw,870,2.8,-1.1,National,9,2024-10-14,DEM,Harris,48
@@ -281,6 +1847,8 @@ Siena/NYT,808,3,-1.5,Arizona,9,2024-10-10,GRE,Stein,2
 Siena/NYT,808,3,-1.5,Arizona,9,2024-10-10,LIB,Oliver,1
 RMG Research,731,2.3,-0.4,Georgia,5,2024-10-10,DEM,Harris,47
 RMG Research,731,2.3,-0.4,Georgia,5,2024-10-10,REP,Trump,50
+Claflin University,1005,NA,NA,South Carolina,5,2024-10-10,DEM,Harris,42.84
+Claflin University,1005,NA,NA,South Carolina,5,2024-10-10,REP,Trump,49.94
 UMass Amherst/YouGov,700,2.4,-0.4,Massachusetts,7.5,2024-10-10,DEM,Harris,56
 UMass Amherst/YouGov,700,2.4,-0.4,Massachusetts,7.5,2024-10-10,REP,Trump,30
 UMass Amherst/YouGov,700,2.4,-0.4,Massachusetts,7.5,2024-10-10,GRE,Stein,2
@@ -321,6 +1889,8 @@ U. Houston,1329,2.2,-0.3,Texas,4,2024-10-10,DEM,Harris,46
 U. Houston,1329,2.2,-0.3,Texas,4,2024-10-10,REP,Trump,51
 U. Houston,1329,2.2,-0.3,Texas,4,2024-10-10,GRE,Stein,1
 U. Houston,1329,2.2,-0.3,Texas,4,2024-10-10,LIB,Oliver,0
+Michigan State University/YouGov,845,NA,NA,Michigan,3,2024-10-10,DEM,Harris,52.4
+Michigan State University/YouGov,845,NA,NA,Michigan,3,2024-10-10,REP,Trump,47.6
 ActiVote,400,NA,NA,California,8,2024-10-10,DEM,Harris,63.5
 ActiVote,400,NA,NA,California,8,2024-10-10,REP,Trump,36.5
 ActiVote,400,NA,NA,Missouri,8,2024-10-10,DEM,Harris,42.8
@@ -370,6 +1940,8 @@ Fabrizio/McLaughlin,800,NA,0.3,Pennsylvania,1,2024-10-09,DEM,Harris,48
 Fabrizio/McLaughlin,800,NA,0.3,Pennsylvania,1,2024-10-09,REP,Trump,49
 Fabrizio/McLaughlin,800,NA,0.3,Wisconsin,1,2024-10-09,DEM,Harris,48
 Fabrizio/McLaughlin,800,NA,0.3,Wisconsin,1,2024-10-09,REP,Trump,49
+Change Research,3275,1.4,0.6,National,5,2024-10-09,DEM,Harris,46
+Change Research,3275,1.4,0.6,National,5,2024-10-09,REP,Trump,46
 University of Massachusetts Lowell/YouGov,800,2.9,-1,Pennsylvania,9,2024-10-09,DEM,Harris,46
 University of Massachusetts Lowell/YouGov,800,2.9,-1,Pennsylvania,9,2024-10-09,REP,Trump,45
 University of Massachusetts Lowell/YouGov,800,2.9,-1,Pennsylvania,9,2024-10-09,GRE,Stein,1
@@ -626,6 +2198,15 @@ Noble Predictive Insights,600,2.4,-0.4,Utah,6,2024-10-07,CON,Skousen,0
 Noble Predictive Insights,600,2.4,-0.4,Utah,6,2024-10-07,IND,West,2
 Noble Predictive Insights,600,2.4,-0.4,Utah,6,2024-10-07,LIB,Oliver,1
 Noble Predictive Insights,600,2.4,-0.4,Utah,6,2024-10-07,GRE,Stein,1
+Digital Research,604,1.4,0.2,Maine,3,2024-10-07,DEM,Harris,48
+Digital Research,604,1.4,0.2,Maine,3,2024-10-07,REP,Trump,41
+Digital Research,604,1.4,0.2,Maine,3,2024-10-07,GRE,Stein,3
+Digital Research,604,1.4,0.2,Maine,3,2024-10-07,IND,West,1
+Digital Research,604,1.4,0.2,Maine,3,2024-10-07,LIB,Oliver,1
+Digital Research,303,1.4,0.2,Maine CD-1,3,2024-10-07,DEM,Harris,56
+Digital Research,303,1.4,0.2,Maine CD-1,3,2024-10-07,REP,Trump,33
+Digital Research,301,1.4,0.2,Maine CD-2,3,2024-10-07,DEM,Harris,40
+Digital Research,301,1.4,0.2,Maine CD-2,3,2024-10-07,REP,Trump,49
 Redfield & Wilton Strategies,1918,1.8,0.4,National,9,2024-10-06,DEM,Harris,47.72
 Redfield & Wilton Strategies,1918,1.8,0.4,National,9,2024-10-06,REP,Trump,45.99
 Redfield & Wilton Strategies,1918,1.8,0.4,National,9,2024-10-06,LIB,Oliver,0.7
@@ -634,6 +2215,8 @@ Research Co.,1001,2.4,-0.5,National,6,2024-10-06,DEM,Harris,49
 Research Co.,1001,2.4,-0.5,National,6,2024-10-06,REP,Trump,45
 Morning Consult,11353,1.9,-0.3,National,3,2024-10-06,DEM,Harris,51
 Morning Consult,11353,1.9,-0.3,National,3,2024-10-06,REP,Trump,46
+Axis Research,NA,NA,NA,Maine CD-2,2,2024-10-06,DEM,Harris,44
+Axis Research,NA,NA,NA,Maine CD-2,2,2024-10-06,REP,Trump,46
 Florida Atlantic University/Mainstreet Research,811,NA,NA,Texas,6,2024-10-06,DEM,Harris,45
 Florida Atlantic University/Mainstreet Research,811,NA,NA,Texas,6,2024-10-06,REP,Trump,50
 Florida Atlantic University/Mainstreet Research,775,NA,NA,Texas,6,2024-10-06,DEM,Harris,45
@@ -692,15 +2275,15 @@ YouGov,1150,3,-1.1,National,9,2024-10-04,REP,Trump,45
 YouGov,1150,3,-1.1,National,9,2024-10-04,IND,West,1
 YouGov,1150,3,-1.1,National,9,2024-10-04,GRE,Stein,1
 YouGov,1150,3,-1.1,National,9,2024-10-04,LIB,Oliver,1
-YouGov,1032,3,-1.1,National,9,2024-10-04,DEM,Harris,47
-YouGov,1032,3,-1.1,National,9,2024-10-04,REP,Trump,47
+YouGov,1032,3,-1.1,National,9,2024-10-04,DEM,Harris,48
+YouGov,1032,3,-1.1,National,9,2024-10-04,REP,Trump,46
 YouGov,1032,3,-1.1,National,9,2024-10-04,IND,West,1
 YouGov,1032,3,-1.1,National,9,2024-10-04,GRE,Stein,1
 YouGov,1032,3,-1.1,National,9,2024-10-04,LIB,Oliver,1
 YouGov,1151,3,-1.1,National,9,2024-10-04,DEM,Harris,48
 YouGov,1151,3,-1.1,National,9,2024-10-04,REP,Trump,46
-YouGov,1033,3,-1.1,National,9,2024-10-04,DEM,Harris,48
-YouGov,1033,3,-1.1,National,9,2024-10-04,REP,Trump,47
+YouGov,1033,3,-1.1,National,9,2024-10-04,DEM,Harris,49
+YouGov,1033,3,-1.1,National,9,2024-10-04,REP,Trump,46
 Big Village,1013,1.2,1.7,National,9,2024-10-04,DEM,Harris,44.5
 Big Village,1013,1.2,1.7,National,9,2024-10-04,REP,Trump,41.5
 Big Village,841,1.2,1.7,National,9,2024-10-04,DEM,Harris,48.7
@@ -729,6 +2312,10 @@ Glengariff Group Inc.,600,1.5,-0.2,Michigan,1,2024-10-04,IND,West,1.2
 Glengariff Group Inc.,600,1.5,-0.2,Michigan,1,2024-10-04,LIB,Oliver,0.8
 Mason-Dixon,625,2.6,-1.1,Florida,6,2024-10-04,DEM,Harris,43
 Mason-Dixon,625,2.6,-1.1,Florida,6,2024-10-04,REP,Trump,49
+CWS Research,533,1.6,0.2,Texas,6,2024-10-04,DEM,Harris,43
+CWS Research,533,1.6,0.2,Texas,6,2024-10-04,REP,Trump,48
+CWS Research,533,1.6,0.2,Texas,6,2024-10-04,LIB,Oliver,1
+CWS Research,533,1.6,0.2,Texas,6,2024-10-04,GRE,Stein,2
 Siena/NYT,617,3,-1.5,Texas,9,2024-10-04,DEM,Harris,44
 Siena/NYT,617,3,-1.5,Texas,9,2024-10-04,REP,Trump,50
 Siena/NYT,617,3,-1.5,Texas,9,2024-10-04,DEM,Harris,42
@@ -1480,6 +3067,14 @@ Bullfinch,600,NA,NA,North Carolina,4,2024-09-23,DEM,Harris,49
 Bullfinch,600,NA,NA,North Carolina,4,2024-09-23,REP,Trump,48
 SurveyUSA,558,2.8,-1.3,Nebraska,8,2024-09-23,DEM,Harris,40
 SurveyUSA,558,2.8,-1.3,Nebraska,8,2024-09-23,REP,Trump,56
+HarrisX,1011,1.5,-0.1,National,6,2024-09-23,DEM,Harris,52
+HarrisX,1011,1.5,-0.1,National,6,2024-09-23,REP,Trump,48
+HarrisX,1011,1.5,-0.1,National,6,2024-09-23,DEM,Harris,50
+HarrisX,1011,1.5,-0.1,National,6,2024-09-23,REP,Trump,46
+HarrisX,1011,1.5,-0.1,National,6,2024-09-23,IND,West,2
+HarrisX,1011,1.5,-0.1,National,6,2024-09-23,GRE,Stein,2
+Monmouth,654,2.9,-0.9,Pennsylvania,9,2024-09-23,DEM,Harris,47
+Monmouth,654,2.9,-0.9,Pennsylvania,9,2024-09-23,REP,Trump,45
 University of Maryland/Washington Post,1012,2.5,-0.3,Maryland,8,2024-09-23,DEM,Harris,63
 University of Maryland/Washington Post,1012,2.5,-0.3,Maryland,8,2024-09-23,REP,Trump,31
 University of Maryland/Washington Post,1012,2.5,-0.3,Maryland,8,2024-09-23,GRE,Stein,1
@@ -1492,6 +3087,12 @@ University of Maryland/Washington Post,1012,2.5,-0.3,Maryland,8,2024-09-23,GRE,S
 University of Maryland/Washington Post,1012,2.5,-0.3,Maryland,8,2024-09-23,LIB,Oliver,1
 University of Maryland/Washington Post,1012,2.5,-0.3,Maryland,8,2024-09-23,DEM,Harris,62
 University of Maryland/Washington Post,1012,2.5,-0.3,Maryland,8,2024-09-23,REP,Trump,32
+RG Strategies,400,NA,NA,Michigan,2,2024-09-23,DEM,Harris,51
+RG Strategies,400,NA,NA,Michigan,2,2024-09-23,REP,Trump,45
+RG Strategies,400,NA,NA,Wisconsin,2,2024-09-23,DEM,Harris,51
+RG Strategies,400,NA,NA,Wisconsin,2,2024-09-23,REP,Trump,45
+RG Strategies,400,NA,NA,Pennsylvania,2,2024-09-23,DEM,Harris,48
+RG Strategies,400,NA,NA,Pennsylvania,2,2024-09-23,REP,Trump,48
 RMG Research,788,2.3,-0.4,Wisconsin,5,2024-09-23,DEM,Harris,50
 RMG Research,788,2.3,-0.4,Wisconsin,5,2024-09-23,REP,Trump,49
 Morning Consult,11057,1.9,-0.3,National,3,2024-09-22,DEM,Harris,50
@@ -1594,6 +3195,8 @@ Remington,800,2.6,-0.6,Montana,7,2024-09-20,REP,Trump,56
 Remington,800,2.6,-0.6,Montana,7,2024-09-20,GRE,Stein,2
 Morning Consult,10528,1.9,-0.3,National,3,2024-09-19,DEM,Harris,50
 Morning Consult,10528,1.9,-0.3,National,3,2024-09-19,REP,Trump,46
+Change Research,1600,1.4,0.6,National,5,2024-09-19,DEM,Harris,48
+Change Research,1600,1.4,0.6,National,5,2024-09-19,REP,Trump,47
 RMG Research,2969,2.3,-0.4,National,5,2024-09-19,DEM,Harris,50
 RMG Research,2969,2.3,-0.4,National,5,2024-09-19,REP,Trump,48
 Redfield & Wilton Strategies,789,1.8,0.4,Arizona,9,2024-09-19,DEM,Harris,47
@@ -2071,6 +3674,8 @@ Big Village,1724,1.2,1.7,National,9,2024-09-15,DEM,Harris,47.7
 Big Village,1724,1.2,1.7,National,9,2024-09-15,REP,Trump,42.5
 Big Village,1568,1.2,1.7,National,9,2024-09-15,DEM,Harris,50.5
 Big Village,1568,1.2,1.7,National,9,2024-09-15,REP,Trump,43.4
+Monmouth,803,2.9,-0.9,National,9,2024-09-15,DEM,Harris,48
+Monmouth,803,2.9,-0.9,National,9,2024-09-15,REP,Trump,44
 U. Georgia SPIA,1000,2.2,-0.2,Georgia,7,2024-09-15,DEM,Harris,44.4
 U. Georgia SPIA,1000,2.2,-0.2,Georgia,7,2024-09-15,REP,Trump,46.9
 U. Georgia SPIA,1000,2.2,-0.2,Georgia,7,2024-09-15,LIB,Oliver,0.3
@@ -2620,6 +4225,8 @@ Morning Consult,4000,1.9,-0.3,National,3,2024-08-31,DEM,Harris,48
 Morning Consult,4000,1.9,-0.3,National,3,2024-08-31,REP,Trump,45
 Morning Consult,11495,1.9,-0.3,National,3,2024-08-31,DEM,Harris,50
 Morning Consult,11495,1.9,-0.3,National,3,2024-08-31,REP,Trump,46
+U. Arizona/TrueDot,1155,NA,NA,Arizona,5,2024-08-31,DEM,Harris,41.8
+U. Arizona/TrueDot,1155,NA,NA,Arizona,5,2024-08-31,REP,Trump,45.75
 SoonerPoll.com,323,1.8,0.3,Oklahoma,10,2024-08-31,DEM,Harris,39.9
 SoonerPoll.com,323,1.8,0.3,Oklahoma,10,2024-08-31,REP,Trump,56
 YouGov,1200,3,-1.1,Texas,9,2024-08-31,DEM,Harris,44
@@ -4591,6 +6198,8 @@ U. New Hampshire,701,2.6,-0.3,Maine CD-2,10,2024-07-25,GRE,Stein,3
 U. New Hampshire,701,2.6,-0.3,Maine CD-2,10,2024-07-25,IND,West,1
 U. New Hampshire,701,2.6,-0.3,Maine CD-2,10,2024-07-25,DEM,Harris,49
 U. New Hampshire,701,2.6,-0.3,Maine CD-2,10,2024-07-25,REP,Trump,51
+Axis Research,NA,NA,NA,Maine CD-2,2,2024-07-25,DEM,Harris,42
+Axis Research,NA,NA,NA,Maine CD-2,2,2024-07-25,REP,Trump,44
 HarrisX,3013,1.5,-0.1,National,6,2024-07-25,DEM,Harris,49
 HarrisX,3013,1.5,-0.1,National,6,2024-07-25,REP,Trump,51
 HarrisX,2472,1.5,-0.1,National,6,2024-07-25,DEM,Harris,49
@@ -9344,6 +10953,8 @@ Noble Predictive Insights,829,2.4,-0.4,Nevada,6,2024-03-05,IND,West,4
 Noble Predictive Insights,829,2.4,-0.4,Nevada,6,2024-03-05,GRE,Stein,2
 Morning Consult,4000,1.9,-0.3,National,3,2024-03-04,DEM,Biden,44
 Morning Consult,4000,1.9,-0.3,National,3,2024-03-04,REP,Trump,43
+Public Opinion Strategies,1000,1.6,0.3,National,3,2024-03-04,DEM,Biden,42
+Public Opinion Strategies,1000,1.6,0.3,National,3,2024-03-04,REP,Trump,45
 Morning Consult,6334,1.9,-0.3,National,3,2024-03-03,DEM,Biden,44
 Morning Consult,6334,1.9,-0.3,National,3,2024-03-03,REP,Trump,43
 Morning Consult,4000,1.9,-0.3,National,3,2024-03-03,DEM,Biden,44

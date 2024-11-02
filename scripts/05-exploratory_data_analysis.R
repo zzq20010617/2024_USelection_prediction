@@ -18,11 +18,15 @@ candidate_avg_pct <- poll_data %>%
   group_by(answer) %>%
   summarize(average_pct = mean(pct, na.rm = TRUE))
 
-# View the result
+# View the candidate
 print(candidate_avg_pct, n=60)
 top_10_candidates <- candidate_avg_pct %>%
   arrange(desc(average_pct)) %>%  # Sort by average_pct in descending order
   head(10)
+
+# View parties
+nationwide_data <- poll_data %>%  filter(state == "National")
+boxplot(pct ~ party, data = nationwide_data)
 
 #### Save model ####
 saveRDS(

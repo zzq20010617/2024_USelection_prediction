@@ -128,18 +128,13 @@ bayesian_model_dem <- stan_glmer(
   adapt_delta = 0.95
 )
 
-priors |>
-  ggplot(aes(x = marathon_time)) +
-  geom_histogram(binwidth = 10) +
-  theme_classic()
-
 # Posterior predictive checks
 pp_check(bayesian_model_dem)
 
 plot(bayesian_model_dem, pars = "(Intercept)", prob = 0.95)
 
 spline_model_dem <- stan_glm(
-  pct ~ ns(days_since_start, df = 7) + pollscore + numeric_grade + transparency_score + log(sample_size) + pollster,  # Spline with 5 degrees of freedom for end_date_num
+  pct ~ ns(days_since_start, df = 7) + pollscore + numeric_grade + transparency_score + log(sample_size) + pollster,  # Spline with 7 degrees of freedom for end_date_num
   data = dem_data,                            # DEM national dataset
   family = gaussian(),                        # Use a Gaussian family for continuous outcome
   prior = normal(0, 5),                       # Weakly informative prior for coefficients
@@ -151,94 +146,20 @@ spline_model_dem <- stan_glm(
 )
 
 spline_model_rep <- stan_glm(
-  pct ~ ns(days_since_start, df = 7) + pollscore + numeric_grade + transparency_score + log(sample_size) + pollster,  # Spline with 5 degrees of freedom for end_date_num
-  data = rep_data,                            # DEM national dataset
-  family = gaussian(),                        # Use a Gaussian family for continuous outcome
-  prior = normal(0, 5),                       # Weakly informative prior for coefficients
-  prior_intercept = normal(50, 10),           # Weakly informative prior for intercept
-  seed = 1234,                                # Set seed for reproducibility
-  iter = 2000,                                # Number of iterations
-  chains = 4,                                 # Number of MCMC chains
-  refresh = 0                                 # Suppress unnecessary output
+  pct ~ ns(days_since_start, df = 7) + pollscore + numeric_grade + transparency_score + log(sample_size) + pollster,
+  data = rep_data,
+  family = gaussian(),
+  prior = normal(0, 5),
+  prior_intercept = normal(50, 10),
+  seed = 1234,
+  iter = 2000,
+  chains = 4,
+  refresh = 0
 )
 
-pp_check(spline_model_dem)
-pp_check(spline_model_rep)
-# Create new data for prediction
-new_data <- data.frame(
-  pollscore = -1.5,
-  sample_size = 1200,
-  numeric_grade = 3,
-  transparency_score=10,
-  days_since_start = seq(
-    min(dem_data$days_since_start),
-    max(dem_data$days_since_start),
-    length.out = 100
-  ),
-  pollster = factor("TIPP", levels = levels(dem_data$pollster))
-)
+# pp_check(spline_model_dem)
+# pp_check(spline_model_rep)
 
-posterior_preds_dem <- posterior_predict(spline_model_dem, newdata = new_data)
-posterior_preds_rep <- posterior_predict(spline_model_rep, newdata = new_data)
-
-# Summarize predictions
-pred_summary_dem <- new_data |>
-  mutate(
-    pred_mean_dem = colMeans(posterior_preds_dem),
-    pred_lower_dem = apply(posterior_preds_dem, 2, quantile, probs = 0.025),
-    pred_upper_dem = apply(posterior_preds_dem, 2, quantile, probs = 0.975),
-    party = "DEM"
-  )
-
-# Summarize predictions for REP
-pred_summary_rep <- new_data |>
-  mutate(
-    pred_mean_rep = colMeans(posterior_preds_rep),
-    pred_lower_rep = apply(posterior_preds_rep, 2, quantile, probs = 0.025),
-    pred_upper_rep = apply(posterior_preds_rep, 2, quantile, probs = 0.975),
-    party = "REP"
-  )
-
-# Combine both summaries into a single dataframe
-pred_summary <- bind_rows(pred_summary_dem, pred_summary_rep)
-
-combined_data <- bind_rows(dem_data, rep_data)
-
-# Plot the spline fit
-ggplot(combined_data, aes(x = days_since_start, y = pct, color = pollster)) +
-  geom_line(
-    data = pred_summary %>% filter(party == "DEM"),
-    aes(x = days_since_start, y = pred_mean_dem),
-    color = "blue",
-    inherit.aes = FALSE
-  ) +
-  geom_ribbon(
-    data = pred_summary %>% filter(party == "DEM"),
-    aes(x = days_since_start, ymin = pred_lower_dem, ymax = pred_upper_dem),
-    alpha = 0.2,
-    fill = "blue",
-    inherit.aes = FALSE
-  ) +
-  # Add REP predictions
-  geom_line(
-    data = pred_summary %>% filter(party == "REP"),
-    aes(x = days_since_start, y = pred_mean_rep),
-    color = "red",
-    inherit.aes = FALSE
-  ) +
-  geom_ribbon(
-    data = pred_summary %>% filter(party == "REP"),
-    aes(x = days_since_start, ymin = pred_lower_rep, ymax = pred_upper_rep),
-    alpha = 0.2,
-    fill = "red",
-    inherit.aes = FALSE
-  ) +
-  labs(
-    x = "Days since 2024",
-    y = "Percentage",
-    title = "Poll Percentage over Time with Spline Fit"
-  ) +
-  theme_minimal()
 
 #### Just Harris model ####
 
