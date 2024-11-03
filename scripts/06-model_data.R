@@ -111,8 +111,8 @@ ggplot(combined_data, aes(x = days_since_start)) +
 modelsummary(models = models)
 
 # Bayesian model section 
-model_formula_dem <- cbind(num_party, sample_size - num_party) ~ log(sample_size) +
-  pollscore + numeric_grade + transparency_score + days_since_start + (1 | pollster)
+model_formula_dem <- cbind(num_party, sample_size - num_party) ~ log(sample_size) + days_since_start + 
+   pollscore + numeric_grade + transparency_score + (1 | pollster)
 
 # Set normal priors for the coefficients
 priors <- normal(0, 2.5, autoscale = TRUE)
@@ -125,6 +125,16 @@ bayesian_model_dem <- stan_glmer(
   prior_intercept = priors,
   seed = 123,
   cores = 4,
+  adapt_delta = 0.95,
+)
+
+bayesian_model_rep <- stan_glmer(
+  formula = model_formula_dem,
+  data = rep_data,
+  family = binomial(link = "logit"),
+  prior = priors,
+  prior_intercept = priors,
+  seed = 123,
   adapt_delta = 0.95
 )
 
@@ -181,14 +191,15 @@ ggplot(just_harris_high_quality, aes(x = end_date)) +
   scale_y_continuous(labels = scales::percent_format(scale = 1))+
   labs(y = "Harris percent", x = "Date", title = "Linear Model: pct ~ end_date")
 
-
-
 #### Save model ####
 saveRDS(
   bayesian_model_dem,
   file = "models/bayesian_model_dem.rds"
 )
-
+saveRDS(
+  bayesian_model_rep,
+  file = "models/bayesian_model_rep.rds"
+)
 saveRDS(models, file = "models/MLRmodels.rds")
 saveRDS(spline_model_dem, file = "models/spline_dem.rds")
 saveRDS(spline_model_rep, file = "models/spline_rep.rds")

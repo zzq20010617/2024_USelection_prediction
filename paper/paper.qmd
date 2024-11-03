@@ -208,11 +208,10 @@ The Bayesian model is build from the MLR models from above section. With the ins
 \sigma_{\text{pollster}} &\sim \text{Exponential}(1)
 \end{align}
 ```
-$y_i$ represent the number of individuals in the sample that support the Democratic party (this corresponds to num_party). The response is modeled as binomial: $y_i \sim \text{Binomial}(\text{sample\_size}_i, p_i)$, where $p_i$ is the probability that an individual in poll $i$ supports the Democratic party, and $\text{sample\_size}_i$ is the total number of individuals surveyed in poll $i$.
+$y_i$ represent the number of individuals in the sample that support the Democratic party (this corresponds to num_party). The response is modeled as binomial: $y_i \sim \text{Binomial}(\text{sample\_size}_i, p_i)$, where $p_i$ is the probability that an individual in poll $i$ supports the Democratic party, and $\text{sample\_size}_i$ is the total number of individuals surveyed in poll $i$. We also create a model for Republican to compare the trend in prediction result in the following section [@sec-bayresult].
 
-### Result
-
-Summary of Bayesian model is hsown in [@tbl-baymodelresults], and the ppcheck is in appendix [@fig-ppcheck].
+### Result {#sec-bayresult}
+To get a prediction by the Bayesian model, we create a data frame and generate posterior predictions by the new data frame, example data looks like [@tbl-newdata], we set the quality scale of predict data to the best to perform a poll that has high quality. Summary of Bayesian model is shown in [@tbl-baymodelresults], and the posterior predictive check is in appendix [@sec-model-ppcheck]. The predict result is shown in [@fig-baypredict].
 
 ```{r}
 #| echo: false
@@ -220,8 +219,10 @@ Summary of Bayesian model is hsown in [@tbl-baymodelresults], and the ppcheck is
 #| warning: false
 #| message: false
 
-Bay_model <-
+bayesian_model_dem <-
   readRDS(file = here::here("models/bayesian_model_dem.rds"))
+bayesian_model_rep <-
+  readRDS(file = here::here("models/bayesian_model_rep.rds"))
 ```
 
 ```{r}
@@ -232,18 +233,10 @@ Bay_model <-
 #| warning: false
 
 modelsummary::modelsummary(
-  Bay_model,
+  bayesian_model_dem,
   fmt = 2
 )
 ```
-
-# Prediction {#sec-predict}
-
-To get a prediction by the Bayesian model we have, we first spline fit the model, and then create a data frame and generate posterior predictions by the new data frame.
-
-## Spline Fit for Bayesian model set-up
-
-We run the model in R [@citeR] using the `rstanarm` package of [@rstanarm]. We use priors $\text{Normal}(0, 5)$ to allow for more flexibility of predictors effects with “autoscale = TRUE”. Then we crate a data frame like [@tbl-newdata], we set the quality scale of predict data to the best to perform a poll that has high quality. the result is shown as [@sec-splresult]
 
 ```{r}
 #| echo: false
@@ -253,6 +246,7 @@ We run the model in R [@citeR] using the `rstanarm` package of [@rstanarm]. We u
 
 # Create new data for prediction
 new_data <- data.frame(
+  num_party = 0,
   pollscore = -1.5,
   sample_size = 1200,
   numeric_grade = 3,
@@ -262,11 +256,99 @@ new_data <- data.frame(
     max(dem_data$days_since_start),
     length.out = 100
   ),
-  pollster = factor("TIPP", levels = levels(dem_data$pollster))
+  pollster = factor("YouGov", levels = levels(dem_data$pollster))
 )
 
 head(new_data)
 ```
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+set.seed(123) # set seed for reproduce of predict result
+predict_counts_dem <- posterior_predict(bayesian_model_dem, newdata = new_data)
+predict_counts_rep <- posterior_predict(bayesian_model_rep, newdata = new_data)
+
+combined_data <- bind_rows(dem_data, rep_data)
+pred_summary_dem <- new_data %>%
+  mutate(
+    pred_mean_dem = colMeans(predict_counts_dem),
+    pred_lower_dem = apply(predict_counts_dem, 2, quantile, probs = 0.025),
+    pred_upper_dem = apply(predict_counts_dem, 2, quantile, probs = 0.975)
+  )
+
+# Summarize predictions for REP
+pred_summary_rep <- new_data %>%
+  mutate(
+    pred_mean_rep = colMeans(predict_counts_rep),
+    pred_lower_rep = apply(predict_counts_rep, 2, quantile, probs = 0.025),
+    pred_upper_rep = apply(predict_counts_rep, 2, quantile, probs = 0.975)
+  )
+
+# Combine both summaries
+combined_summary <- pred_summary_dem %>%
+  select(days_since_start, pred_mean_dem, pred_lower_dem, pred_upper_dem) %>%
+  left_join(
+    pred_summary_rep %>% 
+      select(days_since_start, pred_mean_rep, pred_lower_rep, pred_upper_rep),
+    by = "days_since_start"
+  )
+# Extract the last day data for annotations
+last_day_data <- combined_summary %>%
+  filter(days_since_start == max(days_since_start))
+```
+
+```{r}
+#| echo: false
+#| label: fig-baypredict
+#| fig-cap: "Predicted number of supporters for DEM and REP party"
+#| warning: false
+
+ggplot(combined_summary, aes(x = days_since_start)) +
+  geom_line(aes(y = pred_mean_dem, color = "DEM"), size = 1) +
+  geom_ribbon(aes(ymin = pred_lower_dem, ymax = pred_upper_dem, fill = "DEM"), alpha = 0.2) +
+  geom_line(aes(y = pred_mean_rep, color = "REP"), size = 1) +
+  geom_ribbon(aes(ymin = pred_lower_rep, ymax = pred_upper_rep, fill = "REP"), alpha = 0.2) +
+  scale_color_manual(values = c("DEM" = "blue", "REP" = "red")) +
+  scale_fill_manual(values = c("DEM" = "blue", "REP" = "red")) +
+  geom_text(
+    data = last_day_data,
+    aes(
+      x = days_since_start,
+      y = pred_mean_dem,
+      label = paste("DEM:", round(pred_mean_dem))
+    ),
+    color = "blue",
+    vjust = -1,
+    hjust = 1
+  ) +
+  geom_text(
+    data = last_day_data,
+    aes(
+      x = days_since_start,
+      y = pred_mean_rep,
+      label = paste("REP:", round(pred_mean_rep))
+    ),
+    color = "red",
+    vjust = -1,
+    hjust = 1
+  ) +
+  labs(
+    x = "Days Since Start",
+    y = "Predicted Number of Supporters",
+    color = "Party",
+    fill = "Party"
+  ) +
+  theme_minimal()
+```
+
+The prediction results of the Bayesian model closely align with those of the linear model, with both showing the mean predicted number of supporters for each party. Notably, the Democratic Party takes the lead around day 210 (late July). By early November, the predictions indicate that the Democratic Party has an average of 601 supporters, compared to the Republican Party's 578. This suggests a slight advantage for the Democrats as the final prediction period concludes.
+
+## Spline Fit model set-up
+
+We first run the model in R [@citeR] using the `rstanarm` package of [@rstanarm], and use priors $\text{Normal}(0, 5)$ to allow for more flexibility of predictors effects with “autoscale = TRUE”. Then we use the same data frame that used for predict for Bayesian model [@tbl-newdata], the result is shown as [@sec-splresult]
 
 ## Result {#sec-splresult}
 
@@ -283,10 +365,8 @@ spline_rep <-
 
 ```{r}
 #| echo: false
-#| label: fig-splpredict
-#| fig-cap: "Poll Percentage over Time with Spline Fit for DEM and REP party"
 #| warning: false
-
+#| message: false
 
 posterior_preds_dem <- posterior_predict(spline_dem, newdata = new_data)
 posterior_preds_rep <- posterior_predict(spline_rep, newdata = new_data)
@@ -314,47 +394,57 @@ pred_summary_rep <- new_data |>
 # Combine both summaries into a single dataframe
 pred_summary <- bind_rows(pred_summary_dem, pred_summary_rep)
 
-# Plot the spline fit
-ggplot(combined_data, aes(x = days_since_start, y = pct, color = pollster)) +
-  # DEM predictions
-  geom_line(
-    data = pred_summary %>% filter(party == "DEM"),
-    aes(x = days_since_start, y = pred_mean_dem, color = "DEM"),
-    inherit.aes = FALSE
+# Extract the last day data for annotations
+last_day_data <- pred_summary %>%
+  filter(days_since_start == max(days_since_start))
+```
+
+```{r}
+#| echo: false
+#| label: fig-splpredict
+#| fig-cap: "Predicted support percentage over Time with Spline Fit for DEM and REP party"
+#| warning: false
+
+ggplot(pred_summary, aes(x = days_since_start)) +
+  geom_line(aes(y = pred_mean_dem, color = "DEM"), size = 1, data = subset(pred_summary, party == "DEM")) +
+  geom_ribbon(aes(ymin = pred_lower_dem, ymax = pred_upper_dem, fill = "DEM"), alpha = 0.2, data = subset(pred_summary, party == "DEM")) +
+  geom_line(aes(y = pred_mean_rep, color = "REP"), size = 1, data = subset(pred_summary, party == "REP")) +
+  geom_ribbon(aes(ymin = pred_lower_rep, ymax = pred_upper_rep, fill = "REP"), alpha = 0.2, data = subset(pred_summary, party == "REP")) +
+  scale_color_manual(values = c("DEM" = "blue", "REP" = "red")) +
+  scale_fill_manual(values = c("DEM" = "blue", "REP" = "red")) +
+    geom_text(
+    data = last_day_data,
+    aes(
+      x = days_since_start,
+      y = pred_mean_dem,
+      label = paste("DEM:", round(pred_mean_dem, 2))
+    ),
+    color = "blue",
+    vjust = -1,
+    hjust = 1
   ) +
-  geom_ribbon(
-    data = pred_summary %>% filter(party == "DEM"),
-    aes(x = days_since_start, ymin = pred_lower_dem, ymax = pred_upper_dem, fill = "DEM"),
-    alpha = 0.2,
-    inherit.aes = FALSE
+  geom_text(
+    data = last_day_data,
+    aes(
+      x = days_since_start,
+      y = pred_mean_rep,
+      label = paste("REP:", round(pred_mean_rep, 2))
+    ),
+    color = "red",
+    vjust = -1,
+    hjust = 1
   ) +
-  # REP predictions
-  geom_line(
-    data = pred_summary %>% filter(party == "REP"),
-    aes(x = days_since_start, y = pred_mean_rep, color = "REP"),  # Move color inside aes()
-    inherit.aes = FALSE
-  ) +
-  geom_ribbon(
-    data = pred_summary %>% filter(party == "REP"),
-    aes(x = days_since_start, ymin = pred_lower_rep, ymax = pred_upper_rep, fill = "REP"),  # Move fill inside aes()
-    alpha = 0.2,
-    inherit.aes = FALSE
-  ) +
-  # Use scale_color_manual and scale_fill_manual for colors and fills
-  scale_color_manual(values = c("DEM" = "blue", "REP" = "red"), 
-                     name = "Party",
-                     labels = c("DEM (Blue)", "REP (Red)")) +
-  scale_fill_manual(values = c("DEM" = "blue", "REP" = "red"), 
-                    name = "Party",
-                    labels = c("DEM (Blue)", "REP (Red)")) +
   labs(
-    x = "Days since 2024",
-    y = "Percentage",
+    x = "Days Since Start",
+    y = "Predicted Number of Supporters",
+    color = "Party",
+    fill = "Party"
   ) +
   theme_minimal()
 ```
 
-The prediction graph [@fig-splpredict] contains prediction of spline fit model for two parties, blue line represents the DEM party's predicted percentage of support, and the red line represents the REP party's predicted percentage of support over time (measured in days since the start of 2024). We can tell that the predicted support of DEM party is taking the lead by aroud 2 percent until the last day of the dataset.
+
+The prediction graph [@fig-splpredict] contains prediction of spline fit model for two parties, blue line represents the DEM party's predicted percentage of support, and the red line represents the REP party's predicted percentage of support over time (measured in days since the start of 2024). We can tell that the predicted support of DEM party is taking the lead by around 2 percent until the last day of the dataset.
 
 # Discussion {#sec-discuss}
 
@@ -533,11 +623,12 @@ summary(MLR_models[['REP']])
 #| message: false
 #| warning: false
 #| label: fig-ppcheck
-#| fig-cap: "Posterior prediction check for Bayesian model"
+#| fig-cap: "Posterior prediction check for Bayesian models"
+#| layout-ncol: 2
+#| fig-subcap: ["Democratic Model", "Republican Model"]
 
-
-pp_check(Bay_model)
-
+pp_check(bayesian_model_dem)
+pp_check(bayesian_model_rep)
 ```
 
 ## Diagnostics

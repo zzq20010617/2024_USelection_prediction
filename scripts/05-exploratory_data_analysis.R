@@ -28,10 +28,11 @@ top_10_candidates <- candidate_avg_pct %>%
 nationwide_data <- poll_data %>%  filter(state == "National")
 boxplot(pct ~ party, data = nationwide_data)
 
-#### Save model ####
-saveRDS(
-  first_model,
-  file = "models/first_model.rds"
-)
+# Separate by state 
+poll_counts <- poll_data %>%
+  group_by(state) %>%  # Group by 'state'
+  summarize(poll_count = n()) %>%  # Count the number of polls per state
+  arrange(desc(poll_count))
+
 
 
