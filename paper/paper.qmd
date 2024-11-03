@@ -80,16 +80,16 @@ Our Results shows that
 
 This analysis is useful in understanding how various polling factors contribute to predicting election results. By modeling the relationship between polling result and factors, the study enhances the ability to forecast election outcomes based on public opinion data. This model provides a practical tool for researchers, political strategists, and analysts to assess the reliability of polling data and its implications for elections.
 
-This paper develops statistical models to forecast the 2024 presidential election outcome between Kamala Harris and Donald Trump. Utilizing multiple linear regression, we predict the support percentages for each candidate across various states, incorporating essential factors such as pollster rating, sample size, and state-specific demographics. By aggregating these state-level predictions, we simulate possible outcomes to estimate each candidate's probability of achieving the necessary 270 electoral votes. Additionally, we analyze [@trafalgar_polling_methodolog] polling methodology and propose an optimized survey and methodology aimed at improving election forecast accuracy.
+This paper develops statistical models to forecast the 2024 presidential election outcome between Kamala Harris and Donald Trump. Utilizing multiple linear regression, we predict the support percentages for each candidate across various states, incorporating essential factors such as pollster rating, sample size, and state-specific demographics. By aggregating these state-level predictions, we simulate possible outcomes to estimate each candidate's probability of achieving the necessary 270 electoral votes. Additionally, we analyze [@trafalgar_polling_methodology] polling methodology and propose an optimized survey and methodology aimed at improving election forecast accuracy.
 
-The remainder of this paper is structured as follows. @sec-data discusses the data used for this analysis, including key variables and sources, with particular attention to the quality metrics that affect polling accuracy. @sec-model outlines our modeling approach for each candidate, incorporating lessons learned from recent electoral cycles. @sec-predict presents our Electoral College predictions based on the model outputs. @sec-discuss discusses the implications of our findings and suggests directions for future research. Finally, @sec-appendix evaluates Trafalgar Group’s polling methodology, and our idealized methodology and survey copy.
+The remainder of this paper is structured as follows. @sec-data discusses the data used for this analysis, including key variables and sources, with particular attention to the quality metrics that affect polling accuracy. @sec-models outlines our modeling approach for each candidate, incorporating lessons learned from recent electoral cycles. @sec-predict presents our *** predictions based on the model outputs. @sec-discuss discusses the implications of our findings and suggests directions for future research. Finally, @sec-appendix evaluates Trafalgar Group’s polling methodology, and our idealized methodology and survey copy.
 
 
 # Data {#sec-data}
 
 ## Overview
 
-Our data is download from [Five Thirty Eight](https://projects.fivethirtyeight.com/polls)[@polls], the website gathered survey data from different pollsters of 2024 US president election, We use the statistical programming **language R** [@citeR], and packages **lubridate**[@lubridate], **dplyr**[@dplyr], **tidyverse**[@tidyverse], **model summary**[@models] to process the data. Also, we use **tibble** [@tibble] to create the table for simulate table and save it as csv files. Graphs are created by using ggplot2 in from package **tidyverse**[@tidyverse]Following **Telling stories with data**[@telling_stories_with_data], we consider using multiple linear model to predict and forecasting the result of US president election in 2024. We are creating different graphs and models for the candidates from different parties in general state and combine all models and graphs together to create a new scatter plot to predict and forecasting the US president election in 2024.
+Our data is download from [Five Thirty Eight] (https://projects.fivethirtyeight.com/polls) [@polls], the website gathered survey data from different pollsters of 2024 US president election, We use the statistical programming **language R** [@citeR], and packages **lubridate** [@lubridate], **dplyr** [@dplyr], **tidyverse** [@tidyverse], **model summary** [@models] to process the data. Also, we use **tibble** [@tibble] to create the table for simulate table and save it as csv files. Graphs are created by using ggplot2 in from package **tidyverse** [@tidyverse]Following **Telling stories with data** [@telling_stories_with_data], we consider using multiple linear model to predict and forecasting the result of US president election in 2024. We are creating different graphs and models for the candidates from different parties in general state and combine all models and graphs together to create a new scatter plot to predict and forecasting the US president election in 2024.
 
 ## Measurement
 
@@ -121,7 +121,7 @@ Transparency score measures how openly a pollster reports their methodology and 
 
 This variable represents the number of days since the beginning of the election polling period. It helps capture the dynamic nature of voter preferences over time, accounting for shifts in public opinion as the election date nears.
 
-# Models
+# Models {#sec-models}
 
 The goal of our modelling strategy is try to capture the trend of support percentage for different parties in 2024 Presidential election as much as possible. In the following section we briefly describe the models we used to investigate. Background details and diagnostics are included in [Appendix -@sec-model-details].
 
@@ -237,7 +237,7 @@ modelsummary::modelsummary(
 )
 ```
 
-# Prediction
+# Prediction {#sec-predict}
 
 To get a prediction by the Bayesian model we have, we first spline fit the model, and then create a data frame and generate posterior predictions by the new data frame.
 
@@ -356,7 +356,7 @@ ggplot(combined_data, aes(x = days_since_start, y = pct, color = pollster)) +
 
 The prediction graph [@fig-splpredict] contains prediction of spline fit model for two parties, blue line represents the DEM party's predicted percentage of support, and the red line represents the REP party's predicted percentage of support over time (measured in days since the start of 2024). We can tell that the predicted support of DEM party is taking the lead by aroud 2 percent until the last day of the dataset.
 
-# Discussion
+# Discussion {#sec-discuss}
 
 ## Crossing point in the prediction {#sec-first-point}
 
