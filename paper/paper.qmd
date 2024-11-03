@@ -80,7 +80,6 @@ Our Results shows that
 
 This analysis is useful in understanding how various polling factors contribute to predicting election results. By modeling the relationship between polling result and factors, the study enhances the ability to forecast election outcomes based on public opinion data. This model provides a practical tool for researchers, political strategists, and analysts to assess the reliability of polling data and its implications for elections.
 
-
 # Data {#sec-data}
 
 ## Overview
@@ -88,7 +87,7 @@ This analysis is useful in understanding how various polling factors contribute 
 Our data is download from [Five Thirty Eight](https://projects.fivethirtyeight.com/polls)[@polls], the website gathered survey data from different pollsters of 2024 US president election, We use the statistical programming **language R** [@citeR], and packages **lubridate**[@lubridate], **dplyr**[@dplyr], **tidyverse**[@tidyverse], **model summary**[@models] to process the data. Also, we use **tibble** [@tibble] to create the table for simulate table and save it as csv files. Graphs are created by using ggplot2 in from package **tidyverse**[@tidyverse]Following **Telling stories with data**[@telling_stories_with_data], we consider using multiple linear model to predict and forecasting the result of US president election in 2024. We are creating different graphs and models for the candidates from different parties in general state and combine all models and graphs together to create a new scatter plot to predict and forecasting the US president election in 2024.
 
 ## Measurement
-	
+
 The dataset is about public opinions about U.S. presidential candidates, which are captured through polling.
 
 ## Outcome variables {#sec-octvar}
@@ -117,15 +116,13 @@ Transparency score measures how openly a pollster reports their methodology and 
 
 This variable represents the number of days since the beginning of the election polling period. It helps capture the dynamic nature of voter preferences over time, accounting for shifts in public opinion as the election date nears.
 
-
 # Models
 
-The goal of our modelling strategy is try to capture the trend of support percentage for different parties in 2024 Presidential election as much as possible.
-In the following section we briefly describe the models we used to investigate. Background details and diagnostics are included in [Appendix -@sec-model-details].
+The goal of our modelling strategy is try to capture the trend of support percentage for different parties in 2024 Presidential election as much as possible. In the following section we briefly describe the models we used to investigate. Background details and diagnostics are included in [Appendix -@sec-model-details].
 
 ## MLR Model set-up
-We first filtered our data by different parties, as the single linear model but include other 3 parties(GRE, IND, and LIB, Conservative only has two entries in cleaned nationwide data and has 0 pct so its been removed), and fit linear model for each of them. The formula for Multiple linear regression is as follow
-\begin{align}
+
+We first filtered our data by different parties, as the single linear model but include other 3 parties(GRE, IND, and LIB, Conservative only has two entries in cleaned nationwide data and has 0 pct so its been removed), and fit linear model for each of them. The formula for Multiple linear regression is as follow \begin{align}
 \text{pct}_i &= \beta_0 + \beta_1 \log(\text{sample\_size}_i) + \beta_2 \, \text{pollscore}_i + \beta_3 \, \text{numeric\_grade}_i \\
 &+ \beta_4 \, \text{transparency\_score}_i + \beta_5 \, \text{days\_since\_start}_i + \epsilon_i
 \end{align}
@@ -158,6 +155,7 @@ modelsummary::modelsummary(
   fmt = 2
 )
 ```
+
 We first check the residual vs. fitted plot as shown in [Appendix @sec-model-details], and see no obvious violation of assumptions. According to the summary, DEM and REP models are based on the largest number of observations (both 1235). Smaller parties have fewer observations, which may lead to less robust models. The $r^2$ shows that the model explain the highest amount of variance on Democratic Party than others with value 0.357, and other parties less than 0.2. Based on the summary of models for DEM and REP [@sec-model-sigcheck], we are not sure if those predictor that measure quality of polls are significant or not, so we keep them for now in Bayesian model. Prediction of MLR models is shown in [@fig-mlrpredict], which we can see blue line which is Democratic party has a steeper slope and start to take the lead between day 100 and day 200.
 
 ```{r}
@@ -188,8 +186,10 @@ ggplot(combined_data, aes(x = days_since_start)) +
 ```
 
 ## Bayesian Model set-up
+
 The Bayesian model is build from the MLR models from above section. With the inspiration from the example R code, we introduce the random effects for Pollsters, and we use a logistic link to predict the probability of support, modeling count data which is in binomial distribution. We choose to use a default prior and enable autoscale, the formula is shown below
 
+```{=tex}
 \begin{align} 
 \log \left( \frac{p_i}{1 - p_i} \right) &= \beta_0 + \beta_1 \log(\text{sample\_size}_i) + \beta_2 \, \text{pollscore}_i + \beta_3 \, \text{numeric\_grade}_i \\
 &+ \beta_4 \, \text{transparency\_score}_i + \beta_5 \, \text{days\_since\_start}_i + \alpha_j\\
@@ -202,12 +202,13 @@ The Bayesian model is build from the MLR models from above section. With the ins
 \beta_5 &\sim \text{Normal}(0, 2.5) \\
 \sigma_{\text{pollster}} &\sim \text{Exponential}(1)
 \end{align}
-
-$y_i$ represent the number of individuals in the sample that support the Democratic party (this corresponds to num_party).
-The response is modeled as binomial: $y_i \sim \text{Binomial}(\text{sample\_size}_i, p_i)$, where $p_i$ is the probability that an individual in poll $i$ supports the Democratic party, and $\text{sample\_size}_i$ is the total number of individuals surveyed in poll $i$.
+```
+$y_i$ represent the number of individuals in the sample that support the Democratic party (this corresponds to num_party). The response is modeled as binomial: $y_i \sim \text{Binomial}(\text{sample\_size}_i, p_i)$, where $p_i$ is the probability that an individual in poll $i$ supports the Democratic party, and $\text{sample\_size}_i$ is the total number of individuals surveyed in poll $i$.
 
 ### Result
-Summary of Bayesian model is hsown in [@tbl-baymodelresults], and the ppcheck is in appendix [@fig-ppcheck]. 
+
+Summary of Bayesian model is hsown in [@tbl-baymodelresults], and the ppcheck is in appendix [@fig-ppcheck].
+
 ```{r}
 #| echo: false
 #| eval: true
@@ -236,7 +237,9 @@ modelsummary::modelsummary(
 To get a prediction by the Bayesian model we have, we first spline fit the model, and then create a data frame and generate posterior predictions by the new data frame.
 
 ## Spline Fit for Bayesian model set-up
+
 We run the model in R [@citeR] using the `rstanarm` package of [@rstanarm]. We use priors $\text{Normal}(0, 5)$ to allow for more flexibility of predictors effects with “autoscale = TRUE”. Then we crate a data frame like [@tbl-newdata], we set the quality scale of predict data to the best to perform a poll that has high quality. the result is shown as [@sec-splresult]
+
 ```{r}
 #| echo: false
 #| warning: false
@@ -261,6 +264,7 @@ head(new_data)
 ```
 
 ## Result {#sec-splresult}
+
 ```{r}
 #| echo: false
 #| warning: false
@@ -344,15 +348,14 @@ ggplot(combined_data, aes(x = days_since_start, y = pct, color = pollster)) +
   ) +
   theme_minimal()
 ```
+
 The prediction graph [@fig-splpredict] contains prediction of spline fit model for two parties, blue line represents the DEM party's predicted percentage of support, and the red line represents the REP party's predicted percentage of support over time (measured in days since the start of 2024). We can tell that the predicted support of DEM party is taking the lead by aroud 2 percent until the last day of the dataset.
 
 # Discussion
 
-## Crossing point in the prediction  {#sec-first-point}
+## Crossing point in the prediction {#sec-first-point}
 
-From the prediction of spline fit model [@fig-splpredict], There is a clear increase in the support for the DEM party starting around day 200, while the REP party's support remains more stable with only a slight increase over time.
-The increase in support for the DEM party in the predictions could be attributed to Harris's rise as the Democratic candidate after Biden's exit from the race On July 21, 2024, which is about 230 days from start of 2024. 
-
+From the prediction of spline fit model [@fig-splpredict], There is a clear increase in the support for the DEM party starting around day 200, while the REP party's support remains more stable with only a slight increase over time. The increase in support for the DEM party in the predictions could be attributed to Harris's rise as the Democratic candidate after Biden's exit from the race On July 21, 2024, which is about 230 days from start of 2024.
 
 ## Weaknesses and next steps
 
@@ -362,19 +365,117 @@ Weaknesses and next steps should also be included.
 
 \appendix
 
-# Appendix {-}
+# Appendix {#sec-appendix}
 
-## Idealized  Survey and Methodology
+## Idealized Methodology
+
+To forecast the 2024 U.S. presidential election with a budget of $100,000, this methodology combines stratified sampling, multimodal recruitment, and aggregation techniques that leverage the strengths of multiple data sources. The approach employs stratified random sampling with targeted oversampling of key subgroups, like younger and minority voters, to address their frequent underrepresentation in polling. By segmenting eligible U.S. voters by demographics—age, gender, race, party affiliation, region, and urban/rural residency—the method ensures broad representational coverage, aiming to capture diverse voting patterns accurately [@pewpolling] . Partnering with a voter database provider gives us access to a detailed list of registered voters, organized by demographics, to improve the accuracy of our sample. This approach also builds on public trust, as Americans generally trust polls from news organizations (43%) more than those from websites that combine multiple polls (30%) [@PublicOpinionQuarterly].
+
+Respondents are recruited through multiple channels to reduce potential biases associated with any single mode. The multimodal approach includes Interactive Voice Response (IVR) to reach older and rural populations (30%), targeted online surveys to capture difficult-to-reach demographics (40%), text surveys directed at younger voters (20%), and live calls in key battleground states (10%). This mix helps address “coverage error” by compensating for the limitations associated with each mode [@Blumenthal_2014].
+
+Survey data is collected via a short, 5–7 minute questionnaire with 10 core questions covering demographics, voting intention, likelihood of voting, and key issues. A shorter survey length and mix of direct and indirect questions help reduce Social Desirability Bias, while randomizing question order minimizes positional bias. Given that any individual survey is likely to suffer from random and systematic errors—sampling errors, coverage errors, and response biases—aggregation across multiple polls can mitigate these sources of error, improving the accuracy of forecasts by averaging out errors specific to individual polls [@Blumenthal_2014].
+
+For data validation and quality control, screening questions confirm attentiveness, demographic cross-checks validate responses against voter registration data, and post-survey weighting adjusts for demographic imbalances. Weighting responses to match population demographics ensures that key groups are proportionally represented, while data cleaning removes low-quality responses to maintain data integrity [@Blumenthal_2014]. To further address biases, surveys are conducted anonymously in formats like online and SMS. Weighting adjustments are also made to address non-response bias, enhancing accuracy by reflecting the true population distribution. We will keep the process and result transparent by posting on our website for the public to view. 
+
+Weekly aggregation serves as a “poll of polls” that balances fluctuations across samples and smooths out errors. By incorporating recent data more heavily, this rolling average adapts to shifts in voter sentiment leading up to the election. Bayesian modeling, applied to smooth sample variations and incorporate prior election trends, stabilizes the forecast further. Poll aggregation, which is commonly employed in election analyses, effectively combines estimates from various samples, reducing random error and discounting non-universal biases [@Blumenthal_2014]. Given the variability in survey methodologies—such as IVR surveys missing cell-only populations or web surveys excluding offline individuals—aggregation allows errors in one type of survey to offset those in another. Weighting each survey according to sample size and precision further refines the accuracy of the aggregated forecast.
 
 
-## Trafalgar group’s methodology overview and evaluation 
+### Budget Allocation:
 
-The Trafalgar Group conducts polls ranging from major political campaigns to marketing surveys. The organization's 0.7 pollster rating indicates moderate accuracy and reliability compared to other pollsters. The population consists of all eligible voters in the U.S., while the sampling frame includes registered voters across states, segmented by demographics like age, gender, party affiliation, and ethnicity. Trafalgar Group typically samples likely voters, focusing on those most likely to participate in upcoming elections. Trafalgar Group recruits its sample using a mix of interactive voice response (IVR), live phone calls, text messages, online panels, and email surveys. Trafalgar Group employs stratified random sampling to ensure proportional representation of subgroups like political party, gender, and region. This method improves accuracy by reflecting the electorate's demographic and political makeup but may risk over-stratification, giving smaller voter groups disproportionate influence and potentially skewing results. Trafalgar Group handles non-response by using weighting to adjust the sample, ensuring respondent demographics match population parameters. This method reduces bias by accounting for underrepresented groups, though heavy reliance on post-survey adjustments may introduce new biases, particularly when there are large discrepancies in response rates across demographics.
+- **Sample Acquisition**: Partnership with a voter database provider to access a list of registered voters across all states $10,000
+
+- **Interactive Voice Response (IVR)**: Automated voice surveys for older and rural demographics $20,000
+
+- **Online Surveys**: Targeted ads and opt-in digital surveys to capture harder-to-reach groups (40% of sample) $25,000
+
+- **Text Messaging**: SMS-based surveys to engage younger demographics (20% of sample) $10,000
+
+- **Live Phone Calls**: Calls in battleground states to reach underrepresented groups (10% of sample) $20,000
+
+- **Data Validation & Cleaning**:	Screening questions, demographic verification, and removal of low-quality responses to maintain data integrity $5,000
+
+- **Data Analysis & Forecast Modeling**	Bayesian modeling, poll aggregation, and analysis of survey trends to produce election forecasts $10,000
 
 
+## Idealized Survey
+
+The proposed survey questionnarie design is in the following link: https://forms.gle/Zm5Kfj3kL58gwCz38
+
+### Survey Copy
+
+1. **What is your age??**
+   - 18-29
+   - 30-44
+   - 45-64
+   - 65+
+   
+2. **What is your gender identity?**
+   - Female
+   - Male
+   - Another Gender Identity 
+  
+3. **Which of the following best describes your race/ethnicity?**
+   - White
+   - Black/African American
+   - Hispanic/Latino
+   - Asian
+   - Native American
+   - Prefer not to say
+   - Other
+
+4. **What is your highest level of education?**
+   - High school or less
+   - College
+   - Bachelor's degree
+   - Graduate degree
+   - Prefer not to say
+  
+5. **In which U.S. region do you currently reside?**
+   - Midwest
+   - Northeast
+   - South
+   - West
+   
+6. **Are you registered to vote in the 2024 presidential election?**
+   - Yes
+   - No
+  
+7. **2024 Which candidate do you plan to vote for?**
+   - Kamala Harris
+   - Donald Trump
+   - Undecided
+   - Other
+
+8. **2020 Which candidate did you vote for?**
+   - Joe Biden
+   - Donald Trump
+   - Did not vote
+   - Prefer not to say
+   - Other
+  
+9. **What is the most important issue influencing your vote?**
+   - Economy
+   - Healthcare 
+   - Immigration
+   - Climate Change
+   - Social Justice
+   - National Security
+   - Other
+
+10. **On a scale of 1-5, how likely are you to vote in the 2024 U.S. presidential election?**
+
+   - 1 being Not Likely to Vote
+   - 5 being Likely to Vote
+
+
+## Trafalgar group’s methodology overview and evaluation
+
+The Trafalgar Group conducts polls ranging from major political campaigns to marketing surveys. The organization's 0.7 pollster rating indicates moderate accuracy and reliability compared to other pollsters. The population consists of all eligible voters in the U.S., while the sampling frame includes registered voters across states, segmented by demographics like age, gender, party affiliation, and ethnicity. Trafalgar Group typically samples likely voters,focusing on those most likely to participate in upcoming elections. Trafalgar Group recruits its sample using a mix of interactive voice response, live phone calls, text messages, emails, digital dial back interface and online targeted opt-in digital survey platforms [@trafalgar_polling_methodology]. Trafalgar places particular emphasis on reducing Social Desirability Bias, designing short questionnaires and using nontraditional question formats to help participants feel more comfortable expressing their true preferences, especially on sensitive topics [@trafalgar_polling_methodology]. They also adjust for non-response by weighting the sample, ensuring it reflects the broader population’s demographic composition. While this helps to reduce bias from underrepresented groups, reliance on post-survey adjustments can introduce new biases, especially if response rates vary significantly among demographic groups.
 
 # Model details {#sec-model-details}
+
 ## Assumption check for MLR models
+
 ```{r}
 #| echo: false
 #| eval: true
@@ -392,8 +493,11 @@ plot(MLR_models[['DEM']], which = 1, main = "Residuals vs Fitted for DEM Party")
 
 plot(MLR_models[['REP']], which = 1, main = "Residuals vs Fitted for REP Party")
 ```
+
 ## Significant check for MLR models {#sec-model-sigcheck}
+
 see [@tbl-mlrmodelsum-dem], and [@tbl-mlrmodelsum-rep]
+
 ```{r}
 #| echo: false
 #| eval: true
@@ -403,6 +507,7 @@ see [@tbl-mlrmodelsum-dem], and [@tbl-mlrmodelsum-rep]
 
 summary(MLR_models[['DEM']])
 ```
+
 ```{r}
 #| echo: false
 #| eval: true
@@ -414,6 +519,7 @@ summary(MLR_models[['REP']])
 ```
 
 \newpage
+
 ## Posterior predictive check {#sec-model-ppcheck}
 
 ```{r}
@@ -450,13 +556,6 @@ pp_check(Bay_model)
 # plot(first_model, "rhat")
 ```
 
-
-
-
-
 \newpage
 
-
 # References
-
-
