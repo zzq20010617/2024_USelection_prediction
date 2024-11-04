@@ -51,7 +51,7 @@ valid_states <- c(
   "Idaho",
   "Illinois",
   "Indiana",
-  "Lowa",
+  "Iowa",
   "Kansas",
   "Kentucky",
   "Louisiana",
@@ -87,7 +87,12 @@ valid_states <- c(
   "West Virginia",
   "Wisconsin",
   "Wyoming",
-  "National"
+  "National",
+  "Maine CD-2",
+  "Maine CD-1",
+  "Nebraska CD-1",
+  "Nebraska CD-2",
+  "Nebraska CD-3"
 )
 test_that("'state' contains valid United State state names", {
   expect_true(all(analysis_data$state %in% valid_states))
