@@ -1,5 +1,6 @@
 ---
-title: "Forecasting the US Presidential Election: A Poll-of-Polls Approach Using Linear Models By Using Data of Pollsters From Five Thirty Eight In 2024"
+title: "Forecasting the 2024 U.S. Presidential Election Results: Linear Regression, Bayesian and Spline-Fit Gaussian Model by Using Pollsters' Data From Five Thirty Eight"
+subtitle: "Contrasting Harris's Lead: Strong in Linear Regression and Bayesian Model, Modest in Spline-Fit Gaussian Model"
 author: 
   - Ziqi Zhu
   - Yuanchen Miao
@@ -7,7 +8,7 @@ author:
 thanks: "Code and data are available at: https://github.com/zzq20010617/2024_USelection_prediction"
 date: today
 date-format: long
-abstract: "This paper presents a multiple linear regression model for forecasting the outcome of the 2024 U.S. Presidential Election. Using nationwide polling data, we predict the percentage of support for U.S. presidential candidates based on key factors such as sample size, pollster quality, and timing. Our model aggregates these predictions to simulate potential election outcomes. The results reveal how specific poll attributes affect the accuracy of forecasts, offering valuable insights for predicting the likelihood of various electoral scenarios."
+abstract: "we use FiveThirtyEight’s 2024 U.S. presidential poll-of-polls data to analyze support trends for the leading candidates, Kamala Harris and Donald Trump. By focusing on key reliability metrics—such as sample size, numeric scores, poll scores, and state-level factors—we fit the data into three models: a linear regression model, a Bayesian model, and a spline-fit Gaussian model. Our findings reveal a strong lead for Harris in both the linear regression and Bayesian models, with a more modest lead in the spline-fit Gaussian model. These results offer insight into the potential trajectory of the election, helping the public anticipate the policy directions that might follow a Harris administration."
 number-sections: true
 bibliography: references.bib
 format:
