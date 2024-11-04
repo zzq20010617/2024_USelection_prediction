@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project applies a statistical approach to forecast the winner of the upcoming US presidential election through "poll-of-polls" approach, and discuss the methodology and survey of certain pollster in the election.
+This project applies a statistical approach to forecast the winner of the upcoming US presidential election through "poll-of-polls" approach, analyzing support trends for the leading candidates of two parties, Kamala Harris and Donald Trump by the poll data from FiveThirtyEight. Also, provides a solution for an idealized survey on the presidential election and discusses the methodology and survey of a certain pollster in the election.
 
 
 ## File Structure
