@@ -406,7 +406,7 @@ The prediction results of the Bayesian model closely align with those of the lin
 
 We first run the model in R [@citeR] using the `rstanarm` package of [@rstanarm], and use priors $\text{Normal}(0, 5)$ to allow for more flexibility of predictors effects with “autoscale = TRUE”. Then we use the same data frame that was used to predict for the Bayesian model [@tbl-newdata], the result is shown as [@sec-splresult]
 
-## Result {#sec-splresult}
+### Result {#sec-splresult}
 
 ```{r}
 #| echo: false
@@ -527,11 +527,9 @@ ggplot(dem_data_filtered, aes(x = pct, fill = answer)) +
   theme_minimal()
 ```
 
-## Second discussion point
+## Differences in Modeling Nationwide Polls and Actual Election Results
 
-Please don't use these as sub-heading labels - change them to be what your point actually is.
-
-## Third discussion point
+In this paper, we used nationwide poll data for modeling, which contrasts significantly with using state-by-state election results. Nationwide polls offer general insights into aggregate support levels but do not account for the Electoral College system in U.S. presidential elections. This approach can overlook state-specific variations and the unique influence of each state's electoral votes, leading to potential bias where larger states disproportionately affect overall results. Conversely, state-level modeling captures the distribution of support across states, highlighting the impact of battleground states. To enhance prediction accuracy and align with the actual election structure, future models should integrate state-level data especially for the battleground states for more robust, applicable results.
 
 ## Weaknesses and next steps
 
