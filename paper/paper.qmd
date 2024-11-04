@@ -449,11 +449,32 @@ The prediction graph [@fig-splpredict] contains a prediction of the spline fit m
 
 ## Crossing point in the prediction {#sec-first-point}
 
-From the prediction of spline fit model [@fig-splpredict], There is a clear increase in the support for the DEM party starting around day 200, while the REP party's support remains more stable with only a slight increase over time. The increase in support for the DEM party in the predictions could be attributed to Harris's rise as the Democratic candidate after Biden's exit from the race On July 21, 2024, which is about 230 days from start of 2024.
+From the prediction of spline fit model [@fig-splpredict], There is a clear increase in the support for the DEM party starting around day 200, while the REP party's support remains more stable with only a slight increase over time. The increase in support for the DEM party in the predictions could be attributed to Harris's rise as the Democratic candidate after Biden's exit from the race On July 21, 2024, which is about 230 days from start of 2024. By analyzing the support percentages of Biden and Harris from the Democratic poll data @fig-demonly, it becomes evident that their combined impact likely contributes to the double peak seen in the posterior predictive check @fig-ppcheck. This dual pattern challenges the model’s ability to capture trends accurately
+
+```{r}
+#| echo: false
+#| label: fig-demonly
+#| fig-cap: "Density Plot of Support Percentage for Biden and Harris in 2024"
+#| warning: false
+
+dem_data_filtered <- dem_data %>%
+  filter(answer %in% c("Biden", "Harris"))
+
+# Create the density plot
+ggplot(dem_data_filtered, aes(x = pct, fill = answer)) +
+  geom_density(alpha = 0.4) +
+  labs(
+    x = "Support Percentage",
+    y = "Density",
+    fill = "Candidate"
+  ) +
+  theme_minimal()
+```
+
 
 ## Weaknesses and next steps
 
-Firstly we focused only on nationwide polls, excluding state-specific data, due to limited and outdated information from certain states. For example, Mississippi had only four polls, with the most recent conducted in April 2024, making state-level modeling and vote counting challenging. This limitation restricts the accuracy of state-by-state analysis. With more reliable and updated data, using a state-based approach would enhance the model’s precision and provide a more comprehensive prediction of the election outcome.
+Firstly we focused only on nationwide polls, excluding state-specific data, due to limited and outdated information from certain states. For example, Mississippi had only four polls, with the most recent conducted in April 2024, making state-level modeling and vote counting challenging. This limitation restricts the accuracy of state-by-state analysis. With more reliable and updated data, using a state-based approach would enhance the model’s precision and provide a more comprehensive prediction of the election outcome. Furthermore modeling Biden and Harris together under one Democratic model introduces potential inaccuracies, especially influencing the slope of predictions in both linear and Bayesian models, making the observed upward trend less reliable.
 
 \newpage
 
@@ -616,6 +637,8 @@ summary(MLR_models[['REP']])
 
 ## Posterior predictive check {#sec-model-ppcheck}
 
+In @fig-ppcheck we implement a posterior predictive check. The check for DEM model shows the observed data has two peaks, indicating a possible bimodal distribution, but the predictive simulations also show significant variability around the peaks. While the model for REP performs better, capturing the main distribution of the data
+
 ```{r}
 #| eval: true
 #| echo: false
@@ -626,9 +649,15 @@ summary(MLR_models[['REP']])
 #| layout-ncol: 2
 #| fig-subcap: ["Democratic Model", "Republican Model"]
 
-pp_check(bayesian_model_dem)
-pp_check(bayesian_model_rep)
+pp_check(bayesian_model_dem) +
+  theme_classic() +
+  theme(legend.position = "bottom")
+pp_check(bayesian_model_rep) +
+  theme_classic() +
+  theme(legend.position = "bottom")
+
 ```
+
 
 ## Diagnostics
 

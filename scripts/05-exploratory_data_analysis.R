@@ -34,5 +34,13 @@ poll_counts <- poll_data %>%
   summarize(poll_count = n()) %>%  # Count the number of polls per state
   arrange(desc(poll_count))
 
+# Check support pct for Biden and Harris
+average_biden <- nationwide_data %>%
+  filter(answer == "Biden") %>%
+  summarize(avg_pct_biden = mean(pct, na.rm = TRUE))
 
+# Calculate average support for Harris
+average_harris <- nationwide_data %>%
+  filter(answer == "Harris") %>%
+  summarize(avg_pct_harris = mean(pct, na.rm = TRUE))
 
