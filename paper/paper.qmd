@@ -29,6 +29,7 @@ library(splines)
 library(broom)
 library(knitr)
 library(stringr)
+library(patchwork)
 ```
 
 ```{r}
@@ -106,7 +107,7 @@ The remainder of this paper is structured as follows. @sec-data discusses the da
 
 ## Overview
 
-Our data is download from [Five Thirty Eight] (https://projects.fivethirtyeight.com/polls) [@polls], the website gathered survey data from different pollsters of 2024 US president election, We use the statistical programming **language R** [@citeR], and packages **lubridate** [@lubridate], **dplyr** [@dplyr], **tidyverse** [@tidyverse], **model summary** [@models] to process the data. Also, we use **tibble** [@tibble] to create the table for simulate table and save it as csv files. Graphs are created by using ggplot2 in from package **tidyverse** [@tidyverse], packages **broom** [@broom] and **knitr** [@knitr] were used to generate clean summary and table in this paper. Following **Telling stories with data** [@telling_stories_with_data], we consider using multiple linear model to predict and forecasting the result of US president election in 2024. We are creating different graphs and models for the candidates from different parties in general state and combine all models and graphs together to create a new scatter plot to predict and forecasting the US president election in 2024.
+Our data is download from [Five Thirty Eight] (https://projects.fivethirtyeight.com/polls) [@polls], the website gathered survey data from different pollsters of 2024 US president election, We use the statistical programming **language R** [@citeR], and packages **lubridate** [@lubridate], **dplyr** [@dplyr], **tidyverse** [@tidyverse], **model summary** [@models] to process the data. Also, we use **tibble** [@tibble] to create the table for simulate table and save it as csv files, package **stringr** [@stringr] is used to clean the column names in tables. Graphs are created by using ggplot2 in from package **tidyverse** [@tidyverse], packages **broom** [@broom] and **knitr** [@knitr] were used to generate clean summary and table in this paper. Package **patchwork** [@patchwork] is been used to combine two graphs together. Following **Telling stories with data** [@telling_stories_with_data], we consider using multiple linear model to predict and forecasting the result of US president election in 2024. We are creating different graphs and models for the candidates from different parties in general state and combine all models and graphs together to create a new scatter plot to predict and forecasting the US president election in 2024.
 
 ## Cleaned Data 
 
@@ -134,29 +135,68 @@ Polling data is collected by different pollsters using various survey methods re
 
 ## Outcome variables {#sec-octvar}
 
-Our primary outcome variable is **support percentage (pct)**, which represents the percentage of respondents who support each candidate. This variable is modeled as the response variable in the MLR analyse.
+Our primary outcome variable is **support percentage (pct)**, which represents the percentage of respondents who support each candidate. This variable is modeled as the response variable in the linear regression model, Bayesian model and spline-fit Gaussian model analysis.
+
 
 ## Predictor variables {#sec-prevar}
 
 ### Sample Size
 
-Sample size is an important predictor because it influences the reliability of a poll. Larger sample sizes tend to reduce sampling error, providing more accurate reflections of voter sentiment. In our MLR model, the sample size is log-transformed to account for diminishing returns—larger polls do not necessarily offer proportionally better accuracy.
+Sample size is an important predictor because it influences the reliability of a poll. Larger sample sizes tend to reduce sampling error, providing more accurate reflections of voter sentiment and more reliable predictions of the election. In our models, the sample size is log-transformed to account for diminishing returns—larger polls do not necessarily offer proportionally better accuracy. 
 
-### Poll Score
+### Poll Score and Numeric Grade
 
-The poll score is a measure of the error and bias we can attribute to a pollster, negative number is better.
+The poll score is a measure of the error and bias we can attribute to a pollster, negative number is better. The numeric grade is an aggregate score of the poll based on a numeric scale. It serves as an indicator of the pollster's historical performance and the methodology used. 3 is the maximum and some pollsters have no rating. A lower poll score and higher numeric grade of a pollster indicate the data collected by the pollster has higher reliability and the methodology used by the pollster is more consistent.
 
-### Numeric Grade
+```{r}
+#| label: fig-pollscore-numericgrade
+#| fig-cap: "Distribution of Poll scores and Numeric Grade of Pollsters in the 2024 U.S. Presidential Election"
+#| echo: false
+#| warning: false
 
-This variable is an aggregate score of the poll based on a numeric scale. It serves as an indicator of the pollster's historical performance and the methodology used. 3 is the maximum and some pollsters have no rating.
+
+ps_graph <- ggplot(cleaned_data, aes(x = pollscore)) +
+  geom_bar(fill = "blue", color = "black") +
+  labs(x = "Pollscore",
+       y = "Frequency") +
+  theme_minimal()
+
+ng_graph <- ggplot(cleaned_data, aes(x = numeric_grade)) +
+  geom_bar(fill = "red", color = "black") +
+  labs(x = "Numeric Grade",
+       y = "Frequency") +
+  theme_minimal()
+
+ps_graph + ng_graph
+```
+The left side of @fig-pollscore-numericgrade presents the distribution of poll scores among all of the pollsters, most of the pollsters have negative poll scores which indicates these pollsters are reliable. Among these pollsters having negative poll scores, more than 2000 pollsters have poll scores lower than -1 showing higher reliability of the data collected by them than other pollsters. Some of the pollsters have positive poll scores, data collected by these pollsters is not reliable.
+
+The right side of @fig-pollscore-numericgrade presents the distribution of numeric grades of all pollsters, most of the pollsters have the numeric grades higher than the middle number, 1.5. More than 3000 polling organizations have numeric grades higher than 2.8 reflects a higher reliability of data collected by them.
 
 ### Transparency Score
 
 Transparency score measures how openly a pollster reports their methodology and results. A higher transparency score suggests that the pollster has disclosed key details about how the poll was conducted, improving trust in the poll results.
 
+```{r}
+#| label: fig-transparency
+#| fig-cap: "Distribution of Transparency Score of Pollsters in the 2024 U.S. Presidential Election"
+#| echo: false
+#| warning: false
+
+
+ts_graph <- ggplot(cleaned_data, aes(x = transparency_score)) +
+  geom_bar(fill = "blue", color = "black") +
+  labs(x = "Transparency Score",
+       y = "Frequency") +
+  theme_minimal()
+
+ts_graph
+```
+From the distribution graph of transparency score among all of the pollster shown in @fig-transparency, this reflects the differences in the methodologies used by different pollsters. Over 3,000 pollsters have a transparency score above 9, indicating that they have more open and trustworthy methodologies. In contrast, some pollsters have a transparency score below 5, which suggests that their methodologies are not disclose the details of their data collection processes, thereby diminishing the credibility of these polls."
+
 ### Days Since Start
 
-This variable represents the number of days since the beginning of the election polling period. It helps capture the dynamic nature of voter preferences over time, accounting for shifts in public opinion as the election date nears.
+This variable represents the number of days since the beginning of the election polling period. It is calculated as Days Since Start = number of days from the beginning of the election to the end date of the specific poll. It helps capture the dynamic nature of voter preferences over time, accounting for shifts in public opinion as the election date nears. We only keep the polls with end dates after January 1 2024 to keep the variety of the data but avoid candidates and parties that are not involved in the final race of the election to mainly analyze the support rate percentage between Donald Trump and Kamala Harris.
 
 # Models {#sec-models}
 
