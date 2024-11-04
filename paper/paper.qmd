@@ -5,7 +5,7 @@ author:
   - Ziqi Zhu
   - Yuanchen Miao
   - Claire Chang
-thanks: "Code and data are available at: c"
+thanks: "Code and data are available at: https://github.com/zzq20010617/2024_USelection_prediction"
 date: today
 date-format: long
 abstract: "we utilize FiveThirtyEight’s 2024 U.S. presidential poll-of-polls data from [date] to [date] to analyze support trends for the leading candidates, Kamala Harris and Donald Trump. By focusing on variables shows the reliability of a pollster, such as sample size, numeric scores, poll scores, and state-level factors, the data is fit into three models: a linear regression model, a Bayesian model, and a spline-fit Gaussian model. The results of the analysis indicated a strong lead for Harris in both the linear regression and Bayesian models, with a more modest lead in the spline-fit Gaussian model. This paper predicts the potential trajectory of the election, helping the public anticipate the policy directions that might follow a Harris administration."
