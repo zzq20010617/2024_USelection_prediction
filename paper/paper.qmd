@@ -105,7 +105,7 @@ The remainder of this paper is structured as follows. @sec-data discusses the da
 
 ### Data Tools
 
-Our data is download from [Five Thirty Eight] (https://projects.fivethirtyeight.com/polls) [@polls], the website gathered survey data from different pollsters of 2024 US president election, We use the statistical programming **language R** [@citeR], and packages **lubridate** [@lubridate], **dplyr** [@dplyr], **tidyverse** [@tidyverse], **model summary** [@models] to process the data. Also, we use **tibble** [@tibble] to create the table for simulate table and save it as csv files. Graphs are created by using ggplot2 in from package **tidyverse** [@tidyverse]Following **Telling stories with data** [@telling_stories_with_data], we consider using multiple linear model to predict and forecasting the result of US president election in 2024. We are creating different graphs and models for the candidates from different parties in general state and combine all models and graphs together to create a new scatter plot to predict and forecasting the US president election in 2024.
+Our data is download from [Five Thirty Eight] (https://projects.fivethirtyeight.com/polls) [@polls], the website gathered survey data from different pollsters of 2024 US president election, We use the statistical programming **language R** [@citeR], and packages **lubridate** [@lubridate], **dplyr** [@dplyr], **tidyverse** [@tidyverse], **model summary** [@models] to process the data. Also, we use **tibble** [@tibble] to create the table for simulate table and save it as csv files. Graphs are created by using ggplot2 in from package **tidyverse** [@tidyverse].
 
 ### Cleaned Data 
 
