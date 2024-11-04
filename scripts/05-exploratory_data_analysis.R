@@ -28,10 +28,19 @@ top_10_candidates <- candidate_avg_pct %>%
 nationwide_data <- poll_data %>%  filter(state == "National")
 boxplot(pct ~ party, data = nationwide_data)
 
-#### Save model ####
-saveRDS(
-  first_model,
-  file = "models/first_model.rds"
-)
+# Separate by state 
+poll_counts <- poll_data %>%
+  group_by(state) %>%  # Group by 'state'
+  summarize(poll_count = n()) %>%  # Count the number of polls per state
+  arrange(desc(poll_count))
 
+# Check support pct for Biden and Harris
+average_biden <- nationwide_data %>%
+  filter(answer == "Biden") %>%
+  summarize(avg_pct_biden = mean(pct, na.rm = TRUE))
+
+# Calculate average support for Harris
+average_harris <- nationwide_data %>%
+  filter(answer == "Harris") %>%
+  summarize(avg_pct_harris = mean(pct, na.rm = TRUE))
 
