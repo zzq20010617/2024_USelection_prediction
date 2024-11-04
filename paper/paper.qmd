@@ -28,12 +28,9 @@ library(rstanarm)
 library(splines)
 library(broom)
 library(knitr)
-<<<<<<< HEAD
 library(stringr)
 library(patchwork)
-=======
 library(kableExtra)
->>>>>>> 7a2a9b8863eaee6ebf0c72a57ba977cf7723ee8e
 ```
 
 ```{r}
@@ -89,17 +86,13 @@ The analysis employs three statistical models: linear regression model, Bayesian
 
 These results are significant since they show the evolving dynamics of the election and how different statistical models and approaches could yield varying interpretations of candidate support rate. This paper is giving public an idea of who is the likely winner of the election that will have the potential implications on future political strategies and the overall direction of U.S. policy.
 
-The remainder of this paper is structured as follows. @sec-data discusses the data used for this analysis, including key variables and sources, with particular attention to the quality metrics that affect polling accuracy. @sec-models outlines our modeling approach for each candidate, incorporating lessons learned from recent electoral cycles. @sec-predict presents our *** predictions based on the model outputs. @sec-discuss discusses the implications of our findings and suggests directions for future research. Finally, @sec-appendix evaluates Trafalgar Group’s polling methodology, and our idealized methodology and survey copy.
+The remainder of this paper is structured as follows. @sec-data discusses the data used for this analysis, including key variables and sources, with particular attention to the quality metrics that affect polling accuracy. @sec-models outlines our modeling approach for each candidate, incorporating lessons learned from recent electoral cycles. Results of each model are discussed under the specific model section @sec-discuss discusses the implications of our findings and suggests directions for future research. Finally, @sec-appendix evaluates Trafalgar Group’s polling methodology, and our idealized methodology and survey copy.
 
 # Data {#sec-data}
 
 ## Overview
 
-<<<<<<< HEAD
 Our data is download from [Five Thirty Eight] (https://projects.fivethirtyeight.com/polls) [@polls], the website gathered survey data from different pollsters of 2024 US president election, We use the statistical programming **language R** [@citeR], and packages **lubridate** [@lubridate], **dplyr** [@dplyr], **tidyverse** [@tidyverse], **model summary** [@models] to process the data. Also, we use **tibble** [@tibble] to create the table for simulate table and save it as csv files, package **stringr** [@stringr] is used to clean the column names in tables. Graphs are created by using ggplot2 in from package **tidyverse** [@tidyverse], packages **broom** [@broom] and **knitr** [@knitr] were used to generate clean summary and table in this paper. Package **patchwork** [@patchwork] is been used to combine two graphs together. Following **Telling stories with data** [@telling_stories_with_data], we consider using multiple linear model to predict and forecasting the result of US president election in 2024. We are creating different graphs and models for the candidates from different parties in general state and combine all models and graphs together to create a new scatter plot to predict and forecasting the US president election in 2024.
-=======
-Our data is download from [Five Thirty Eight] (https://projects.fivethirtyeight.com/polls) [@polls], the website gathered survey data from different pollsters of 2024 US president election, We use the statistical programming **language R** [@citeR], and packages **lubridate** [@lubridate], **dplyr** [@dplyr], **tidyverse** [@tidyverse], **model summary** [@models], and **arrow** [@arrow] to process the data. Also, we use **tibble** [@tibble] to create the table for simulate table and save it as csv files. Graphs are created by using ggplot2 in from package **tidyverse** [@tidyverse], packages **broom** [@broom] and **knitr** [@knitr] were used to generate clean summary and table in this paper. Following **Telling stories with data** [@telling_stories_with_data], we create different models for the candidates from different parties in general state and forecasting the US president election in 2024.
->>>>>>> 7a2a9b8863eaee6ebf0c72a57ba977cf7723ee8e
 
 ## Cleaned Data 
 
@@ -129,7 +122,6 @@ Polling data is collected by different pollsters using various survey methods re
 ## Outcome variables {#sec-octvar}
 
 Our primary outcome variable is **support percentage (pct)**, which represents the percentage of respondents who support each candidate. This variable is modeled as the response variable in the linear regression model, Bayesian model and spline-fit Gaussian model analysis.
-
 
 ## Predictor variables {#sec-prevar}
 
