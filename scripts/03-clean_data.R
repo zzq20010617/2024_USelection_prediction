@@ -10,6 +10,7 @@
 library(tidyverse)
 library(lubridate)
 library(dplyr)
+library(arrow)
 
 #### Clean data ####
 #Pollster: Different pollsters may have varying methodologies and biases.
@@ -27,7 +28,7 @@ raw_data <- read_csv("data/01-raw_data/raw_data.csv")
 raw_data$end_date <- as.character(raw_data$end_date)
 raw_data$end_date <- mdy(raw_data$end_date)
 
-# select useful columns and filter by date to keep polls ends in 2024
+# select useful columns and filter by date to keep polls ends in 2024, remove rows contain NAs
 cleaned_data <-
   raw_data |>
   janitor::clean_names() %>%
@@ -35,6 +36,8 @@ cleaned_data <-
   filter(end_date >= as.Date("2024-01-01")) %>%
   mutate(
     state = if_else(is.na(state), "National", state))
+cleaned_data <- na.omit(cleaned_data)
 
 #### Save data ####
 write_csv(cleaned_data, "data/02-analysis_data/cleaned_data.csv")
+write_parquet(cleaned_data, "data/02-analysis_data/cleaned_data.parquet")
