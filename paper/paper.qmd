@@ -28,7 +28,6 @@ library(rstanarm)
 library(splines)
 library(broom)
 library(knitr)
-library(stringr)
 library(patchwork)
 library(kableExtra)
 ```
@@ -86,13 +85,14 @@ The analysis employs three statistical models: linear regression model, Bayesian
 
 These results are significant since they show the evolving dynamics of the election and how different statistical models and approaches could yield varying interpretations of candidate support rate. This paper is giving public an idea of who is the likely winner of the election that will have the potential implications on future political strategies and the overall direction of U.S. policy.
 
-The remainder of this paper is structured as follows. @sec-data discusses the data used for this analysis, including key variables and sources, with particular attention to the quality metrics that affect polling accuracy. @sec-models outlines our modeling approach for each candidate, incorporating lessons learned from recent electoral cycles. Results of each model are discussed under the specific model section @sec-discuss discusses the implications of our findings and suggests directions for future research. Finally, @sec-appendix evaluates Trafalgar Group’s polling methodology, and our idealized methodology and survey copy.
+The remainder of this paper is structured as follows. @sec-data discusses the data used for this analysis, including key variables and sources, with particular attention to the quality metrics that affect polling accuracy. @sec-models outlines our modeling approach for each candidate, incorporating lessons learned from recent electoral cycles. Our predictions are under section of each model. @sec-discuss discusses the implications of our findings and suggests directions for future research. Finally, @sec-appendix evaluates Trafalgar Group’s polling methodology, and our idealized methodology and survey copy.
+
 
 # Data {#sec-data}
 
 ## Overview
 
-Our data is download from [Five Thirty Eight] (https://projects.fivethirtyeight.com/polls) [@polls], the website gathered survey data from different pollsters of 2024 US president election, We use the statistical programming **language R** [@citeR], and packages **lubridate** [@lubridate], **dplyr** [@dplyr], **tidyverse** [@tidyverse], **model summary** [@models] to process the data. Also, we use **tibble** [@tibble] to create the table for simulate table and save it as csv files, package **stringr** [@stringr] is used to clean the column names in tables. Graphs are created by using ggplot2 in from package **tidyverse** [@tidyverse], packages **broom** [@broom] and **knitr** [@knitr] were used to generate clean summary and table in this paper. Package **patchwork** [@patchwork] is been used to combine two graphs together. Following **Telling stories with data** [@telling_stories_with_data], we consider using multiple linear model to predict and forecasting the result of US president election in 2024. We are creating different graphs and models for the candidates from different parties in general state and combine all models and graphs together to create a new scatter plot to predict and forecasting the US president election in 2024.
+Our data is download from [Five Thirty Eight] (https://projects.fivethirtyeight.com/polls) [@polls], the website gathered survey data from different pollsters of 2024 US president election, We use the statistical programming **language R** [@citeR], and packages **lubridate** [@lubridate], **dplyr** [@dplyr], **tidyverse** [@tidyverse], **model summary** [@models], and **arrow** [@arrow] to process the data. Also, we use **tibble** [@tibble] to create the table for simulate table and save it as csv files. Graphs are created by using ggplot2 in from package **tidyverse** [@tidyverse], packages **broom** [@broom] and **knitr** [@knitr] were used to generate clean summary and table in this paper. Package **patchwork** [@patchwork] is been used to combine two graphs together. Following **Telling stories with data** [@telling_stories_with_data], we create different models for the candidates from different parties in general state and forecasting the US president election in 2024.
 
 ## Cleaned Data 
 
@@ -446,7 +446,7 @@ The prediction results of the Bayesian model closely align with those of the lin
 
 We first run the model in R [@citeR] using the `rstanarm` package of [@rstanarm], and use priors $\text{Normal}(0, 5)$ to allow for more flexibility of predictors effects with “autoscale = TRUE”. Then we use the same data frame that was used to predict for the Bayesian model [@tbl-newdata], the result is shown as [@sec-splresult]
 
-## Result {#sec-splresult}
+### Result {#sec-splresult}
 
 ```{r}
 #| echo: false
@@ -566,12 +566,15 @@ ggplot(dem_data_filtered, aes(x = pct, fill = answer)) +
   ) +
   theme_minimal()
 ```
+## Cross-Model Observations
 
-## Second discussion point
+In both the MLR and Bayesian models, Harris demonstrates a significant lead over Trump. The MLR model projects an approximate 2.6% lead for Harris, as indicated by the slope for the Democratic (DEM) variable, which is steeper and surpasses the Republican (REP) trend line between day 100 and day 200 (see @fig-mlrpredict). This early crossover point indicates a shift in support dynamics, suggesting that Harris’s policies or campaign events during this period may have positively influenced public sentiment. 
+The Bayesian model, which accounts for random effects among pollsters, reinforces this lead by predicting 601 supporters for Harris versus 578 for Trump towards the end of the prediction period (see @fig-baypredict). This stability across models suggests that Harris’s support is likely durable, despite the model-specific variations in lead magnitude.
+The Spline-Fit Gaussian model, however, presents a more conservative lead for Harris, with a smaller difference of approximately 1.06% in favor of the Democratic candidate by the end of the dataset (see @fig-splpredict). This model, designed to capture smoother trends, suggests that Harris’s lead, while present, may not be as robust as projected by the MLR and Bayesian models. This discrepancy emphasizes that different modeling approaches yield varied levels of confidence in support predictions, with the Spline-Fit model capturing subtle shifts that might indicate voter hesitancy or fluctuating preferences over time.
 
-Please don't use these as sub-heading labels - change them to be what your point actually is.
+## Differences in Modeling Nationwide Polls and Actual Election Results
 
-## Third discussion point
+In this paper, we used nationwide poll data for modeling, which contrasts significantly with using state-by-state election results. Nationwide polls offer general insights into aggregate support levels but do not account for the Electoral College system in U.S. presidential elections. This approach can overlook state-specific variations and the unique influence of each state's electoral votes, leading to potential bias where larger states disproportionately affect overall results. Conversely, state-level modeling captures the distribution of support across states, highlighting the impact of battleground states. To enhance prediction accuracy and align with the actual election structure, future models should integrate state-level data especially for the battleground states for more robust, applicable results.
 
 ## Weaknesses and next steps
 
