@@ -48,27 +48,8 @@ for (party in unique_parties) {
   models[[party]] <- model
 }
 
-for (party in names(models)) {
-  # Extract the model for the current party
-  current_model <- models[[party]]
 
-  # Create a Residuals vs Fitted plot for the current model
-  plot(current_model, which = 1, main = paste("Residuals vs Fitted for", party, "Party"))
-
-  # Optionally, pause between plots to view them
-  readline(prompt = "Press [Enter] to continue to the next plot...")
-}
-
-# choose a party to check summary
-model_summary <- summary(models[['DEM']])
-# Access the R-squared and Adjusted R-squared values
-r_squared <- model_summary$r.squared
-adjusted_r_squared <- model_summary$adj.r.squared
-
-# Print the model summary
-print(model_summary)
-
-# Need number not percent for some models
+# Need number not percent for Bayesian models
 nationwide_data <- nationwide_data %>% mutate(
   num_party = round((pct / 100) * sample_size, 0)
 )
@@ -98,18 +79,6 @@ dem_data <- dem_data |>
 rep_data <- rep_data |>
   mutate(fitted_pct_rep = predict(models[['REP']]))
 
-combined_data <- bind_rows(dem_data, rep_data)
-ggplot(combined_data, aes(x = days_since_start)) +
-#  geom_point(aes(y = pct), color = "black") +
-  geom_line(aes(y = fitted_pct_dem), data = subset(combined_data, party == "DEM"), color = "blue") +
-  geom_line(aes(y = fitted_pct_rep), data = subset(combined_data, party == "REP"), color = "red") +
-  theme_classic() +
-  labs(y = "Percent", x = "Date", title = "Linear Model: 
-       pct ~ log(sample_size) + pollscore + numeric_grade + transparency_score + 
-       days_since_start")
-
-modelsummary(models = models)
-
 # Bayesian model section 
 model_formula_dem <- cbind(num_party, sample_size - num_party) ~ log(sample_size) + days_since_start + 
    pollscore + numeric_grade + transparency_score + (1 | pollster)
@@ -138,9 +107,6 @@ bayesian_model_rep <- stan_glmer(
   adapt_delta = 0.95
 )
 
-# Posterior predictive checks
-pp_check(bayesian_model_dem)
-
 plot(bayesian_model_dem, pars = "(Intercept)", prob = 0.95)
 
 spline_model_dem <- stan_glm(
@@ -166,30 +132,6 @@ spline_model_rep <- stan_glm(
   chains = 4,
   refresh = 0
 )
-
-# pp_check(spline_model_dem)
-# pp_check(spline_model_rep)
-
-
-#### Just Harris model ####
-
-# Model 1: pct as a function of end_date
-model_date <- lm(pct ~ end_date, data = just_harris_high_quality)
-
-# Augment data with model predictions
-just_harris_high_quality <- just_harris_high_quality |>
-  mutate(
-    fitted_date = predict(model_date),
-  )
-
-# Plot model predictions
-# Model 1
-ggplot(just_harris_high_quality, aes(x = end_date)) +
-  geom_point(aes(y = pct), color = "black") +
-  geom_line(aes(y = fitted_date), color = "blue", linetype = "dotted") +
-  theme_classic() +
-  scale_y_continuous(labels = scales::percent_format(scale = 1))+
-  labs(y = "Harris percent", x = "Date", title = "Linear Model: pct ~ end_date")
 
 #### Save model ####
 saveRDS(
