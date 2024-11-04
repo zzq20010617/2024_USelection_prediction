@@ -8,7 +8,7 @@ author:
 thanks: "Code and data are available at: https://github.com/zzq20010617/2024_USelection_prediction"
 date: today
 date-format: long
-abstract: "we utilize FiveThirtyEight’s 2024 U.S. presidential poll-of-polls data from [date] to [date] to analyze support trends for the leading candidates, Kamala Harris and Donald Trump. By focusing on variables shows the reliability of a pollster, such as sample size, numeric scores, poll scores, and state-level factors, the data is fit into three models: a linear regression model, a Bayesian model, and a spline-fit Gaussian model. The results of the analysis indicated a strong lead for Harris in both the linear regression and Bayesian models, with a more modest lead in the spline-fit Gaussian model. This paper predicts the potential trajectory of the election, helping the public anticipate the policy directions that might follow a Harris administration."
+abstract: "We utilize FiveThirtyEight’s 2024 U.S. presidential poll-of-polls data in 2024 to analyze support trends for the leading candidates, Kamala Harris and Donald Trump. By focusing on variables shows the reliability of a pollster, such as sample size, numeric scores, poll scores, and state-level factors, the data is fit into three models: a linear regression model, a Bayesian model, and a spline-fit Gaussian model. The results of the analysis indicated a strong lead for Harris in both the linear regression and Bayesian models, with a more modest lead in the spline-fit Gaussian model. This paper predicts the potential trajectory of the election, helping the public anticipate the policy directions that might follow a Harris administration."
 number-sections: true
 bibliography: references.bib
 format:
@@ -26,6 +26,8 @@ format:
 library(tidyverse)
 library(rstanarm)
 library(splines)
+library(broom)
+library(knitr)
 ```
 
 ```{r}
@@ -103,11 +105,9 @@ The remainder of this paper is structured as follows. @sec-data discusses the da
 
 ## Overview
 
-### Data Tools
+Our data is download from [Five Thirty Eight] (https://projects.fivethirtyeight.com/polls) [@polls], the website gathered survey data from different pollsters of 2024 US president election, We use the statistical programming **language R** [@citeR], and packages **lubridate** [@lubridate], **dplyr** [@dplyr], **tidyverse** [@tidyverse], **model summary** [@models] to process the data. Also, we use **tibble** [@tibble] to create the table for simulate table and save it as csv files. Graphs are created by using ggplot2 in from package **tidyverse** [@tidyverse], packages **broom** [@broom] and **knitr** [@knitr] were used to generate clean summary and table in this paper. Following **Telling stories with data** [@telling_stories_with_data], we consider using multiple linear model to predict and forecasting the result of US president election in 2024. We are creating different graphs and models for the candidates from different parties in general state and combine all models and graphs together to create a new scatter plot to predict and forecasting the US president election in 2024.
 
-Our data is download from [Five Thirty Eight] (https://projects.fivethirtyeight.com/polls) [@polls], the website gathered survey data from different pollsters of 2024 US president election, We use the statistical programming **language R** [@citeR], and packages **lubridate** [@lubridate], **dplyr** [@dplyr], **tidyverse** [@tidyverse], **model summary** [@models] to process the data. Also, we use **tibble** [@tibble] to create the table for simulate table and save it as csv files. Graphs are created by using ggplot2 in from package **tidyverse** [@tidyverse].
-
-### Cleaned Data 
+## Cleaned Data 
 
 The raw data obtained from FiveThirtyEight [@polls] initially contains 17,440 observations, which we reduced to 12,185 by only retaining polls conducted after January 1, 2024. As our analysis focuses specifically on Kamala Harris and Donald Trump, data collected before January 1, 2024, holds limited relevance due to the inclusion of outdated candidates. Reducing the data further to only include polls after Harris officially announced her candidacy would result in too few observations to support a robust model. Additionally, the "state" column in the dataset was adjusted by replacing all "NA" values with "National," as these "NA" entries represent polls conducted nationwide in the raw data. A view of the first five rows of cleaned data is shown in @tbl-cleandatarows
 
@@ -671,7 +671,7 @@ The Trafalgar Group conducts polls ranging from major political campaigns to mar
 #| warning: false
 #| fig.cap: "Residuals vs Fitted for DEM Party"
 
-plot(MLR_models[['DEM']], which = 1, main = "Residuals vs Fitted for DEM Party")
+plot(MLR_models[['DEM']], which = 1)
 ```
 
 ```{r}
@@ -680,7 +680,7 @@ plot(MLR_models[['DEM']], which = 1, main = "Residuals vs Fitted for DEM Party")
 #| warning: false
 #| fig.cap: "Residuals vs Fitted for REP Party"
 
-plot(MLR_models[['REP']], which = 1, main = "Residuals vs Fitted for REP Party")
+plot(MLR_models[['REP']], which = 1)
 ```
 
 ## Significant check for MLR models {#sec-model-sigcheck}
@@ -694,7 +694,8 @@ see [@tbl-mlrmodelsum-dem], and [@tbl-mlrmodelsum-rep]
 #| tbl-cap: "Summary of DEM data fit by MLR model"
 #| warning: false
 
-summary(MLR_models[['DEM']])
+model_summary <- tidy(MLR_models[['DEM']])
+kable(model_summary)
 ```
 
 ```{r}
@@ -704,7 +705,8 @@ summary(MLR_models[['DEM']])
 #| tbl-cap: "Summary of REP data fit by MLR model"
 #| warning: false
 
-summary(MLR_models[['REP']])
+model_summary <- tidy(MLR_models[['REP ']])
+kable(model_summary)
 ```
 
 \newpage
@@ -732,26 +734,8 @@ pp_check(bayesian_model_rep) +
 
 ```
 
-
-## Diagnostics
-
-<!-- @fig-stanareyouokay-1 is a trace plot. It shows... This suggests... -->
-
-<!-- @fig-stanareyouokay-2 is a Rhat plot. It shows... This suggests... -->
-
 ```{r}
-#| echo: false
-#| eval: true
-#| message: false
-#| warning: false
-#| label: fig-stanareyouokay
-#| fig-cap: "Checking the convergence of the MCMC algorithm"
-#| fig-subcap: ["Trace plot", "Rhat plot"]
-#| layout-ncol: 2
-
-# plot(first_model, "trace")
-# 
-# plot(first_model, "rhat")
+plot(bayesian_model_dem, pars = "(Intercept)", prob = 0.95)
 ```
 
 \newpage
