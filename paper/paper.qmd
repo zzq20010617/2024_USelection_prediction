@@ -103,7 +103,6 @@ The raw data obtained from FiveThirtyEight [@polls] initially contains 17,440 ob
 #| tbl-cap: "First Five Rows of Cleaned Data"
 #| warning: false
 
-
 cleaned_data_subset <- head(cleaned_data, 5)
 colnames(cleaned_data_subset) <- c("pollster"	, "sample size", "poll grade", 
                                    "pollscore","state", "transparency score", 
@@ -116,7 +115,7 @@ kable(cleaned_data_subset, digits = 2) %>%
 
 ## Measurement
 
-The dataset is about public opinions about U.S. presidential candidates, which are captured through polling.
+Polling data is collected by different pollsters using various survey methods reflect public opinion on the 2024 U.S. presidential election. Information of individuals collected by pollsters is being separate to different groups based on age, gender, race, occupation and geographic to reflect a more accurate supporting trend of each candidates involved in the presidential elections. From FiveThirtyEight, poll-of-polls dataset included the pollscore and numeric grade of the pollster which influence the reliability of the pollster on the collection of support rate of each candidates. Polling methodology is also various among pollsters, such as online panels, app panels, online Ad and phone interviews. Different methodology are having its own target audiences which the data collected can represent the opinion of specific age group.
 
 ## Outcome variables {#sec-octvar}
 
