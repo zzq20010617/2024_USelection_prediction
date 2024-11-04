@@ -79,7 +79,7 @@ In this paper, polling data of 2024 U.S. presidential election from FiveThirtyEi
 
 The primary estimand in this study is the expected percentage of support (pct) for a U.S. presidential candidate, given polling data and relevant predictor variables like rating of the pollster and sample size of the poll.
 
-The analysis employs three statistical models: linear regression model, Bayesian model and spline-fit Gaussian model. The findings indicates that Kamala Harris maintains a strong lead in both linear regression model and Bayesian model, while her leads becomes modest when comparing the trend of support rate of Donald Trump in spline-fit Gaussian model. Comparing to Donald Trump, Kamala Harris has a [pct] lead in linear regression model, [pct] in Bayesian model and only [pct] lead in spline-fit Gaussian model.
+The analysis employs three statistical models: linear regression model, Bayesian model and spline-fit Gaussian model. The findings indicates that Kamala Harris maintains a strong lead in both linear regression model and Bayesian model, while her leads becomes modest when comparing the trend of support rate of Donald Trump in spline-fit Gaussian model. Comparing to Donald Trump, Kamala Harris has a 2.6 percent lead in linear regression model, 23 more supporter out of 1200 in Bayesian model and only 1.06 percent lead in spline-fit Gaussian model.
 
 These results are significant since they show the evolving dynamics of the election and how different statistical models and approaches could yield varying interpretations of candidate support rate. This paper is giving public an idea of who is the likely winner of the election that will have the potential implications on future political strategies and the overall direction of U.S. policy.
 
@@ -175,7 +175,7 @@ modelsummary::modelsummary(
 )
 ```
 
-First, we checked the residual vs. fitted plot as shown in [Appendix @sec-model-details] and saw no obvious violation of assumptions. According to the summary, DEM and REP models are based on the largest number of observations (both 1235). Smaller parties have fewer observations, which may lead to less robust models. The $r^2$ shows that the model explains the highest amount of variance on the Democratic Party than others with a value of 0.357, and other parties less than 0.2. Based on the summary of models for DEM and REP [@sec-model-sigcheck], we are not sure if those predictors that measure the quality of polls are significant, so we keep them for now in the Bayesian model. The prediction of MLR models is shown in [@fig-mlrpredict], in which we can see the blue line represents the Democratic party has a steeper slope and starts to take the lead between day 100 and day 200.
+First, we checked the residual vs. fitted plot as shown in [Appendix @sec-model-details] and saw no obvious violation of assumptions. According to the summary, DEM and REP models are based on the largest number of observations (both 1235). Smaller parties have fewer observations, which may lead to less robust models. The $r^2$ shows that the model explains the highest amount of variance on the Democratic Party than others with a value of 0.357, and other parties less than 0.2. Based on the summary of models for DEM and REP [@sec-model-sigcheck], we are not sure if those predictors that measure the quality of polls are significant, so we keep them for now in the Bayesian model. The prediction of MLR models is shown in [@fig-mlrpredict], in which we can see the blue line represents the Democratic party has a steeper slope and starts to take the lead between day 100 and day 200, and the average support percentage on the last day of data shows that Democratic (Harris) has a slight advantage of 2.6 percent.
 
 ```{r}
 #| echo: false
@@ -192,13 +192,47 @@ rep_data <- rep_data |>
 # Combine both datasets into one
 combined_data <- bind_rows(dem_data, rep_data)
 
+# Take average of pct for each day
+combined_data_avg <- combined_data %>%
+  group_by(days_since_start) %>%
+  summarize(
+    avg_fitted_pct_dem = mean(fitted_pct_dem, na.rm = TRUE),
+    avg_fitted_pct_rep = mean(fitted_pct_rep, na.rm = TRUE)
+  )
+
+# Extract the last day data for annotations
+last_day_data <- combined_data_avg %>%
+  filter(days_since_start == max(days_since_start))
+
 # Plot with colors based on the party
-ggplot(combined_data, aes(x = days_since_start)) +
-  geom_line(aes(y = fitted_pct_dem, color = "DEM")) +
-  geom_line(aes(y = fitted_pct_rep, color = "REP")) +
+ggplot(combined_data_avg, aes(x = days_since_start)) +
+  geom_line(aes(y = avg_fitted_pct_dem, color = "DEM")) +
+  geom_line(aes(y = avg_fitted_pct_rep, color = "REP")) +
   scale_color_manual(values = c("DEM" = "blue", "REP" = "red"), 
                      name = "Party",
                      labels = c("DEM (Blue)", "REP (Red)")) +
+  geom_text(
+    data = last_day_data,
+    aes(
+      x = days_since_start,
+      y = avg_fitted_pct_dem,
+      label = paste("DEM:", round(avg_fitted_pct_dem, 1))
+    ),
+    color = "blue",
+    vjust = -0.5,
+    hjust = 1
+  ) +
+  geom_text(
+    data = last_day_data,
+    aes(
+      x = days_since_start,
+      y = avg_fitted_pct_rep,
+      label = paste("REP:", round(avg_fitted_pct_rep, 1))
+    ),
+    color = "red",
+    vjust = -0.5,
+    hjust = 1
+  ) +
   theme_classic() +
   labs(y = "Percent", x = "Days") +
   theme(legend.position = "top")
@@ -485,10 +519,16 @@ ggplot(dem_data_filtered, aes(x = pct, fill = answer)) +
   theme_minimal()
 ```
 
+## Second discussion point
+
+Please don't use these as sub-heading labels - change them to be what your point actually is.
+
+## Third discussion point
 
 ## Weaknesses and next steps
 
-Firstly we focused only on nationwide polls, excluding state-specific data, due to limited and outdated information from certain states. For example, Mississippi had only four polls, with the most recent conducted in April 2024, making state-level modeling and vote counting challenging. This limitation restricts the accuracy of state-by-state analysis. With more reliable and updated data, using a state-based approach would enhance the model’s precision and provide a more comprehensive prediction of the election outcome. Furthermore modeling Biden and Harris together under one Democratic model introduces potential inaccuracies, especially influencing the slope of predictions in both linear and Bayesian models, making the observed upward trend less reliable.
+Firstly we focused only on nationwide polls, excluding state-specific data, due to limited and outdated information from certain states. For example, Mississippi had only four polls, with the most recent conducted in April 2024, making state-level modeling and vote counting challenging. This limitation restricts the accuracy of state-by-state analysis. With more reliable and updated data, using a state-based approach would enhance the model’s precision and provide a more comprehensive prediction of the election outcome, especially for discovering the public opinion in battleground states.
+Furthermore modeling Biden and Harris together under one Democratic model introduces potential inaccuracies, especially influencing the slope of predictions in both linear and Bayesian models, making the observed upward trend less reliable.
 
 \newpage
 
