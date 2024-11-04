@@ -28,6 +28,7 @@ library(rstanarm)
 library(splines)
 library(broom)
 library(knitr)
+library(kableExtra)
 ```
 
 ```{r}
@@ -56,7 +57,6 @@ nationwide_data <- nationwide_data %>% mutate(
 # filter nationwide_data by parties
 dem_data <- nationwide_data %>%
   filter(party == "DEM")
-dem_data <- na.omit(dem_data)
 
 dem_data <- dem_data |>
   mutate(
@@ -65,7 +65,6 @@ dem_data <- dem_data |>
 
 rep_data <- nationwide_data %>%
   filter(party == "REP")
-rep_data <- na.omit(rep_data)
 
 rep_data <- rep_data |>
   mutate(
@@ -87,25 +86,11 @@ These results are significant since they show the evolving dynamics of the elect
 
 The remainder of this paper is structured as follows. @sec-data discusses the data used for this analysis, including key variables and sources, with particular attention to the quality metrics that affect polling accuracy. @sec-models outlines our modeling approach for each candidate, incorporating lessons learned from recent electoral cycles. @sec-predict presents our *** predictions based on the model outputs. @sec-discuss discusses the implications of our findings and suggests directions for future research. Finally, @sec-appendix evaluates Trafalgar Group’s polling methodology, and our idealized methodology and survey copy.
 
-
-<!-- This paper examines the development of a multiple linear regression (MLR) model to predict the percentage of support (pct) for U.S. presidential candidates based on polling data. The data includes a range of predictors, such as sample size, pollster quality factors, and time-related factors. The focus of the analysis is on nationwide polling data, aggregated from different pollsters, to create a robust model for forecasting election outcomes. The goal is to provide a clearer understanding of how various poll attributes influence polling results and to derive insights that can predict election outcomes. -->
-
-<!-- The primary estimand in this study is the expected percentage of support (pct) for a U.S. presidential candidate, given polling data and relevant predictor variables like rating of the pollster and sample size of the poll. -->
-
-<!-- Our Results shows that -->
-
-<!-- This analysis is useful in understanding how various polling factors contribute to predicting election results. By modeling the relationship between polling result and factors, the study enhances the ability to forecast election outcomes based on public opinion data. This model provides a practical tool for researchers, political strategists, and analysts to assess the reliability of polling data and its implications for elections. -->
-
-<!-- This paper develops statistical models to forecast the 2024 presidential election outcome between Kamala Harris and Donald Trump. Utilizing multiple linear regression, we predict the support percentages for each candidate across various states, incorporating essential factors such as pollster rating, sample size, and state-specific demographics. By aggregating these state-level predictions, we simulate possible outcomes to estimate each candidate's probability of achieving the necessary 270 electoral votes. Additionally, we analyze [@trafalgar_polling_methodology] polling methodology and propose an optimized survey and methodology aimed at improving election forecast accuracy. -->
-
-<!-- The remainder of this paper is structured as follows. @sec-data discusses the data used for this analysis, including key variables and sources, with particular attention to the quality metrics that affect polling accuracy. @sec-models outlines our modeling approach for each candidate, incorporating lessons learned from recent electoral cycles. @sec-predict presents our *** predictions based on the model outputs. @sec-discuss discusses the implications of our findings and suggests directions for future research. Finally, @sec-appendix evaluates Trafalgar Group’s polling methodology, and our idealized methodology and survey copy. -->
-
-
 # Data {#sec-data}
 
 ## Overview
 
-Our data is download from [Five Thirty Eight] (https://projects.fivethirtyeight.com/polls) [@polls], the website gathered survey data from different pollsters of 2024 US president election, We use the statistical programming **language R** [@citeR], and packages **lubridate** [@lubridate], **dplyr** [@dplyr], **tidyverse** [@tidyverse], **model summary** [@models] to process the data. Also, we use **tibble** [@tibble] to create the table for simulate table and save it as csv files. Graphs are created by using ggplot2 in from package **tidyverse** [@tidyverse], packages **broom** [@broom] and **knitr** [@knitr] were used to generate clean summary and table in this paper. Following **Telling stories with data** [@telling_stories_with_data], we consider using multiple linear model to predict and forecasting the result of US president election in 2024. We are creating different graphs and models for the candidates from different parties in general state and combine all models and graphs together to create a new scatter plot to predict and forecasting the US president election in 2024.
+Our data is download from [Five Thirty Eight] (https://projects.fivethirtyeight.com/polls) [@polls], the website gathered survey data from different pollsters of 2024 US president election, We use the statistical programming **language R** [@citeR], and packages **lubridate** [@lubridate], **dplyr** [@dplyr], **tidyverse** [@tidyverse], **model summary** [@models], and **arrow** [@arrow] to process the data. Also, we use **tibble** [@tibble] to create the table for simulate table and save it as csv files. Graphs are created by using ggplot2 in from package **tidyverse** [@tidyverse], packages **broom** [@broom] and **knitr** [@knitr] were used to generate clean summary and table in this paper. Following **Telling stories with data** [@telling_stories_with_data], we create different models for the candidates from different parties in general state and forecasting the US president election in 2024.
 
 ## Cleaned Data 
 
@@ -118,10 +103,14 @@ The raw data obtained from FiveThirtyEight [@polls] initially contains 17,440 ob
 #| tbl-cap: "First Five Rows of Cleaned Data"
 #| warning: false
 
-five_rows <- as_tibble(cleaned_data)
-five_rows %>% 
-  slice(1:5)
 
+cleaned_data_subset <- head(cleaned_data, 5)
+colnames(cleaned_data_subset) <- c("pollster"	, "sample size", "poll grade", 
+                                   "pollscore","state", "transparency score", 
+                                   "poll end date", "party", "candidate", 
+                                   "percentage")
+kable(cleaned_data_subset, digits = 2) %>%
+    kable_styling(font_size = 6) 
 ```
 
 
@@ -732,10 +721,6 @@ pp_check(bayesian_model_rep) +
   theme_classic() +
   theme(legend.position = "bottom")
 
-```
-
-```{r}
-plot(bayesian_model_dem, pars = "(Intercept)", prob = 0.95)
 ```
 
 \newpage
