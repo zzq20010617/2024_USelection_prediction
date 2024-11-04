@@ -28,6 +28,7 @@ library(rstanarm)
 library(splines)
 library(broom)
 library(knitr)
+library(stringr)
 ```
 
 ```{r}
@@ -119,6 +120,8 @@ The raw data obtained from FiveThirtyEight [@polls] initially contains 17,440 ob
 #| warning: false
 
 five_rows <- as_tibble(cleaned_data)
+five_rows <- five_rows %>%
+  rename_with(~ str_replace_all(., "_", " "))
 five_rows %>% 
   slice(1:5)
 
@@ -127,7 +130,7 @@ five_rows %>%
 
 ## Measurement
 
-The dataset is about public opinions about U.S. presidential candidates, which are captured through polling.
+Polling data is collected by different pollsters using various survey methods reflect public opinion on the 2024 U.S. presidential election. Information of individuals collected by pollsters is being separate to different groups based on age, gender, race, occupation and geographic to reflect a more accurate supporting trend of each candidates involved in the presidential elections. From FiveThirtyEight, poll-of-polls dataset included the pollscore and numeric grade of the pollster which influence the reliability of the pollster on the collection of support rate of each candidates. Polling methodology is also various among pollsters, such as online panels, app panels, online Ad and phone interviews. Different methodology are having its own target audiences which the data collected can represent the opinion of specific age group.
 
 ## Outcome variables {#sec-octvar}
 
