@@ -2,12 +2,11 @@
 
 ## Overview
 
-This project applies a statistical approach to forecast the winner of the upcoming US presidential election through "poll-of-polls" approach, analyzing support trends for the leading candidates of two parties, Kamala Harris and Donald Trump by the poll data from FiveThirtyEight. Also, provides a solution for an idealized survey on the presidential election and discusses the methodology and survey of a certain pollster in the election.
-
+This project forecasts the 2024 U.S. Presidential Election Results: Linear Regression, Bayesian, and Spline-Fit Gaussian Model Using Pollsters' Data from FiveThirtyEight. It leverages various modelling approaches to predict the outcome of the 2024 U.S. Presidential election. By applying linear regression, Bayesian methods, and a Spline-Fit Gaussian model, this work explores different perspectives on interpreting polling data. The results indicate notable differences across the models: Harris's lead is strong in both the linear regression and Bayesian approaches while appearing more modest when analyzed with the Spline-Fit Gaussian model. These differences offer insight into how various modelling techniques can affect the interpretation of polling trends and predictive accuracy.
 
 ## File Structure
 
-The repo is structured as:
+The repo is structured as follows:
 
 - **data/**
   - `00-simulated_data/`: Contains the simulated data generated for model testing.
